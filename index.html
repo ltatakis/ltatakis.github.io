@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta name="keywords" content="HTML,CSS,D3,JavaScript">
+  <meta name="keywords" content="HTML,CSS,D3,JavaScript">
     <meta name="author" content="Lefteris Tatakis">
     <meta itemscope itemtype="http://schema.org/CreativeWork" itemprop="creator" content="Lefteris Tatakis" />
     <meta name="description" content="My personal page on the Internet.">
@@ -11,132 +11,90 @@
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
     <title>Lefteris Tatakis</title>
     <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js?1.25.0"></script>
-<script type="text/javascript">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+<script type="text/javascript">
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-49230117-1']);
   _gaq.push(['_trackPageview']);
-
   (function() {
     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
-
 </script>
-    <style type="text/css">
-        .fluidList {
-            list-style: none;
-            list-style-image: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .pageMenu {
-            vertical-align: middle;
-            text-align: center;
-
-        }
-
-        .fluid {
-            clear: both;
-            margin-left: 0;
-            width: 100%;
-            float: left;
-            display: block;
-        }
-
-        .item {
-            width: 10.0344%;
-            /*margin-left: 3.4482%;*/
-            clear: none;
-            height: 30px;
-            font-size: large;
-            margin-top: 10px;
-        }
-
-        body {
-            background: #ffffff;
-        }
-
-        circle {
-            fill: none;
-            stroke-width: 1.5px;
-        }
-
-        .DoONhover:hover {
-            background-color: #4830d6;
-            margin-top: 5px;
-        }
-
-        text {
-            fill: blue;
-        }
-
-        .floatRight {
-            float: right;
-        }
-        .project-wrap {
-            width: 100%;
-            font-size: 17px;
-            color: white;
-            margin: 0 auto;
-        }
-
-        .project {
-            background: #5435ff;
-            color: #fff;
-            font-size: 17px;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            z-index: 9999;
-            display: block;
-        }
-    </style>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+  </style>
 </head>
 <body>
-<script type="text/javascript">
 
-    var w = window.innerWidth - 10,
-            h = window.innerHeight - 10,
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Lefteris Tatakis</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <script type="text/javascript">
+    var w = window.innerWidth - 5,
+            h = window.innerHeight - window.innerHeight*0.25 ,
             i = 0;
-
     var svg = d3.select("body").append("svg:svg")
             .attr("width", w)
             .attr("height", h)
             .style("pointer-events", "all")
             .on("mousemove", particle);
-
     svg.append('svg:text').text('Lefteris Tatakis')
             .attr('x', w / 3)
             .attr('y', h / 2 - 20)
             .style("font-size", "50px");
-
     svg.append('svg:text').text('PhD Student')
             .attr('x', w / 3 + 25)
             .attr('y', h / 2 + 40)
             .style("font-size", "34px");
-
     svg.append('svg:text').text('Computer Scientist')
             .attr('x', w / 3 + 25)
             .attr('y', h / 2 + 70)
             .style("font-size", "34px");
-
-    svg.append('text').text('@Ltatakis')
-            .attr('x', w - 150)
-            .attr('y', 30)
-            .style("font-size", "30px");
-
+    // svg.append('text').text('@Ltatakis')
+    //         .attr('x', w - 150)
+    //         .attr('y', 30)
+    //         .style("font-size", "30px");
     svg.append('text').text('Created using d3js')
             .attr('x', w - 100)
             .attr('y', h - 10)
             .style("font-size", "10px");
-
     function particle() {
         var m = d3.svg.mouse(this);
-
         svg.append("svg:circle")
                 .attr("cx", m[0])
                 .attr("cy", m[1])
@@ -150,19 +108,37 @@
                 .style("stroke-opacity", 1e-6)
                 .remove();
     }
-
 </script>
-<div class="project">
-    <div class="project-wrap" itemscope itemtype="http://schema.org/CreativeWork">
-        <ul class="fluid fluidList pageMenu">
-            <li class="fluid item zeroMargin_desktop">Projects :</li>
-            <li class="fluid item DoONhover "><a style="cursor:pointer;color:white;" itemprop="url"
-                                                 href="http://voideditor.cs.man.ac.uk">Void Editor</a></li>
-            <li class="fluid item DoONhover"><a style="color:white;cursor:pointer" itemprop="url" href="/cretecompare.html">CreteCompare</a>
-            </li>
-              
-        </ul>
-    </div>
+  </div>
 </div>
+  
+<div class="container-fluid bg-3 text-center">
+  <h3>Some of my Work</h3><br>
+  <div class="row">
+    <div class="col-sm-4">
+      <p>VoID Editor</p>
+      <a style="cursor:pointer;color:white;" itemprop="url" href="http://voideditor.cs.man.ac.uk/linksets.html">
+        <img src="http://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+        </a>
+    </div>
+    <div class="col-sm-4">
+      <a style="color:white;cursor:pointer" itemprop="url" href="/cretecompare.html">
+      <p>CreteCompare</p>
+      <img src="http://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+      </a>
+    </div>
+    <div class="col-sm-4">
+      <p>Linkset</p>
+      <a style="color:white;cursor:pointer" itemprop="url" href="http://voideditor.cs.man.ac.uk/linksets.html">
+      <img src="http://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+      </a>
+    </div>
+  </div>
+</div><br>
+
+<footer class="container-fluid text-center">
+  <p>&copy; Lefteris Tatakis 2016</p>
+</footer>
+
 </body>
 </html>
