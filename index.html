@@ -38,6 +38,67 @@
       padding: 25px;
     }
   </style>
+    <style type="text/css">
+        .fluidList {
+            list-style: none;
+            list-style-image: none;
+            margin: 0;
+            padding: 0;
+        }
+        .pageMenu {
+            vertical-align: middle;
+            text-align: center;
+        }
+        .fluid {
+            clear: both;
+            margin-left: 0;
+            width: 100%;
+            float: left;
+            display: block;
+        }
+        .item {
+            width: 10.0344%;
+            /*margin-left: 3.4482%;*/
+            clear: none;
+            height: 30px;
+            font-size: large;
+            margin-top: 10px;
+        }
+        body {
+            background: #ffffff;
+        }
+        circle {
+            fill: none;
+            stroke-width: 1.5px;
+        }
+        .DoONhover:hover {
+            background-color: #4830d6;
+            margin-top: 5px;
+        }
+        text {
+            fill: blue;
+        }
+        .floatRight {
+            float: right;
+        }
+        .project-wrap {
+            width: 100%;
+            font-size: 17px;
+            color: white;
+            margin: 0 auto;
+        }
+        .project {
+            background: #5435ff;
+            color: #fff;
+            font-size: 17px;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 9999;
+            display: block;
+        }
+    </style>
 </head>
 <body>
 
@@ -55,7 +116,7 @@
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
+        <!-- <li><a href="#">Contact</a></li> -->
       </ul>
 
     </div>
@@ -65,8 +126,8 @@
 <div class="jumbotron">
   <div class="container text-center">
     <script type="text/javascript">
-    var w = window.innerWidth - 5,
-            h = window.innerHeight - window.innerHeight*0.25 ,
+    var w = window.innerWidth,
+            h = window.innerHeight - window.innerHeight*0.30 ,
             i = 0;
     var svg = d3.select("body").append("svg:svg")
             .attr("width", w)
