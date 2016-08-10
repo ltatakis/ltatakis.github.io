@@ -103,11 +103,11 @@
             background-color: #fff;
             border-color: #5435ff;
         }
-        .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+        .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse  {
             color: #fff;
             background-color: blue;
         }
-
+        /*.navbar-nav>.active>a:hover*/
         .navbar-inverse .navbar-nav>li>a .navbar-nav>li>a:hover{
             color: blue;
         }
@@ -115,6 +115,10 @@
         .navbar-inverse  .navbar-brand .navbar-brand>a>:hover {
             color: blue;
         }
+
+        .navbar-inverse .navbar-brand {
+           color:  blue;
+         }
     </style>
 </head>
 <body>
@@ -144,7 +148,7 @@
   <!-- <div class="container text-center"> -->
     <script type="text/javascript">
     var w = window.innerWidth,
-            h = window.innerHeight - window.innerHeight*0.10 ,
+            h = window.innerHeight - window.innerHeight*0.18 ,
             i = 0;
     var svg = d3.select("body").append("svg:svg")
             .attr("width", w)
@@ -195,20 +199,20 @@
   <div class="row">
     <div class="col-sm-4">
       <p>VoID Editor</p>
-      <a style="cursor:pointer;color:white;" itemprop="url" href="http://voideditor.cs.man.ac.uk/linksets.html">
-        <img src="voideditor.png" class="img-responsive" style="width:100%" alt="Image">
+      <a style="cursor:pointer;color:white;" itemprop="url" href="http://voideditor.cs.man.ac.uk/">
+        <img src="linkset.png" class="img-responsive" style="width:100%" alt="Image">
         </a>
     </div>
     <div class="col-sm-4">
       <p>CreteCompare</p>
       <a style="color:white;cursor:pointer" itemprop="url" href="/cretecompare.html">
-        <img src="https://pbs.twimg.com/profile_images/441287566721945600/GGu3eYCm.jpeg" class="img-responsive" style="width:100%" alt="Image">
+        <img src="cretecompare.jpeg" class="img-responsive" style="width:100%" alt="Image">
       </a>
     </div>
     <div class="col-sm-4">
       <p>Linkset</p>
       <a style="color:white;cursor:pointer" itemprop="url" href="http://voideditor.cs.man.ac.uk/linksets.html">
-      <img src="linkset.png" class="img-responsive" style="width:100%" alt="Image">
+      <img src="voideditor.png" class="img-responsive" style="width:100%" alt="Image">
       </a>
     </div>
   </div>
