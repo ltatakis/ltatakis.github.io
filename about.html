@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="keywords" content="HTML,CSS,D3,JavaScript">
+    <meta name="author" content="Lefteris Tatakis">
+    <meta itemscope itemtype="http://schema.org/CreativeWork" itemprop="creator" content="Lefteris Tatakis" />
+    <meta name="description" content="My personal page on the Internet.">
+    <meta name="keywords" content="Developer, computer science, cretecompare, crete, cars ">
+    <link rel="shortcut icon" href="lt.png">
+    <meta itemscope itemtype="http://schema.org/CreativeWork" itemprop="creator" content="Lefteris Tatakis"/>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>Lefteris Tatakis</title>
+    <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js?1.25.0"></script>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-49230117-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: fff ;   /* lightsteelblue;*/
+      padding: 25px;
+    }
+  </style>
+    <style type="text/css">
+        .fluidList {
+            list-style: none;
+            list-style-image: none;
+            margin: 0;
+            padding: 0;
+        }
+        .pageMenu {
+            vertical-align: middle;
+            text-align: center;
+        }
+        .fluid {
+            clear: both;
+            margin-left: 0;
+            width: 100%;
+            float: left;
+            display: block;
+        }
+        .item {
+            width: 10.0344%;
+            /*margin-left: 3.4482%;*/
+            clear: none;
+            height: 30px;
+            font-size: large;
+            margin-top: 10px;
+        }
+        body {
+            background: #ffffff;
+            color:blue;
+        }
+        circle {
+            fill: none;
+            stroke-width: 1.5px;
+        }
+        .DoONhover:hover {
+            background-color: #4830d6;
+            margin-top: 5px;
+        }
+        text {
+            fill: blue;
+        }
+        .floatRight {
+            float: right;
+        }
+        .project-wrap {
+            width: 100%;
+            font-size: 17px;
+            color: white;
+            margin: 0 auto;
+        }
+        .project {
+            background: #5435ff;
+            color: #fff;
+            font-size: 17px;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 9999;
+            display: block;
+        }
+         .navbar-inverse {
+            background-color: #fff;
+            border-color: #5435ff;
+        }
+        .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus {
+            color: #fff;
+            background-color: blue;
+        }
+       /* .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse  {
+            color: #fff;
+            background-color: blue;
+        }*/
+        /*.navbar-nav>.active>a:hover*/
+  
+        .navbar-inverse  .navbar-brand .navbar-brand>a>:hover {
+            color: blue;
+        }
+
+        .navbar-inverse .navbar-brand .navbar-nav>a>:hover {
+           color:  blue;
+         }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" style="color:blue;    " href="#">Lefteris Tatakis</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+       <li><a href="/about.html" style="color:blue; ">About</a></li>
+        <!-- <li><a href="#">Contact</a></li> -->
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+<!-- <div class="jumbotron"> -->
+  <!-- <div class="container text-center"> -->
+    <script type="text/javascript">
+    var w = window.innerWidth,
+            h = window.innerHeight - window.innerHeight*0.10 ,
+            i = 0;
+    var svg = d3.select("body").append("svg:svg")
+            .attr("width", w)
+            .attr("height", h)
+            .style("pointer-events", "all")
+            .on("mousemove", particle);
+    svg.append('svg:text').text('Lefteris Tatakis')
+            .attr('x', w / 3)
+            .attr('y', h / 2 - 20)
+            .style("font-size", "50px");
+    svg.append('svg:text').text('PhD Student')
+            .attr('x', w / 3 + 25)
+            .attr('y', h / 2 + 40)
+            .style("font-size", "34px");
+    svg.append('svg:text').text('Computer Scientist')
+            .attr('x', w / 3 + 25)
+            .attr('y', h / 2 + 70)
+            .style("font-size", "34px");
+    // svg.append('text').text('@Ltatakis')
+    //         .attr('x', w - 150)
+    //         .attr('y', 30)
+    //         .style("font-size", "30px");
+    svg.append('text').text('Created using d3js')
+            .attr('x', w - 100)
+            .attr('y', h - 10)
+            .style("font-size", "10px");
+    function particle() {
+        var m = d3.svg.mouse(this);
+        svg.append("svg:circle")
+                .attr("cx", m[0])
+                .attr("cy", m[1])
+                .attr("r", 1e-6)
+                .style("stroke", "steelblue")
+                .style("stroke-opacity", 1)
+                .transition()
+                .duration(2000)
+                .ease(Math.sqrt)
+                .attr("r", 100)
+                .style("stroke-opacity", 1e-6)
+                .remove();
+    }
+</script>
+  <!-- </div> -->
+<!-- </div> -->
+  
+<div class="container-fluid bg-3 text-center">
+  <!-- <h3>Some of my Work</h3><br> -->
+  <div class="row">
+     Under construction
+  </div>
+</div><br>
+
+<footer class="container-fluid text-center">
+  <p>&copy; Lefteris Tatakis 2016</p>
+</footer>
+
+</body>
+</html>
