@@ -1,231 +1,128 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta name="keywords" content="HTML,CSS,D3,JavaScript">
-    <meta name="author" content="Lefteris Tatakis">
-    <meta itemscope itemtype="http://schema.org/CreativeWork" itemprop="creator" content="Lefteris Tatakis" />
-    <meta name="description" content="My personal page on the Internet.">
-    <meta name="keywords" content="Developer, computer science, cretecompare, crete, cars ">
-    <link rel="shortcut icon" href="lt.png">
-    <meta itemscope itemtype="http://schema.org/CreativeWork" itemprop="creator" content="Lefteris Tatakis"/>
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-    <title>Lefteris Tatakis</title>
-    <script src='//d3js.org/d3.v2.js'></script>
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!DOCTYPE HTML>
+<!--
+	Aerial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<!-- <link rel="stylesheet" href="assets/css/miniport.css" /> -->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<meta name="keywords" content="HTML,CSS,D3,JavaScript">
+	    <meta name="author" content="Lefteris Tatakis">
+	    <meta itemscope itemtype="http://schema.org/CreativeWork" itemprop="creator" content="Lefteris Tatakis" />
+	    <meta name="description" content="My personal page on the Internet.">
+	    <meta name="keywords" content="Developer, computer science, cretecompare, crete, cars ">
+	    <link rel="shortcut icon" href="lt.png">
+	    <meta itemscope itemtype="http://schema.org/CreativeWork" itemprop="creator" content="Lefteris Tatakis"/>
+	    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	    <title>Lefteris Tatakis</title>
+	    <!-- // <script src='//d3js.org/d3.v2.js'></script> -->
+	  
+	<script type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-49230117-1']);
+	  _gaq.push(['_trackPageview']);
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	</script>
+	<!-- // <script src="//platform.linkedin.com/in.js" type="text/javascript"></script> -->
+	<script type="IN/MemberProfile" data-id="https://www.linkedin.com/in/tatakis" data-format="click" data-related="false"></script>
+	 <style type="text/css">
 
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-49230117-1']);
-  _gaq.push(['_trackPageview']);
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
-<script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
-<script type="IN/MemberProfile" data-id="https://www.linkedin.com/in/tatakis" data-format="click" data-related="false"></script>
+	.image img {
+    	display: block;
+    	width: 100%;
+	}
+	
+	#top .image img {
+    	border-radius: 50%;
+	}
 
+	.row {
+		border-bottom: solid 1px transparent;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+	}
 
-  <style>
-    /* Remove the navbar's default margin-bottom and rounded borders */
-    .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
-    }
-    
-    /* Add a gray background color and some padding to the footer */
-    footer {
-      background-color: fff ;   /* lightsteelblue;*/
-      padding: 25px;
-    }
-  </style>
-    <style type="text/css">
-        .fluidList {
-            list-style: none;
-            list-style-image: none;
-            margin: 0;
-            padding: 0;
-        }
-        .pageMenu {
-            vertical-align: middle;
-            text-align: center;
-        }
-        .fluid {
-            clear: both;
-            margin-left: 0;
-            width: 100%;
-            float: left;
-            display: block;
-        }
-        .item {
-            width: 10.0344%;
-            /*margin-left: 3.4482%;*/
-            clear: none;
-            height: 30px;
-            font-size: large;
-            margin-top: 10px;
-        }
-        body {
-            background: #ffffff;
-            color:blue;
-        }
-        circle {
-            fill: none;
-            stroke-width: 1.5px;
-        }
-        .DoONhover:hover {
-            background-color: #4830d6;
-            margin-top: 5px;
-        }
-        text {
-            fill: blue;
-        }
-        .floatRight {
-            float: right;
-        }
-        .project-wrap {
-            width: 100%;
-            font-size: 17px;
-            color: white;
-            margin: 0 auto;
-        }
-        .project {
-            background: #5435ff;
-            color: #fff;
-            font-size: 17px;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            z-index: 9999;
-            display: block;
-        }
-         .navbar-inverse {
-            background-color: #fff;
-            border-color: #5435ff;
-        }
-        .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus {
-            color: #fff;
-            background-color: blue;
-        }
-       /* .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse  {
-            color: #fff;
-            background-color: blue;
-        }*/
-        /*.navbar-nav>.active>a:hover*/
-  
-        .navbar-inverse  .navbar-brand .navbar-brand>a>:hover {
-            color: blue;
-        }
+	.row > * {
+		float: left;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	
+	 </style>
+	</head>
+	<body class="loading">
+		
 
-        .navbar-inverse .navbar-brand .navbar-nav>a>:hover {
-           color:  blue;
-         }
-    </style>
-</head>
-<body>
+		<div id="wrapper">
+			<div id="bg"></div>
+			<!-- <div id="overlay"></div> -->
+			<div id="main">
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" style="color:blue;    " href="#">Lefteris Tatakis</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="/index.html">Home</a></li>
-       <li><a href="/about.html" style="color:blue; ">About</a></li>
-        <!-- <li><a href="#">Contact</a></li> -->
-      </ul>
+				<!-- Nav -->
+					<!-- <nav id="nav">
+						<ul class="container">
+							<li><a href="#top">Top</a></li>
+							<li><a href="#work">Work</a></li>
+							<li><a href="#portfolio">Portfolio</a></li>
+							<li><a href="#contact">Contact</a></li>
+						</ul>
+					</nav>					
+ -->
+				<!-- Header -->
+					<header id="header">
+					<article class="container" id="top">
 
-    </div>
-  </div>
-</nav>
+						 <div class="row"> 
+							<div style="width:20%; margin-left:5%;">
+								<span class="image fit"><img src="img/me.jpg" alt="" /></span>
+							</div>	
+						<!-- </div> -->
+						<!-- <div class="6u 12u(mobile)"> -->
+							<div style="width: 60%;">
+								<h1>Lefteris Tatakis</h1>
+								<p>Computer Scientist &nbsp;&bull;&nbsp; Developer &nbsp;&bull;&nbsp; Never asked for this</p>
+								<nav>
+									<ul>
+										<li><a href="https://twitter.com/LTatakis" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="/play.html" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+										<li><a href="https://github.com/ltatakis" class="icon fa-github"><span class="label">Github</span></a></li>
+										<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+										<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+									</ul>
+								</nav>
+							</div>
 
-<!-- <div class="jumbotron"> -->
-  <!-- <div class="container text-center"> -->
-    <script type="text/javascript">
-    var w = window.innerWidth,
-            h = window.innerHeight - window.innerHeight*0.18 ,
-            i = 0;
-    var svg = d3.select("body").append("svg:svg")
-            .attr("width", w)
-            .attr("height", h)
-            .style("pointer-events", "all")
-            .on("mousemove", particle);
-    svg.append('svg:text').text('Lefteris Tatakis')
-            .attr('x', w / 3)
-            .attr('y', h / 2 - 20)
-            .style("font-size", "50px");
-    // svg.append('svg:text').text('PhD Student')
-    //         .attr('x', w / 3 + 25)
-    //         .attr('y', h / 2 + 40)
-    //         .style("font-size", "34px");
-    svg.append('svg:text').text('Computer Scientist')
-            .attr('x', w / 3 + 25)
-            .attr('y', h / 2 + 70)
-            .style("font-size", "34px");
-    // svg.append('text').text('@Ltatakis')
-    //         .attr('x', w - 150)
-    //         .attr('y', 30)
-    //         .style("font-size", "30px");
-    svg.append('text').text('Created using d3js')
-            .attr('x', w - 100)
-            .attr('y', h - 10)
-            .style("font-size", "10px");
-    function particle() {
-        var m = d3.svg.mouse(this);
-        svg.append("svg:circle")
-                .attr("cx", m[0])
-                .attr("cy", m[1])
-                .attr("r", 1e-6)
-                .style("stroke", "steelblue")
-                .style("stroke-opacity", 1)
-                .transition()
-                .duration(2000)
-                .ease(Math.sqrt)
-                .attr("r", 100)
-                .style("stroke-opacity", 1e-6)
-                .remove();
-    }
-</script>
-  <!-- </div> -->
-<!-- </div> -->
-  
-<div class="container-fluid bg-3 text-center">
-  <!-- <h3>Some of my Work</h3><br> -->
-  <div class="row">
-    <div class="col-sm-4">
-      <!-- <p>VoID Editor</p> -->
-      <a style="cursor:pointer;color:white;" itemprop="url" href="http://voideditor.cs.man.ac.uk/">
-        <img src="linkset.png" class="img-responsive" style="width:80%" alt="Image">
-        </a>
-    </div>
-    <div class="col-sm-4">
-      <!-- <p>CreteCompare</p> -->
-      <a style="color:white;cursor:pointer" itemprop="url" href="/cretecompare.html">
-        <img src="cc-name.png" class="img-responsive" style="width:80%" alt="Image">
-      </a>
-    </div>
-    <div class="col-sm-4">
-      <!-- <p>Linkset</p> -->
-      <a style="color:white;cursor:pointer" itemprop="url" href="http://voideditor.cs.man.ac.uk/linksets.html">
-      <img src="voideditor.png" class="img-responsive" style="width:80%" alt="Image">
-      </a>
-    </div>
-  </div>
-</div><br>
+						</div>
+							
+					</article>
 
-<footer class="container-fluid text-center">
-  <p>&copy; Lefteris Tatakis 2016</p>
-</footer>
+					</header>
 
-</body>
+				<!-- Footer -->
+					<footer id="footer">
+						<span class="copyright">&copy; Lefteris Tatakis 2016</a>.</span>
+					</footer>
+
+			</div>
+		</div>
+		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+		<script>
+			window.onload = function() { document.body.className = ''; }
+			window.ontouchmove = function() { return false; }
+			window.onorientationchange = function() { document.body.scrollTop = 0; }
+		</script>
+	</body>
 </html>
