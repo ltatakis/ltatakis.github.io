@@ -176,18 +176,18 @@
 		/*-webkit-animation: bg 60s linear infinite;*/
 		/*-ms-animation: bg 60s linear infinite;*/
 		/*animation: bg 60s linear infinite;*/
-		-moz-backface-visibility: hidden;
+		/*-moz-backface-visibility: hidden;
 		-webkit-backface-visibility: hidden;
 		-ms-backface-visibility: hidden;
 		backface-visibility: hidden;
 		-moz-transform: translate3d(0,0,0);
 		-webkit-transform: translate3d(0,0,0);
 		-ms-transform: translate3d(0,0,0);
-		transform: translate3d(0,0,0);
+		transform: translate3d(0,0,0);*/
 	/* Set your background with this */
 
 		background: #348cb2 url("images/bg.jpg") bottom left;
-		background-repeat: repeat-x;
+		/*background-repeat: repeat-x;*/
 		height: 100%;
 		left: 0;
 		opacity: 1;
@@ -195,7 +195,7 @@
 		top: 0;
 	}
 
-	@-moz-keyframes bg {
+/*	@-moz-keyframes bg {
 		0% {
 			-moz-transform: translate3d(0,0,0);
 			-webkit-transform: translate3d(0,0,0);
@@ -258,7 +258,7 @@
 			transform: translate3d(-2250px,0,0);
 		}
 	}
-
+*/
 	#bg {
 		background-size: 2250px auto;
 		width: 6750px;
@@ -764,7 +764,7 @@
 		}
 
 		#bg {
-			background-size: 1500px auto;
+			/*background-size: 1500px auto;*/
 			width: 4500px;
 		} }
 
@@ -846,7 +846,7 @@
 		}
 
 		#bg {
-			background-size: 750px auto;
+			/*background-size: 750px auto;*/
 			width: 2250px;
 		} }
 
@@ -932,7 +932,7 @@
 		}
 
 		#bg {
-			background-size: 300px auto;
+			/*background-size: 300px auto;*/
 			width: 900px;
 		}
 
@@ -1030,7 +1030,7 @@
 		}
 
 		#bg {
-			background-size: 412.5px auto;
+			/*background-size: 412.5px auto;*/
 			width: 1237.5px;
 		}
 
