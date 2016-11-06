@@ -552,7 +552,7 @@
 				width: 5.35em;
 			}
 
-				#header nav li:nth-child(1) {
+				/*#header nav li:nth-child(1) {
 					-moz-animation-delay: 2.5s;
 					-webkit-animation-delay: 2.5s;
 					-ms-animation-delay: 2.5s;
@@ -620,7 +620,7 @@
 					-webkit-animation-delay: 4.75s;
 					-ms-animation-delay: 4.75s;
 					animation-delay: 4.75s;
-				}
+				}*/
 
 			#header nav a {
 				-webkit-tap-highlight-color: transparent;
@@ -1030,7 +1030,7 @@
 		}
 
 		#bg {
-			/*background-size: 412.5px auto;*/
+			background-size: 412.5px auto;
 			width: 1237.5px;
 		}
 
