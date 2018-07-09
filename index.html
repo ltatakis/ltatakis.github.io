@@ -1,11 +1,11 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-	<meta name="keywords" content="HTML,CSS,D3,JavaScript">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" />
+    <link rel="stylesheet" href="main.css" />
+    <meta name="keywords" content="HTML,CSS,D3,JavaScript">
 	<meta name="author" content="Lefteris Tatakis">
 	<meta itemscope itemtype="http://schema.org/CreativeWork" itemprop="creator" content="Lefteris Tatakis" />
 	<meta name="description" content="My personal page on the Internet.">
@@ -13,7 +13,7 @@
 	<link rel="shortcut icon" href="lt.png">
 	<meta itemscope itemtype="http://schema.org/CreativeWork" itemprop="creator" content="Lefteris Tatakis" />
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-	<title>Lefteris Tatakis</title>
+    <title>Lefteris Tatakis</title>
 	<script type="text/javascript">
 		var _gaq = _gaq || [];
 		_gaq.push(['_setAccount', 'UA-49230117-1']);
@@ -24,139 +24,41 @@
 			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		})();
 	</script>
-	<style type="text/css">
-		.image img {
-			display: block;
-			width: 100%;
-		}
-
-		#top .image img {
-			border-radius: 50%;
-		}
-
-		.row {
-			border-bottom: solid 1px transparent;
-			-moz-box-sizing: border-box;
-			-webkit-box-sizing: border-box;
-			box-sizing: border-box;
-		}
-
-		.row>* {
-			float: left;
-			-moz-box-sizing: border-box;
-			-webkit-box-sizing: border-box;
-			box-sizing: border-box;
-		}
-
-		ul li ul {
-			padding: 0;
-			position: absolute;
-			top: 5em;
-			left: -2.2em;
-			width: 450px;
-			-webkit-box-shadow: none;
-			-moz-box-shadow: none;
-			box-shadow: none;
-			display: none;
-			opacity: 0;
-			visibility: hidden;
-		}
-
-		ul li ul li {
-			display: block;
-			color: #fff;
-			margin-right: 15px;
-		}
-
-		ul li ul li:hover {
-			background: none;
-			background-color: rgba(255, 255, 255, 0.175);
-			color: #fff;
-		}
-
-		ul li:hover ul {
-			display: block;
-			opacity: 1;
-			visibility: visible;
-		}
-	</style>
 </head>
-
-<body class="loading">
-
-
-	<div id="wrapper">
-		<div id="bg"></div>
-		<div id="main">
-
-			<!-- Header -->
-			<header id="header">
-				<article class="container" id="top">
-
-					<div class="row">
-						<div style="width:20%; margin-left:5%;">
-							<span class="image fit">
-								<img src="img/nu.jpg" alt="" />
-							</span>
-						</div>
-
-						<div style="width: 60%;">
-							<h1>Lefteris Tatakis</h1>
-							<p>Computer Scientist &nbsp;&bull;&nbsp; Software Engineer &nbsp;&bull;&nbsp; Oxford</p>
-							<nav>
-								<ul>
-									<li>
-										<ul>
-											<li style="font-size: 1em;border: solid 1px #fff;  border-radius: 100%; width: 6.8em;height: 5.8em;">
-												<a href="cretecompare.html">CreteCompare</a>
-											</li>
-											<li style="font-size: 1em;border: solid 1px #fff;  border-radius: 100%; width: 6.8em;height: 5.8em;">
-												<a href="http://libertycars.gr">LibertyCars</a>
-											</li>
-											<li style="font-size: 1em;border: solid 1px #fff;  border-radius: 100%; width: 6.8em;height: 5.8em;">
-												<a href="http://voideditor.cs.man.ac.uk">VoidEditor</a>
-											</li>
-
-										</ul>
-										<a class="icon fa-briefcase">
-										</a>
-									</li>
-									<li>
-										<a href="https://github.com/ltatakis" class="icon fa-github">
-											<span class="label">Github</span>
-										</a>
-									</li>
-									<li>
-										<a href="/play.html" class="icon fa-dribbble">
-											<span class="label">Dribbble</span>
-										</a>
-									</li>
-									<li>
-										<a href="https://www.linkedin.com/in/tatakis" class="icon fa-linkedin">
-											<span class="label">LinkedIn</span>
-										</a>
-									</li>
-								</ul>
-							</nav>
-						</div>
-					</div>
-				</article>
-
-			</header>
-
-			<!-- Footer -->
-			<footer id="footer">
-				<span class="copyright">&copy; Lefteris Tatakis 2018</a>.</span>
-			</footer>
-
-		</div>
-	</div>
-	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-	<script>
-		window.onload = function () { document.body.className = ''; }
-		window.ontouchmove = function () { return false; }
-		window.onorientationchange = function () { document.body.scrollTop = 0; }
-	</script>
+<body>
+    <div>
+            <img id="mainPhoto" src="img/me_900.jpg" srcset="img/me_200_150.jpg 200w, img/me_900.jpg 900w" alt="An image of me">
+            <h1> Lefteris Tatakis </h1>
+            <h5>Computer Scientist &nbsp;&bull;&nbsp; Software Engineer &nbsp;&bull;&nbsp; Oxford</h5>
+            <ul>
+                <li class="svgListItem" id="projects">
+                    <a href="http://libertycars.gr">
+                        <img src="assets/Briefcase_font_awesome.svg" />
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="http://libertycars.gr">LibertyCars</a>
+                        </li>
+                        <li>
+                            <a href="cretecompare.html">CreteCompare</a>
+                        </li>
+                        <li>
+                            <a href="http://voideditor.cs.man.ac.uk">VoidEditor</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="svgListItem">
+                    <a href="https://github.com/ltatakis"><img src="assets/github.svg" /></a>
+                </li>
+                <li class="svgListItem">
+                    <a href="https://www.linkedin.com/in/tatakis"><img src="assets/linkedin.svg" /></a>
+                </li>
+            </ul>
+    </div>
+    <footer>
+        &copy; Copyright Lefteris Tatakis <span id="copyright"> </span>
+    </footer>
+    <script>
+        document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()));
+    </script>
 </body>
-
-</html>
