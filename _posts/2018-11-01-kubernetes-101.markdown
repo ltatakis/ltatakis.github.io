@@ -5,21 +5,19 @@ date: 2018-10-31 13:48
 image: /assets/images/markdown.jpg
 headerImage: false
 tag:
-- markdown
-- components
-- extra
+- kubernetes
 category: blog
 author: Lefteris Tatakis
 description: Kubernetes 101 - how I understand it
 # jemoji: '<img class="emoji" title=":ramen:" alt=":ramen:" src="https://assets.github.com/images/icons/emoji/unicode/1f35c.png" height="20" width="20" align="absmiddle">'
 ---
 
-Kubernetes.
 
+👷🏻‍ UNDER CONTRUCTION 👷🏻‍
 
-Containers - docker
+<iframe src="https://giphy.com/embed/tAeB6dptxnoli" width="480" height="446" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/construction-tAeB6dptxnoli"></a></p>
 
-
-Yaml
-
-and more
+<!-- Kubernetes. -->
+<!-- Containers - docker -->
+<!-- Yaml -->
+<!-- and more -->

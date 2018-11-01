@@ -9,14 +9,14 @@ tag:
 - components
 - extra
 category: blog
-author: Lefteris Tatakis
+author: LefterisTatakis
 description: The idea of a blog
 # jemoji: '<img class="emoji" title=":ramen:" alt=":ramen:" src="https://assets.github.com/images/icons/emoji/unicode/1f35c.png" height="20" width="20" align="absmiddle">'
 ---
 
 
 ## Hello everyone outthere! 👋  ✌️ ️
-Something I have been thinking for a while but never got the time to do it.
+This is something I have been thinking for a while but never got the time to do it.
 
 While attending Velocity conference I was inspired by the cool tech and possiblities out there.
 And thought to myself, this would be a great blog post... just a quick summary and overview for people to get a brief introduction on toping touched here.

@@ -5,16 +5,16 @@ date: 2018-10-31 18:48
 image: /assets/images/markdown.jpg
 headerImage: false
 tag:
-- markdown
-- components
-- extra
+- chaos engineering
+- velocity
+- tech
 category: blog
-author: Lefteris Tatakis
+author: LefterisTatakis
 description: Key points of Chaos Engineering talk @ Velocity
 # jemoji: '<img class="emoji" title=":ramen:" alt=":ramen:" src="https://assets.github.com/images/icons/emoji/unicode/1f35c.png" height="20" width="20" align="absmiddle">'
 ---
 
-Talk given by @ from Gremlin.
+Talk given by @Ana_M_Medina from Gremlin.
 
 # What is Chaos Engineering?
 
@@ -28,14 +28,14 @@ Where we would try to:
 
 - Downtime is really expensive
 - Our dependencies will fail
-- Pager fatigue for John and Marcus
+- Pager fatigue
 - Reveal weak points in your systems
 
 # Prerequisites
 
-1. Dashboard and metrics (New Relic, Kibana) ✅
-2. Alerting ✅
-3. What is our cost per hour of outage? ❓
+1. Dashboard and metrics (New Relic, Kibana) 
+2. Alerting 
+3. What is our cost per hour of outage? 
 
 # Principles of Chaos Engineering ([http://principlesofchaos.org](http://principlesofchaos.org/) )
 
@@ -62,14 +62,6 @@ These experiments follow four steps:
 However, ensure we restrict the **blast radius** of our experiments.
 
 And after each experiment, reiterate the experiment to see if we are resilient to it.
-
-## Where we could we use it?
-
-We already have it in the pipeline! 👷
-
-**Hint: War games**
-
-Or at least in my intepritation of it. 🤓
 
 # Tools
 
