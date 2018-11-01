@@ -1,0 +1,204 @@
+<!-- ---
+title: "Markdown Common Elements"
+layout: post
+date: 2018-01-24 22:44
+image: /assets/images/markdown.jpg
+headerImage: false
+tag:
+- markdown
+- elements
+star: true
+category: blog
+author: Lefteris Tatakis
+description: Markdown summary with different options
+---
+
+## Basic formatting
+
+This note **demonstrates** some of what [Markdown][1] is *capable of doing*.
+
+And that's how to do it.
+
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">This note **demonstrates** some of what [Markdown][some/link] is *capable of doing*.</code></pre></figure>
+
+
+---
+
+## Headings
+
+There are six levels of headings. They correspond with the six levels of HTML headings. You've probably noticed them already in the page. Each level down uses one more hash character. But we are using just 4 of them.
+
+# Headings can be small
+
+## Headings can be small
+
+### Headings can be small
+
+#### Headings can be small
+
+
+<figure class="highlight"><pre><code class="language-raw" data-lang="raw"># Heading
+## Heading
+### Heading
+#### Heading</code></pre></figure>
+
+
+---
+
+## Lists
+
+### Ordered list
+
+1. Item 1
+2. A second item
+3. Number 3
+
+
+<figure class="highlight"><pre><code class="language-raw" data-lang="raw">1. Item 1
+2. A second item
+3. Number 3</code></pre></figure>
+
+
+### Unordered list
+
+* An item
+* Another item
+* Yet another item
+* And there's more...
+
+
+<figure class="highlight"><pre><code class="language-raw" data-lang="raw">* An item
+* Another item
+* Yet another item
+* And there's more...</code></pre></figure>
+
+
+---
+
+## Paragraph modifiers
+
+### Quote
+
+> Here is a quote. What this is should be self explanatory. Quotes are automatically indented when they are used.
+
+
+<figure class="highlight"><pre><code class="language-raw" data-lang="raw">&gt; Here is a quote. What this is should be self explanatory.</code></pre></figure>
+
+
+---
+
+## URLs
+
+URLs can be made in a handful of ways:
+
+* A named link to [Mark It Down][3].
+* Another named link to [Mark It Down](http://markitdown.net/)
+* Sometimes you just want a URL like <http://markitdown.net/>.
+
+
+<figure class="highlight"><pre><code class="language-raw" data-lang="raw">* A named link to [MarkItDown][3].
+* Another named link to [MarkItDown](http://markitdown.net/)
+* Sometimes you just want a URL like &lt;http://markitdown.net/&gt;.</code></pre></figure>
+
+
+---
+
+## Horizontal rule
+
+A horizontal rule is a line that goes across the middle of the page.
+It's sometimes handy for breaking things up.
+
+
+<figure class="highlight"><pre><code class="language-raw" data-lang="raw">---</code></pre></figure>
+
+
+---
+
+## Images
+
+Markdown can also contain images. I'll need to add something here sometime.
+
+
+<figure class="highlight"><pre><code class="language-raw" data-lang="raw">![Markdowm Image][/image/url]</code></pre></figure>
+
+
+![Markdowm Image][6]
+
+*Figure Caption*?
+
+
+<figure class="highlight"><pre><code class="language-raw" data-lang="raw">![Markdowm Image][/image/url]
+&lt;figcaption class="caption"&gt;Photo by John Doe&lt;/figcaption&gt;</code></pre></figure>
+
+
+![Markdowm Image][6]
+<figcaption class="caption">Photo by John Doe</figcaption>
+
+*Bigger Images*?
+
+
+<figure class="highlight"><pre><code class="language-raw" data-lang="raw">![Markdowm Image][/image/url]{: class="bigger-image" }</code></pre></figure>
+
+
+![Markdowm Image][6]{: class="bigger-image" }
+
+---
+
+## Code
+
+A HTML Example:
+
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Document<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>Just a test<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span></code></pre></figure>
+
+
+A CSS Example:
+
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">pre</span> <span class="p">{</span>
+    <span class="nl">padding</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+    <span class="nl">font-size</span><span class="p">:</span> <span class="m">.8em</span><span class="p">;</span>
+    <span class="nl">white-space</span><span class="p">:</span> <span class="n">pre</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">pre</span><span class="o">,</span> <span class="nt">table</span> <span class="p">{</span>
+    <span class="nl">width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">code</span><span class="o">,</span> <span class="nt">pre</span><span class="o">,</span> <span class="nt">tt</span> <span class="p">{</span>
+    <span class="nl">font-family</span><span class="p">:</span> <span class="n">Monaco</span><span class="p">,</span> <span class="n">Consolas</span><span class="p">,</span> <span class="n">Inconsolata</span><span class="p">,</span> <span class="nb">monospace</span><span class="p">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
+    <span class="nl">background</span><span class="p">:</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">.05</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+
+A JS Example:
+
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// Sticky Header</span>
+<span class="nx">$</span><span class="p">(</span><span class="nb">window</span><span class="p">).</span><span class="nx">scroll</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="nb">window</span><span class="p">).</span><span class="nx">scrollTop</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">900</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="nx">$</span><span class="p">(</span><span class="s2">"body"</span><span class="p">).</span><span class="nx">hasClass</span><span class="p">(</span><span class="s1">'show-menu'</span><span class="p">))</span> <span class="p">{</span>
+        <span class="nx">$</span><span class="p">(</span><span class="s1">'#hamburguer__open'</span><span class="p">).</span><span class="nx">fadeOut</span><span class="p">(</span><span class="s1">'fast'</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">$</span><span class="p">(</span><span class="s2">"body"</span><span class="p">).</span><span class="nx">hasClass</span><span class="p">(</span><span class="s1">'show-menu'</span><span class="p">))</span> <span class="p">{</span>
+        <span class="nx">$</span><span class="p">(</span><span class="s1">'#hamburguer__open'</span><span class="p">).</span><span class="nx">fadeIn</span><span class="p">(</span><span class="s1">'fast'</span><span class="p">);</span>
+    <span class="p">}</span>
+
+<span class="p">});</span></code></pre></figure>
+
+
+[1]: http://daringfireball.net/projects/markdown/
+[2]: http://www.fileformat.info/info/unicode/char/2163/index.htm
+[3]: http://www.markitdown.net/
+[4]: http://daringfireball.net/projects/markdown/basics
+[5]: http://daringfireball.net/projects/markdown/syntax
+[6]: http://kune.fr/wp-content/uploads/2013/10/ghost-blog.jpg -->
