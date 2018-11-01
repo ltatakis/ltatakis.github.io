@@ -1,4 +1,97 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-11-01T15:37:12+00:00</updated><id>http://localhost:4000/</id><title type="html">John Doe</title><subtitle>A blog about technology and stuff related</subtitle><entry><title type="html">Markdown Extra Components</title><link href="http://localhost:4000/markdown-extra-components/" rel="alternate" type="text/html" title="Markdown Extra Components" /><published>2016-02-24T22:48:00+00:00</published><updated>2016-02-24T22:48:00+00:00</updated><id>http://localhost:4000/markdown-extra-components</id><content type="html" xml:base="http://localhost:4000/markdown-extra-components/">&lt;h2 id=&quot;summary&quot;&gt;Summary:&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-11-01T18:00:07+00:00</updated><id>http://localhost:4000/</id><title type="html">Lefteris Tatakis</title><subtitle>A Software Engineer based in Oxford. This is a blog about technology (engineering or bike!) and travel.</subtitle><entry><title type="html">Chaos Engineering @ Velocity</title><link href="http://localhost:4000/halloween-chaos-engineering/" rel="alternate" type="text/html" title="Chaos Engineering @ Velocity" /><published>2018-10-31T18:48:00+00:00</published><updated>2018-10-31T18:48:00+00:00</updated><id>http://localhost:4000/halloween-chaos-engineering</id><content type="html" xml:base="http://localhost:4000/halloween-chaos-engineering/">&lt;p&gt;Talk given by @ from Gremlin.&lt;/p&gt;
+
+&lt;h1 id=&quot;what-is-chaos-engineering&quot;&gt;What is Chaos Engineering?&lt;/h1&gt;
+
+&lt;p&gt;Thoughtful, planned experiments designed to reveal the weakness in our systems.&lt;/p&gt;
+
+&lt;p&gt;Where we would try to:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Inject something harmful to build an immunity&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;why-do-it&quot;&gt;Why do it?&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Downtime is really expensive&lt;/li&gt;
+  &lt;li&gt;Our dependencies will fail&lt;/li&gt;
+  &lt;li&gt;Pager fatigue for John and Marcus&lt;/li&gt;
+  &lt;li&gt;Reveal weak points in your systems&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;prerequisites&quot;&gt;Prerequisites&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Dashboard and metrics (New Relic, Kibana) ✅&lt;/li&gt;
+  &lt;li&gt;Alerting ✅&lt;/li&gt;
+  &lt;li&gt;What is our cost per hour of outage? ❓&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;principles-of-chaos-engineering-httpprinciplesofchaosorg-&quot;&gt;Principles of Chaos Engineering (&lt;a href=&quot;http://principlesofchaos.org/&quot;&gt;http://principlesofchaos.org&lt;/a&gt; )&lt;/h1&gt;
+
+&lt;p&gt;These experiments follow four steps:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Start by defining ‘steady state’ as some measurable output of a system that indicates normal behavior.&lt;/li&gt;
+  &lt;li&gt;Hypothesize that this steady state will continue in both the control group and the experimental group.&lt;/li&gt;
+  &lt;li&gt;Introduce variables that reflect real world events like servers that crash, hard drives that malfunction, network connections that are severed, etc.&lt;/li&gt;
+  &lt;li&gt;Try to disprove the hypothesis by looking for a difference in steady state between the control group and the experimental group.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Don’t approach it with a random strategy, instead approach it like a scientific experiment, thoughtful and planned.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;what-experiments-can-you-run&quot;&gt;What experiments can you run?&lt;/h1&gt;
+
+&lt;p&gt;• Reproduce outage conditions
+• Unpredictable circumstances
+• Large traffic spikes
+• Race conditions
+• Datacenter failure
+• Time travel - system clocks to be out of sync
+• Network errors
+• CPU overloads&lt;/p&gt;
+
+&lt;p&gt;However, ensure we restrict the &lt;strong&gt;blast radius&lt;/strong&gt; of our experiments.&lt;/p&gt;
+
+&lt;p&gt;And after each experiment, reiterate the experiment to see if we are resilient to it.&lt;/p&gt;
+
+&lt;h2 id=&quot;where-we-could-we-use-it&quot;&gt;Where we could we use it?&lt;/h2&gt;
+
+&lt;p&gt;We already have it in the pipeline! 👷&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Hint: War games&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Or at least in my intepritation of it. 🤓&lt;/p&gt;
+
+&lt;h1 id=&quot;tools&quot;&gt;Tools&lt;/h1&gt;
+
+&lt;p&gt;Tools that could be used:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Chaos Monkey; &lt;a href=&quot;https://github.com/Netflix/chaosmonkey&quot;&gt;https://github.com/Netflix/chaosmonkey&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Simian Army: &lt;a href=&quot;https://github.com/Netflix/SimianArmy&quot;&gt;https://github.com/Netflix/SimianArmy&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Litmus: &lt;a href=&quot;http://github.com/&quot;&gt;github.com&lt;/a&gt;/openebs/Litmus&lt;/li&gt;
+  &lt;li&gt;Powerful Seal: &lt;a href=&quot;https://github.com/bloomberg/powerfulseal&quot;&gt;https://github.com/bloomberg/powerfulseal&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;other&quot;&gt;Other&lt;/h2&gt;
+
+&lt;p&gt;Post mortem URL: (different outages)
+&lt;a href=&quot;http://github.com/danluu/post-mortems&quot;&gt;github.com/danluu/post-mortems&lt;/a&gt;&lt;/p&gt;</content><author><name>Lefteris Tatakis</name></author><category term="blog" /><category term="markdown" /><category term="components" /><category term="extra" /><summary type="html">Talk given by @ from Gremlin.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Hello World - the beginning</title><link href="http://localhost:4000/hello-world-blog/" rel="alternate" type="text/html" title="Hello World - the beginning" /><published>2018-10-31T13:48:00+00:00</published><updated>2018-10-31T13:48:00+00:00</updated><id>http://localhost:4000/hello-world-blog</id><content type="html" xml:base="http://localhost:4000/hello-world-blog/">&lt;h2 id=&quot;hello-everyone-outthere---️-️&quot;&gt;Hello everyone outthere! 👋  ✌️ ️&lt;/h2&gt;
+&lt;p&gt;Something I have been thinking for a while but never got the time to do it.&lt;/p&gt;
+
+&lt;p&gt;While attending Velocity conference I was inspired by the cool tech and possiblities out there.
+And thought to myself, this would be a great blog post… just a quick summary and overview for people to get a brief introduction on toping touched here.&lt;/p&gt;
+
+&lt;p&gt;Well here it is!! 🎉&lt;/p&gt;
+
+&lt;p&gt;I am going to try do a bit of this, on technology, projects I have worked on, concepts I find awesome that we use at work (event sourcing, Kubernetes etc), possibly some triathlon and maybe some travelling blog posts!&lt;/p&gt;
+
+&lt;p&gt;We shall see what the future brings.&lt;/p&gt;
+
+&lt;p&gt;Its an idea, hopefully, it does not die out too soon 🤞🏻&lt;/p&gt;</content><author><name>Lefteris Tatakis</name></author><category term="blog" /><category term="markdown" /><category term="components" /><category term="extra" /><summary type="html">Hello everyone outthere! 👋 ✌️ ️ Something I have been thinking for a while but never got the time to do it.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Markdown Extra Components</title><link href="http://localhost:4000/markdown-extra-components/" rel="alternate" type="text/html" title="Markdown Extra Components" /><published>2018-01-24T22:48:00+00:00</published><updated>2018-01-24T22:48:00+00:00</updated><id>http://localhost:4000/markdown-extra-components</id><content type="html" xml:base="http://localhost:4000/markdown-extra-components/">&lt;h2 id=&quot;summary&quot;&gt;Summary:&lt;/h2&gt;
 
 &lt;p&gt;You can pick as item to see how to apply in markdown.&lt;/p&gt;
 
@@ -119,17 +212,7 @@
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-raw&quot; data-lang=&quot;raw&quot;&gt;{ % gist sergiokopplin/91ff4220480727b47224245ee2e9c291 % }&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;noscript&gt;&lt;pre&gt;&amp;lt;!DOCTYPE html&amp;gt;
-&amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;
-&amp;lt;head&amp;gt;
-    &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt;
-    &amp;lt;title&amp;gt;Just a Test!&amp;lt;/title&amp;gt;
-&amp;lt;/head&amp;gt;
-&amp;lt;body&amp;gt;
-  &amp;lt;h1&amp;gt;Working!&amp;lt;/h1&amp;gt;
-&amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;&lt;/pre&gt;&lt;/noscript&gt;
-&lt;script src=&quot;https://gist.github.com/sergiokopplin/91ff4220480727b47224245ee2e9c291.js&quot;&gt; &lt;/script&gt;
+&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/sergiokopplin/91ff4220480727b47224245ee2e9c291.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -165,7 +248,7 @@
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;iframe&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;560&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;310&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://www.youtube.com/embed/r7XhWUDj-Ts&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;frameborder=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;allowfullscreen&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/iframe&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;iframe width=&quot;560&quot; height=&quot;310&quot; src=&quot;https://www.youtube.com/embed/r7XhWUDj-Ts&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>jamesfoster</name></author><category term="blog" /><category term="markdown" /><category term="components" /><category term="extra" /><summary type="html">Summary:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Markdown Common Elements</title><link href="http://localhost:4000/markdown-common-elements/" rel="alternate" type="text/html" title="Markdown Common Elements" /><published>2016-02-24T22:44:00+00:00</published><updated>2016-02-24T22:44:00+00:00</updated><id>http://localhost:4000/markdown-common-elements</id><content type="html" xml:base="http://localhost:4000/markdown-common-elements/">&lt;h2 id=&quot;basic-formatting&quot;&gt;Basic formatting&lt;/h2&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;310&quot; src=&quot;https://www.youtube.com/embed/r7XhWUDj-Ts&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name>Lefteris Tatakis</name></author><category term="blog" /><category term="markdown" /><category term="components" /><category term="extra" /><summary type="html">Summary:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Markdown Common Elements</title><link href="http://localhost:4000/markdown-common-elements/" rel="alternate" type="text/html" title="Markdown Common Elements" /><published>2018-01-24T22:44:00+00:00</published><updated>2018-01-24T22:44:00+00:00</updated><id>http://localhost:4000/markdown-common-elements</id><content type="html" xml:base="http://localhost:4000/markdown-common-elements/">&lt;h2 id=&quot;basic-formatting&quot;&gt;Basic formatting&lt;/h2&gt;
 
 &lt;p&gt;This note &lt;strong&gt;demonstrates&lt;/strong&gt; some of what &lt;a href=&quot;http://daringfireball.net/projects/markdown/&quot;&gt;Markdown&lt;/a&gt; is &lt;em&gt;capable of doing&lt;/em&gt;.&lt;/p&gt;
 
@@ -328,25 +411,22 @@ It’s sometimes handy for breaking things up.&lt;/p&gt;
         &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'#hamburguer__open'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fadeIn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'fast'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name>johndoe</name></author><category term="blog" /><category term="markdown" /><category term="elements" /><summary type="html">Basic formatting</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">:ramen: Indigo, minimalist jekyll theme</title><link href="http://localhost:4000/indigo-jekyll-theme/" rel="alternate" type="text/html" title=":ramen: Indigo, minimalist jekyll theme" /><published>2016-01-23T22:10:00+00:00</published><updated>2016-01-23T22:10:00+00:00</updated><id>http://localhost:4000/indigo-jekyll-theme</id><content type="html" xml:base="http://localhost:4000/indigo-jekyll-theme/">&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/sergiokopplin/indigo/gh-pages/assets/screen-shot.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Example of project - Indigo Minimalist Jekyll Template - &lt;a href=&quot;http://sergiokopplin.github.io/indigo/&quot;&gt;Demo&lt;/a&gt;. This is a simple and minimalist template for Jekyll for those who likes to eat noodles.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;What has inside?&lt;/p&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name>johndoe</name></author><category term="blog" /><category term="markdown" /><category term="elements" /><summary type="html">Basic formatting</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Liberty Cars</title><link href="http://localhost:4000/liberty-cars-overview/" rel="alternate" type="text/html" title="Liberty Cars" /><published>2018-01-23T22:10:00+00:00</published><updated>2018-01-23T22:10:00+00:00</updated><id>http://localhost:4000/liberty-cars-overview</id><content type="html" xml:base="http://localhost:4000/liberty-cars-overview/">&lt;p&gt;What did I build it with&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Gulp&lt;/li&gt;
-  &lt;li&gt;BrowserSync&lt;/li&gt;
-  &lt;li&gt;Stylus&lt;/li&gt;
-  &lt;li&gt;SVG&lt;/li&gt;
-  &lt;li&gt;Travis&lt;/li&gt;
-  &lt;li&gt;No JS&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fsergiokopplin.github.io%2Findigo%2F&quot;&gt;98/100&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Angular 5&lt;/li&gt;
+  &lt;li&gt;NodeJs Lambdas&lt;/li&gt;
+  &lt;li&gt;TDD’ed the pricing mechanism&lt;/li&gt;
+  &lt;li&gt;Deployment scripts to S3.&lt;/li&gt;
+  &lt;li&gt;Google Drive intergration as Databases&lt;/li&gt;
+  &lt;li&gt;Email service for invoicing&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;Actually this was the 2nd iteration of this project. Initially it was deployed on AWS ….
+However, to drive cost saving as the service does not have a lot of traffic, I decided to change the deployment paridgim to S3 and Lambdas.&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://sergiokopplin.github.io/indigo/&quot;&gt;Check it out&lt;/a&gt; here.
-If you need some help, just &lt;a href=&quot;http://github.com/sergiokopplin/indigo/issues&quot;&gt;tell me&lt;/a&gt;.&lt;/p&gt;</content><author><name>johndoe</name></author><category term="project" /><category term="jekyll" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://koppl.in/indigo/assets/images/jekyll-logo-light-solid.png" /></entry></feed>
+&lt;p&gt;&lt;a href=&quot;https://libertycars.gr&quot;&gt;Check it out&lt;/a&gt; here.&lt;/p&gt;</content><author><name>Lefteris Tatakis</name></author><category term="project" /><category term="ecommerce, lambdas, AWS, Angular, JavaScript, Nodejs" /><summary type="html">What did I build it with</summary></entry><entry><title type="html">Monthly Financial Reporting</title><link href="http://localhost:4000/financial-reporting-tool-commandline/" rel="alternate" type="text/html" title="Monthly Financial Reporting" /><published>2018-01-09T22:10:00+00:00</published><updated>2018-01-09T22:10:00+00:00</updated><id>http://localhost:4000/financial-reporting-tool-commandline</id><content type="html" xml:base="http://localhost:4000/financial-reporting-tool-commandline/">&lt;p&gt;TODO&lt;/p&gt;
+
+&lt;hr /&gt;</content><author><name>Lefteris Tatakis</name></author><category term="project" /><category term="budgeting, nodejs" /><summary type="html">TODO</summary></entry></feed>

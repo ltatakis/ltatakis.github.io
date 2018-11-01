@@ -1,7 +1,7 @@
 ---
 title: "Markdown Extra Components"
 layout: post
-date: 2016-02-24 22:48
+date: 2018-01-24 22:48
 image: /assets/images/markdown.jpg
 headerImage: false
 tag:
@@ -9,7 +9,7 @@ tag:
 - components
 - extra
 category: blog
-author: jamesfoster
+author: Lefteris Tatakis
 description: Markdown summary with different options
 # jemoji: '<img class="emoji" title=":ramen:" alt=":ramen:" src="https://assets.github.com/images/icons/emoji/unicode/1f35c.png" height="20" width="20" align="absmiddle">'
 ---
