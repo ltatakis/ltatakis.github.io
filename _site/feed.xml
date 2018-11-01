@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-11-01T18:00:07+00:00</updated><id>http://localhost:4000/</id><title type="html">Lefteris Tatakis</title><subtitle>A Software Engineer based in Oxford. This is a blog about technology (engineering or bike!) and travel.</subtitle><entry><title type="html">Chaos Engineering @ Velocity</title><link href="http://localhost:4000/halloween-chaos-engineering/" rel="alternate" type="text/html" title="Chaos Engineering @ Velocity" /><published>2018-10-31T18:48:00+00:00</published><updated>2018-10-31T18:48:00+00:00</updated><id>http://localhost:4000/halloween-chaos-engineering</id><content type="html" xml:base="http://localhost:4000/halloween-chaos-engineering/">&lt;p&gt;Talk given by @ from Gremlin.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-11-01T20:32:23+00:00</updated><id>http://localhost:4000/</id><title type="html">Lefteris Tatakis</title><subtitle>A Software Engineer based in Oxford. This is a blog about technology (engineering or bike!) and travel.</subtitle><entry><title type="html">Chaos Engineering @ Velocity</title><link href="http://localhost:4000/halloween-chaos-engineering/" rel="alternate" type="text/html" title="Chaos Engineering @ Velocity" /><published>2018-10-31T18:48:00+00:00</published><updated>2018-10-31T18:48:00+00:00</updated><id>http://localhost:4000/halloween-chaos-engineering</id><content type="html" xml:base="http://localhost:4000/halloween-chaos-engineering/">&lt;p&gt;Talk given by @ from Gremlin.&lt;/p&gt;
 
 &lt;h1 id=&quot;what-is-chaos-engineering&quot;&gt;What is Chaos Engineering?&lt;/h1&gt;
 
@@ -79,7 +79,13 @@
 &lt;h2 id=&quot;other&quot;&gt;Other&lt;/h2&gt;
 
 &lt;p&gt;Post mortem URL: (different outages)
-&lt;a href=&quot;http://github.com/danluu/post-mortems&quot;&gt;github.com/danluu/post-mortems&lt;/a&gt;&lt;/p&gt;</content><author><name>Lefteris Tatakis</name></author><category term="blog" /><category term="markdown" /><category term="components" /><category term="extra" /><summary type="html">Talk given by @ from Gremlin.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Hello World - the beginning</title><link href="http://localhost:4000/hello-world-blog/" rel="alternate" type="text/html" title="Hello World - the beginning" /><published>2018-10-31T13:48:00+00:00</published><updated>2018-10-31T13:48:00+00:00</updated><id>http://localhost:4000/hello-world-blog</id><content type="html" xml:base="http://localhost:4000/hello-world-blog/">&lt;h2 id=&quot;hello-everyone-outthere---️-️&quot;&gt;Hello everyone outthere! 👋  ✌️ ️&lt;/h2&gt;
+&lt;a href=&quot;http://github.com/danluu/post-mortems&quot;&gt;github.com/danluu/post-mortems&lt;/a&gt;&lt;/p&gt;</content><author><name>Lefteris Tatakis</name></author><category term="blog" /><category term="markdown" /><category term="components" /><category term="extra" /><summary type="html">Talk given by @ from Gremlin.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Kubernetes a childs guide</title><link href="http://localhost:4000/kubernetes-101/" rel="alternate" type="text/html" title="Kubernetes a childs guide" /><published>2018-10-31T13:48:00+00:00</published><updated>2018-10-31T13:48:00+00:00</updated><id>http://localhost:4000/kubernetes-101</id><content type="html" xml:base="http://localhost:4000/kubernetes-101/">&lt;p&gt;Kubernetes.&lt;/p&gt;
+
+&lt;p&gt;Containers - docker&lt;/p&gt;
+
+&lt;p&gt;Yaml&lt;/p&gt;
+
+&lt;p&gt;and more&lt;/p&gt;</content><author><name>Lefteris Tatakis</name></author><category term="blog" /><category term="markdown" /><category term="components" /><category term="extra" /><summary type="html">Kubernetes.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Hello World - the beginning</title><link href="http://localhost:4000/hello-world-blog/" rel="alternate" type="text/html" title="Hello World - the beginning" /><published>2018-10-31T13:48:00+00:00</published><updated>2018-10-31T13:48:00+00:00</updated><id>http://localhost:4000/hello-world-blog</id><content type="html" xml:base="http://localhost:4000/hello-world-blog/">&lt;h2 id=&quot;hello-everyone-outthere---️-️&quot;&gt;Hello everyone outthere! 👋  ✌️ ️&lt;/h2&gt;
 &lt;p&gt;Something I have been thinking for a while but never got the time to do it.&lt;/p&gt;
 
 &lt;p&gt;While attending Velocity conference I was inspired by the cool tech and possiblities out there.
@@ -212,7 +218,17 @@ And thought to myself, this would be a great blog post… just a quick summary a
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-raw&quot; data-lang=&quot;raw&quot;&gt;{ % gist sergiokopplin/91ff4220480727b47224245ee2e9c291 % }&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/sergiokopplin/91ff4220480727b47224245ee2e9c291.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;
+&amp;lt;head&amp;gt;
+    &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt;
+    &amp;lt;title&amp;gt;Just a Test!&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+  &amp;lt;h1&amp;gt;Working!&amp;lt;/h1&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/sergiokopplin/91ff4220480727b47224245ee2e9c291.js&quot;&gt; &lt;/script&gt;
 
 &lt;hr /&gt;
 
