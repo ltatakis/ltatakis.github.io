@@ -24,17 +24,19 @@ Currently I am working at Elsevier as a
 <h2>Skills</h2>
 
 <ul class="skill-list">
-	<li>AWS - EC2, Lambdas, RDS, SecretManager and more</li>
 	<li>NodeJS</li>
 	<li>TypeScript</li>
-	<li>Vue.js</li>
+	<li>AWS - EC2, Lambdas, RDS, SecretManager and more</li>
 	<li>Kubernetes</li>
+	<li>Vue.js</li>
 	<li>Infrastructure as Code: Terraform, Ansible, Puppet</li>
 	<li>Jenkins</li>
+	<li>Docker</li>
 	<li>Responsive (Mobile First)</li>
 	<li>Git</li>
 	<li>REST API's</li>
 	<li>MySQL</li>
+	<li>Cypress</li>
 	<li>Scrum and Kanban</li>
 	<li>TDD </li>
 	<li>ElasticSearch</li>
