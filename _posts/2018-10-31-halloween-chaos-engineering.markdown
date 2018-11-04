@@ -37,7 +37,7 @@ Where we would try to:
 2. Alerting 
 3. What is our cost per hour of outage? 
 
-# Principles of Chaos Engineering ([http://principlesofchaos.org](http://principlesofchaos.org/) )
+# [Principles of Chaos Engineering](http://principlesofchaos.org/)
 
 These experiments follow four steps:
 
@@ -50,14 +50,14 @@ These experiments follow four steps:
 
 # What experiments can you run?
 
-• Reproduce outage conditions
-• Unpredictable circumstances
-• Large traffic spikes
-• Race conditions
-• Datacenter failure
-• Time travel - system clocks to be out of sync
-• Network errors
-• CPU overloads
+- Reproduce outage conditions
+- Unpredictable circumstances
+- Large traffic spikes
+- Race conditions
+- Datacenter failure
+- Time travel - system clocks to be out of sync
+- Network errors
+- CPU overloads
 
 However, ensure we restrict the **blast radius** of our experiments.
 
@@ -73,6 +73,5 @@ Tools that could be used:
 - Powerful Seal: [https://github.com/bloomberg/powerfulseal](https://github.com/bloomberg/powerfulseal)
 
 ## Other
+An interesting link that was shared during the talk was [github.com/danluu/post-mortems](http://github.com/danluu/post-mortems). A repo of a number of post mortem of large company outages.
 
-Post mortem URL: (different outages)
-[github.com/danluu/post-mortems](http://github.com/danluu/post-mortems)

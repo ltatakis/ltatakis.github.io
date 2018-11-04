@@ -3,7 +3,7 @@ title: About
 layout: page
 ---
 ![Profile Image]({{ site.url }}/{{ site.picture }})
-<figcaption class="caption">The glory of British Summer! </figcaption>
+<figcaption class="caption">The glory of Greek Summer! </figcaption>
 
 <p>Hello!👋
 I am Lefteris! A software engineer commited to solving problems and always up for an interesting challenge.

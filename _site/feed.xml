@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-11-04T15:51:23+00:00</updated><id>http://localhost:4000/</id><title type="html">Lefteris Tatakis</title><subtitle>A Software Engineer based in Oxford. This is a blog about technology (engineering or bike!) and travel.</subtitle><entry><title type="html">Event Sourcing</title><link href="http://localhost:4000/event-sourcing/" rel="alternate" type="text/html" title="Event Sourcing" /><published>2018-11-03T00:00:00+00:00</published><updated>2018-11-03T00:00:00+00:00</updated><id>http://localhost:4000/event-sourcing</id><content type="html" xml:base="http://localhost:4000/event-sourcing/">&lt;!-- ---
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-11-04T17:25:26+00:00</updated><id>http://localhost:4000/</id><title type="html">Lefteris Tatakis</title><subtitle>A Software Engineer based in Oxford. This is a blog about technology (engineering or bike!) and travel.</subtitle><entry><title type="html">Event Sourcing</title><link href="http://localhost:4000/event-sourcing/" rel="alternate" type="text/html" title="Event Sourcing" /><published>2018-11-03T00:00:00+00:00</published><updated>2018-11-03T00:00:00+00:00</updated><id>http://localhost:4000/event-sourcing</id><content type="html" xml:base="http://localhost:4000/event-sourcing/">&lt;!-- ---
 title: &quot;Event Sourcing&quot;
 layout: post
 date: 2018-11-03 22:10
@@ -43,7 +43,7 @@ TODO --&gt;</content><author><name></name></author><summary type="html">&amp;lt;
   &lt;li&gt;What is our cost per hour of outage?&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h1 id=&quot;principles-of-chaos-engineering-httpprinciplesofchaosorg-&quot;&gt;Principles of Chaos Engineering (&lt;a href=&quot;http://principlesofchaos.org/&quot;&gt;http://principlesofchaos.org&lt;/a&gt; )&lt;/h1&gt;
+&lt;h1 id=&quot;principles-of-chaos-engineering&quot;&gt;&lt;a href=&quot;http://principlesofchaos.org/&quot;&gt;Principles of Chaos Engineering&lt;/a&gt;&lt;/h1&gt;
 
 &lt;p&gt;These experiments follow four steps:&lt;/p&gt;
 
@@ -60,14 +60,16 @@ TODO --&gt;</content><author><name></name></author><summary type="html">&amp;lt;
 
 &lt;h1 id=&quot;what-experiments-can-you-run&quot;&gt;What experiments can you run?&lt;/h1&gt;
 
-&lt;p&gt;• Reproduce outage conditions
-• Unpredictable circumstances
-• Large traffic spikes
-• Race conditions
-• Datacenter failure
-• Time travel - system clocks to be out of sync
-• Network errors
-• CPU overloads&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Reproduce outage conditions&lt;/li&gt;
+  &lt;li&gt;Unpredictable circumstances&lt;/li&gt;
+  &lt;li&gt;Large traffic spikes&lt;/li&gt;
+  &lt;li&gt;Race conditions&lt;/li&gt;
+  &lt;li&gt;Datacenter failure&lt;/li&gt;
+  &lt;li&gt;Time travel - system clocks to be out of sync&lt;/li&gt;
+  &lt;li&gt;Network errors&lt;/li&gt;
+  &lt;li&gt;CPU overloads&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;However, ensure we restrict the &lt;strong&gt;blast radius&lt;/strong&gt; of our experiments.&lt;/p&gt;
 
@@ -85,17 +87,53 @@ TODO --&gt;</content><author><name></name></author><summary type="html">&amp;lt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;other&quot;&gt;Other&lt;/h2&gt;
+&lt;p&gt;An interesting link that was shared during the talk was &lt;a href=&quot;http://github.com/danluu/post-mortems&quot;&gt;github.com/danluu/post-mortems&lt;/a&gt;. A repo of a number of post mortem of large company outages.&lt;/p&gt;</content><author><name>LefterisTatakis</name></author><category term="blog" /><category term="chaos engineering" /><category term="velocity" /><category term="tech" /><summary type="html">Talk given by @Ana_M_Medina from Gremlin.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Kubernetes a childs guide</title><link href="http://localhost:4000/kubernetes-101/" rel="alternate" type="text/html" title="Kubernetes a childs guide" /><published>2018-10-31T13:48:00+00:00</published><updated>2018-10-31T13:48:00+00:00</updated><id>http://localhost:4000/kubernetes-101</id><content type="html" xml:base="http://localhost:4000/kubernetes-101/">&lt;h2 id=&quot;what-is-a-container&quot;&gt;What is a container&lt;/h2&gt;
 
-&lt;p&gt;Post mortem URL: (different outages)
-&lt;a href=&quot;http://github.com/danluu/post-mortems&quot;&gt;github.com/danluu/post-mortems&lt;/a&gt;&lt;/p&gt;</content><author><name>LefterisTatakis</name></author><category term="blog" /><category term="chaos engineering" /><category term="velocity" /><category term="tech" /><summary type="html">Talk given by @Ana_M_Medina from Gremlin.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Kubernetes a childs guide</title><link href="http://localhost:4000/kubernetes-101/" rel="alternate" type="text/html" title="Kubernetes a childs guide" /><published>2018-10-31T13:48:00+00:00</published><updated>2018-10-31T13:48:00+00:00</updated><id>http://localhost:4000/kubernetes-101</id><content type="html" xml:base="http://localhost:4000/kubernetes-101/">&lt;p&gt;👷🏻‍ UNDER CONTRUCTION 👷🏻‍&lt;/p&gt;
+&lt;p&gt;Containers let you isolate an application so that its under the impression its running on its own private machine&lt;/p&gt;
 
+&lt;p&gt;The most popular container platform for this is Docker.&lt;/p&gt;
+
+&lt;h2 id=&quot;kubernetes&quot;&gt;Kubernetes&lt;/h2&gt;
+
+&lt;p&gt;In my mind its just a management system of containers. Deploying them, manageing them, failure recovery and scaling.
+Primarily used for micro services.
+The most common use case for kubernetes is with docker containers.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-do-i-need-to-get-started&quot;&gt;What do I need to get started&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A dockerised application.&lt;/li&gt;
+  &lt;li&gt;A yml file so k8s knows what it needs for your app.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Eg like:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;na&quot;&gt;apiVersion&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;v1&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;kind&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Pod&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;metadata&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;nginx&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;spec&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;containers&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;nginx&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;nginx:1.7.9&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;ports&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;containerPort&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;80&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;how-can-you-manage-the-cluster&quot;&gt;How can you manage the cluster&lt;/h2&gt;
+
+&lt;p&gt;At the moment, my team and I use Tectonic, which helps us check deployments and manage the cluster to some basic extent.
+Its not perfect. It has issues, as losing the logs at time, not being very descriptive and a lot of black magic related to it.&lt;/p&gt;
+
+&lt;p&gt;Most of the time we feel last of control.
+Of course that might not be your experience of it, however, we are investigating other solutions.&lt;/p&gt;
+
+&lt;h2 id=&quot;namespaces&quot;&gt;Namespaces&lt;/h2&gt;
+
+&lt;p&gt;👷🏻‍ UNDER CONTRUCTION 👷🏻‍&lt;/p&gt;
+
+&lt;h2 id=&quot;kubectl&quot;&gt;Kubectl&lt;/h2&gt;
 &lt;iframe src=&quot;https://giphy.com/embed/tAeB6dptxnoli&quot; width=&quot;480&quot; height=&quot;446&quot; frameborder=&quot;0&quot; class=&quot;giphy-embed&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;p&gt;&lt;a href=&quot;https://giphy.com/gifs/construction-tAeB6dptxnoli&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;!-- Kubernetes. --&gt;
-&lt;!-- Containers - docker --&gt;
-&lt;!-- Yaml --&gt;
-&lt;!-- and more --&gt;</content><author><name>Lefteris Tatakis</name></author><category term="blog" /><category term="kubernetes" /><summary type="html">👷🏻‍ UNDER CONTRUCTION 👷🏻‍</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Hello World - the beginning</title><link href="http://localhost:4000/hello-world-blog/" rel="alternate" type="text/html" title="Hello World - the beginning" /><published>2018-10-31T13:48:00+00:00</published><updated>2018-10-31T13:48:00+00:00</updated><id>http://localhost:4000/hello-world-blog</id><content type="html" xml:base="http://localhost:4000/hello-world-blog/">&lt;h2 id=&quot;hello-everyone-outthere---️-️&quot;&gt;Hello everyone outthere! 👋  ✌️ ️&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://giphy.com/gifs/construction-tAeB6dptxnoli&quot;&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>Lefteris Tatakis</name></author><category term="blog" /><category term="kubernetes" /><summary type="html">What is a container</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Hello World - the beginning</title><link href="http://localhost:4000/hello-world-blog/" rel="alternate" type="text/html" title="Hello World - the beginning" /><published>2018-10-31T13:48:00+00:00</published><updated>2018-10-31T13:48:00+00:00</updated><id>http://localhost:4000/hello-world-blog</id><content type="html" xml:base="http://localhost:4000/hello-world-blog/">&lt;h2 id=&quot;hello-everyone-outthere---️-️&quot;&gt;Hello everyone outthere! 👋  ✌️ ️&lt;/h2&gt;
 &lt;p&gt;This is something I have been thinking for a while but never got the time to do it.&lt;/p&gt;
 
 &lt;p&gt;While attending Velocity conference I was inspired by the cool tech and possiblities out there.
@@ -526,12 +564,9 @@ A JS Example:
   &lt;li&gt;Email service for invoicing&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Actually this was the 2nd iteration of this project. Initially it was deployed on AWS Lightsail.
-However, to drive cost saving as the service does not have a lot of traffic, I decided to change the deployment paridgim to S3 and Lambdas.&lt;/p&gt;
+&lt;p&gt;This was the 2nd iteration of this project. Initially, it was deployed on AWS Lightsail, however, to drive cost saving as the service does not have a lot of traffic, I decided to change the deployment paridgim to S3, Lambdas, and Google Drive.&lt;/p&gt;
 
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://libertycars.gr&quot;&gt;Check it out&lt;/a&gt; here.&lt;/p&gt;</content><author><name>LefterisTatakis</name></author><category term="project" /><category term="ecommerce, lambdas, AWS, Angular, JavaScript, Nodejs" /><summary type="html">What did I build it with</summary></entry><entry><title type="html">Cretecompare</title><link href="http://localhost:4000/cretecompare/" rel="alternate" type="text/html" title="Cretecompare" /><published>2018-01-23T22:10:00+00:00</published><updated>2018-01-23T22:10:00+00:00</updated><id>http://localhost:4000/cretecompare</id><content type="html" xml:base="http://localhost:4000/cretecompare/">&lt;p&gt;Overview of the key outcomes of this project:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.libertycars.gr&quot;&gt;Check it out&lt;/a&gt; here.&lt;/p&gt;</content><author><name>LefterisTatakis</name></author><category term="project" /><category term="ecommerce, lambdas, AWS, Angular, JavaScript, Nodejs" /><summary type="html">What did I build it with</summary></entry><entry><title type="html">Cretecompare</title><link href="http://localhost:4000/cretecompare/" rel="alternate" type="text/html" title="Cretecompare" /><published>2018-01-23T22:10:00+00:00</published><updated>2018-01-23T22:10:00+00:00</updated><id>http://localhost:4000/cretecompare</id><content type="html" xml:base="http://localhost:4000/cretecompare/">&lt;p&gt;Overview of the key outcomes of this project:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Secured three local stakeholders to be promoted through the website.&lt;/li&gt;
   &lt;li&gt;Designed and implemented secure and persistent interfaces for the clients and the stakeholders, using Spring Security, HTML5, AngularJS, Hibernate and MongoDB.&lt;/li&gt;

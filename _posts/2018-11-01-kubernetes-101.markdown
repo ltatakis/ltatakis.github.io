@@ -12,12 +12,48 @@ description: Kubernetes 101 - how I understand it
 # jemoji: '<img class="emoji" title=":ramen:" alt=":ramen:" src="https://assets.github.com/images/icons/emoji/unicode/1f35c.png" height="20" width="20" align="absmiddle">'
 ---
 
+## What is a container
+
+Containers let you isolate an application so that its under the impression its running on its own private machine
+
+The most popular container platform for this is Docker.
+
+## Kubernetes
+
+In my mind its just a management system of containers. Deploying them, manageing them, failure recovery and scaling.
+Primarily used for micro services.
+The most common use case for kubernetes is with docker containers.
+
+## What do I need to get started
+
+- A dockerised application.
+- A yml file so k8s knows what it needs for your app.
+
+Eg like:
+{% highlight yaml %}
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+spec:
+  containers:
+  - name: nginx
+    image: nginx:1.7.9
+    ports:
+    - containerPort: 80
+{% endhighlight %}
+
+## How can you manage the cluster
+
+At the moment, my team and I use Tectonic, which helps us check deployments and manage the cluster to some basic extent.
+Its not perfect. It has issues, as losing the logs at time, not being very descriptive and a lot of black magic related to it.
+
+Most of the time we feel last of control.
+Of course that might not be your experience of it, however, we are investigating other solutions.
+
+## Namespaces
 
 👷🏻‍ UNDER CONTRUCTION 👷🏻‍
 
+## Kubectl
 <iframe src="https://giphy.com/embed/tAeB6dptxnoli" width="480" height="446" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/construction-tAeB6dptxnoli"></a></p>
-
-<!-- Kubernetes. -->
-<!-- Containers - docker -->
-<!-- Yaml -->
-<!-- and more -->
