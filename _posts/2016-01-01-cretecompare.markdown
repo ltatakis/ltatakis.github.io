@@ -28,7 +28,6 @@ Overview of the key outcomes of this project:
 - Promoted my work through social media platforms.
 
 
-
 ![Markdowm Image][1]
 <figcaption class="caption">Listing page of CreteCompare</figcaption>
 
