@@ -41,6 +41,6 @@ Some of my favourite pictures from my Peru trip 😊
 [2]: /assets/peru/amazon.jpg
 [3]: /assets/peru/incaking.JPG
 [4]: /assets/peru/incandog.JPG
-[5]: /assets/peru/river.JPG
+[5]: /assets/peru/river.jpg
 [6]: /assets/peru/Ollantaytambo.JPG
-[7]: /assets/peru/trainToCusco.JPG
+[7]: /assets/peru/trainToCusco.jpg
