@@ -6,17 +6,23 @@ image: /assets/images/markdown.jpg
 headerImage: false
 tag:
 - kubernetes
+- containers
+- Docker
+- kubectl
 category: blog
 author: Lefteris Tatakis
 description: Kubernetes 101 - how I understand it
 # jemoji: '<img class="emoji" title=":ramen:" alt=":ramen:" src="https://assets.github.com/images/icons/emoji/unicode/1f35c.png" height="20" width="20" align="absmiddle">'
 ---
 
+As most of my "blogs" on this site, this post is a point of reference for me. A quick guide of the things I learned and has most probably forgot over time.
+I plan on coming back to this and adding (or removing) information I dont agree with or I don't find useful anymore.
+
 ## What is a container
 
 Containers let you isolate an application so that its under the impression its running on its own private machine
 
-The most popular container platform for this is Docker.
+The most popular container platform for this is [Docker](https://www.docker.com/).
 
 ## Kubernetes
 
@@ -45,11 +51,12 @@ spec:
 
 ## How can you manage the cluster
 
-At the moment, my team and I use Tectonic, which helps us check deployments and manage the cluster to some basic extent.
-Its not perfect. It has issues, as losing the logs at time, not being very descriptive and a lot of black magic related to it.
+At the moment, my team and I use Tectonic. 
+Tectonic helps us check deployments and manage the cluster to some basic extent.
+However, its not perfect such as as losing the logs, unable to retrieve the event history for pods, not being very descriptive and a lot of black magic related to it.
 
-Most of the time we feel last of control.
-Of course that might not be your experience of it, however, we are investigating other solutions.
+Most of the time we feel we don't have control of our own clusters.
+We are actively investigating other solutions, primarily moving to AWS EKS and using the default kubernetes dashboard.
 
 ## Namespaces
 

@@ -18,8 +18,8 @@ description: The idea of a blog
 ## Hello everyone outthere! 👋  ✌️ ️
 This is something I have been thinking for a while but never got the time to do it.
 
-While attending Velocity conference I was inspired by the cool tech and possiblities out there.
-And thought to myself, this would be a great blog post... just a quick summary and overview for people to get a brief introduction on toping touched here.
+While attending [Velocity](https://conferences.oreilly.com/velocity), I was inspired by the cool tech and possiblities out there.
+I therefore decided creating a summary and overview for people to get a brief introduction on topics touched upon at the Conference, would be something I would enjoy doing.
 
 Well here it is!! 🎉
 

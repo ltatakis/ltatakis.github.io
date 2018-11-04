@@ -1,4 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-11-04T17:25:26+00:00</updated><id>http://localhost:4000/</id><title type="html">Lefteris Tatakis</title><subtitle>A Software Engineer based in Oxford. This is a blog about technology (engineering or bike!) and travel.</subtitle><entry><title type="html">Event Sourcing</title><link href="http://localhost:4000/event-sourcing/" rel="alternate" type="text/html" title="Event Sourcing" /><published>2018-11-03T00:00:00+00:00</published><updated>2018-11-03T00:00:00+00:00</updated><id>http://localhost:4000/event-sourcing</id><content type="html" xml:base="http://localhost:4000/event-sourcing/">&lt;!-- ---
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-11-04T19:12:57+00:00</updated><id>http://localhost:4000/</id><title type="html">Lefteris Tatakis</title><subtitle>A Software Engineer based in Oxford. This is a blog about technology (engineering or bike!) and travel.</subtitle><entry><title type="html">Expedition Peru</title><link href="http://localhost:4000/my-trip-to-peru/" rel="alternate" type="text/html" title="Expedition Peru" /><published>2018-11-04T18:48:00+00:00</published><updated>2018-11-04T18:48:00+00:00</updated><id>http://localhost:4000/my-trip-to-peru</id><content type="html" xml:base="http://localhost:4000/my-trip-to-peru/">&lt;p&gt;Some of my favourite pictures from my Peru trip 😊&lt;/p&gt;
+
+&lt;figcaption class=&quot;caption&quot;&gt;Machuu Pichuu&lt;/figcaption&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/peru/peru.JPG&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;
+
+&lt;figcaption class=&quot;caption&quot;&gt;The Amazon - it was amazing!&lt;/figcaption&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/peru/amazon.jpg&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;
+
+&lt;figcaption class=&quot;caption&quot;&gt;The Incan king in Cusco&lt;/figcaption&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/peru/incaking.JPG&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;
+
+&lt;figcaption class=&quot;caption&quot;&gt;A traditional Incan dog - used to be considered as bad luck. Now are a point of pride for the locals&lt;/figcaption&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/peru/incandog.JPG&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;
+
+&lt;figcaption class=&quot;caption&quot;&gt;Driving towards Ollantaytambo &lt;/figcaption&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/peru/river.JPG&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;
+
+&lt;figcaption class=&quot;caption&quot;&gt;Ollantaytambo store warehouses&lt;/figcaption&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/peru/Ollantaytambo.JPG&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;
+
+&lt;figcaption class=&quot;caption&quot;&gt;A fantastic view of the mountain towards Aqua Calientes &lt;/figcaption&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/peru/trainToCusco.JPG&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;</content><author><name>LefterisTatakis</name></author><category term="blog" /><category term="travel" /><category term="peru" /><category term="photos" /><summary type="html">Some of my favourite pictures from my Peru trip 😊</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Event Sourcing</title><link href="http://localhost:4000/event-sourcing/" rel="alternate" type="text/html" title="Event Sourcing" /><published>2018-11-03T00:00:00+00:00</published><updated>2018-11-03T00:00:00+00:00</updated><id>http://localhost:4000/event-sourcing</id><content type="html" xml:base="http://localhost:4000/event-sourcing/">&lt;!-- ---
 title: &quot;Event Sourcing&quot;
 layout: post
 date: 2018-11-03 22:10
@@ -13,8 +34,7 @@ author: LefterisTatakis
 externalLink: false
 ---
 
-TODO --&gt;</content><author><name></name></author><summary type="html">&amp;lt;!– — title: “Event Sourcing” layout: post date: 2018-11-03 22:10 tag: event sourcing, node image: # TODO headerImage: true projects: true hidden: true # don’t count this post in blog pagination description: “Even Sourcing ..” category: blog author: LefterisTatakis externalLink: false —</summary></entry><entry><title type="html">Expedition Peru! Machuu Pichuuu</title><link href="http://localhost:4000/my-trip-to-peru/" rel="alternate" type="text/html" title="Expedition Peru! Machuu Pichuuu" /><published>2018-11-01T18:48:00+00:00</published><updated>2018-11-01T18:48:00+00:00</updated><id>http://localhost:4000/my-trip-to-peru</id><content type="html" xml:base="http://localhost:4000/my-trip-to-peru/">&lt;p&gt;&lt;img src=&quot;/assets/images/peru.JPG&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;
-&lt;figcaption class=&quot;caption&quot;&gt;Photo by me - more to come &lt;/figcaption&gt;</content><author><name>LefterisTatakis</name></author><category term="blog" /><category term="travel" /><category term="peru" /><summary type="html">Photo by me - more to come</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Chaos Engineering @ Velocity</title><link href="http://localhost:4000/halloween-chaos-engineering/" rel="alternate" type="text/html" title="Chaos Engineering @ Velocity" /><published>2018-10-31T18:48:00+00:00</published><updated>2018-10-31T18:48:00+00:00</updated><id>http://localhost:4000/halloween-chaos-engineering</id><content type="html" xml:base="http://localhost:4000/halloween-chaos-engineering/">&lt;p&gt;Talk given by @Ana_M_Medina from Gremlin.&lt;/p&gt;
+TODO --&gt;</content><author><name></name></author><summary type="html">&amp;lt;!– — title: “Event Sourcing” layout: post date: 2018-11-03 22:10 tag: event sourcing, node image: # TODO headerImage: true projects: true hidden: true # don’t count this post in blog pagination description: “Even Sourcing ..” category: blog author: LefterisTatakis externalLink: false —</summary></entry><entry><title type="html">Chaos Engineering @ Velocity</title><link href="http://localhost:4000/halloween-chaos-engineering/" rel="alternate" type="text/html" title="Chaos Engineering @ Velocity" /><published>2018-10-31T18:48:00+00:00</published><updated>2018-10-31T18:48:00+00:00</updated><id>http://localhost:4000/halloween-chaos-engineering</id><content type="html" xml:base="http://localhost:4000/halloween-chaos-engineering/">&lt;p&gt;Talk given by @Ana_M_Medina from Gremlin.&lt;/p&gt;
 
 &lt;h1 id=&quot;what-is-chaos-engineering&quot;&gt;What is Chaos Engineering?&lt;/h1&gt;
 
@@ -87,11 +107,14 @@ TODO --&gt;</content><author><name></name></author><summary type="html">&amp;lt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;other&quot;&gt;Other&lt;/h2&gt;
-&lt;p&gt;An interesting link that was shared during the talk was &lt;a href=&quot;http://github.com/danluu/post-mortems&quot;&gt;github.com/danluu/post-mortems&lt;/a&gt;. A repo of a number of post mortem of large company outages.&lt;/p&gt;</content><author><name>LefterisTatakis</name></author><category term="blog" /><category term="chaos engineering" /><category term="velocity" /><category term="tech" /><summary type="html">Talk given by @Ana_M_Medina from Gremlin.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Kubernetes a childs guide</title><link href="http://localhost:4000/kubernetes-101/" rel="alternate" type="text/html" title="Kubernetes a childs guide" /><published>2018-10-31T13:48:00+00:00</published><updated>2018-10-31T13:48:00+00:00</updated><id>http://localhost:4000/kubernetes-101</id><content type="html" xml:base="http://localhost:4000/kubernetes-101/">&lt;h2 id=&quot;what-is-a-container&quot;&gt;What is a container&lt;/h2&gt;
+&lt;p&gt;An interesting link that was shared during the talk was &lt;a href=&quot;http://github.com/danluu/post-mortems&quot;&gt;github.com/danluu/post-mortems&lt;/a&gt;. A repo of a number of post mortem of large company outages.&lt;/p&gt;</content><author><name>LefterisTatakis</name></author><category term="blog" /><category term="chaos engineering" /><category term="velocity" /><category term="tech" /><summary type="html">Talk given by @Ana_M_Medina from Gremlin.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Kubernetes a childs guide</title><link href="http://localhost:4000/kubernetes-101/" rel="alternate" type="text/html" title="Kubernetes a childs guide" /><published>2018-10-31T13:48:00+00:00</published><updated>2018-10-31T13:48:00+00:00</updated><id>http://localhost:4000/kubernetes-101</id><content type="html" xml:base="http://localhost:4000/kubernetes-101/">&lt;p&gt;As most of my “blogs” on this site, this post is a point of reference for me. A quick guide of the things I learned and has most probably forgot over time.
+I plan on coming back to this and adding (or removing) information I dont agree with or I don’t find useful anymore.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-is-a-container&quot;&gt;What is a container&lt;/h2&gt;
 
 &lt;p&gt;Containers let you isolate an application so that its under the impression its running on its own private machine&lt;/p&gt;
 
-&lt;p&gt;The most popular container platform for this is Docker.&lt;/p&gt;
+&lt;p&gt;The most popular container platform for this is &lt;a href=&quot;https://www.docker.com/&quot;&gt;Docker&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;kubernetes&quot;&gt;Kubernetes&lt;/h2&gt;
 
@@ -121,11 +144,12 @@ The most common use case for kubernetes is with docker containers.&lt;/p&gt;
 
 &lt;h2 id=&quot;how-can-you-manage-the-cluster&quot;&gt;How can you manage the cluster&lt;/h2&gt;
 
-&lt;p&gt;At the moment, my team and I use Tectonic, which helps us check deployments and manage the cluster to some basic extent.
-Its not perfect. It has issues, as losing the logs at time, not being very descriptive and a lot of black magic related to it.&lt;/p&gt;
+&lt;p&gt;At the moment, my team and I use Tectonic. 
+Tectonic helps us check deployments and manage the cluster to some basic extent.
+However, its not perfect such as as losing the logs, unable to retrieve the event history for pods, not being very descriptive and a lot of black magic related to it.&lt;/p&gt;
 
-&lt;p&gt;Most of the time we feel last of control.
-Of course that might not be your experience of it, however, we are investigating other solutions.&lt;/p&gt;
+&lt;p&gt;Most of the time we feel we don’t have control of our own clusters.
+We are actively investigating other solutions, primarily moving to AWS EKS and using the default kubernetes dashboard.&lt;/p&gt;
 
 &lt;h2 id=&quot;namespaces&quot;&gt;Namespaces&lt;/h2&gt;
 
@@ -133,11 +157,11 @@ Of course that might not be your experience of it, however, we are investigating
 
 &lt;h2 id=&quot;kubectl&quot;&gt;Kubectl&lt;/h2&gt;
 &lt;iframe src=&quot;https://giphy.com/embed/tAeB6dptxnoli&quot; width=&quot;480&quot; height=&quot;446&quot; frameborder=&quot;0&quot; class=&quot;giphy-embed&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;p&gt;&lt;a href=&quot;https://giphy.com/gifs/construction-tAeB6dptxnoli&quot;&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>Lefteris Tatakis</name></author><category term="blog" /><category term="kubernetes" /><summary type="html">What is a container</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Hello World - the beginning</title><link href="http://localhost:4000/hello-world-blog/" rel="alternate" type="text/html" title="Hello World - the beginning" /><published>2018-10-31T13:48:00+00:00</published><updated>2018-10-31T13:48:00+00:00</updated><id>http://localhost:4000/hello-world-blog</id><content type="html" xml:base="http://localhost:4000/hello-world-blog/">&lt;h2 id=&quot;hello-everyone-outthere---️-️&quot;&gt;Hello everyone outthere! 👋  ✌️ ️&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://giphy.com/gifs/construction-tAeB6dptxnoli&quot;&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>Lefteris Tatakis</name></author><category term="blog" /><category term="kubernetes" /><category term="containers" /><category term="Docker" /><category term="kubectl" /><summary type="html">As most of my “blogs” on this site, this post is a point of reference for me. A quick guide of the things I learned and has most probably forgot over time. I plan on coming back to this and adding (or removing) information I dont agree with or I don’t find useful anymore.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Hello World - the beginning</title><link href="http://localhost:4000/hello-world-blog/" rel="alternate" type="text/html" title="Hello World - the beginning" /><published>2018-10-31T13:48:00+00:00</published><updated>2018-10-31T13:48:00+00:00</updated><id>http://localhost:4000/hello-world-blog</id><content type="html" xml:base="http://localhost:4000/hello-world-blog/">&lt;h2 id=&quot;hello-everyone-outthere---️-️&quot;&gt;Hello everyone outthere! 👋  ✌️ ️&lt;/h2&gt;
 &lt;p&gt;This is something I have been thinking for a while but never got the time to do it.&lt;/p&gt;
 
-&lt;p&gt;While attending Velocity conference I was inspired by the cool tech and possiblities out there.
-And thought to myself, this would be a great blog post… just a quick summary and overview for people to get a brief introduction on toping touched here.&lt;/p&gt;
+&lt;p&gt;While attending &lt;a href=&quot;https://conferences.oreilly.com/velocity&quot;&gt;Velocity&lt;/a&gt;, I was inspired by the cool tech and possiblities out there.
+I therefore decided creating a summary and overview for people to get a brief introduction on topics touched upon at the Conference, would be something I would enjoy doing.&lt;/p&gt;
 
 &lt;p&gt;Well here it is!! 🎉&lt;/p&gt;
 
