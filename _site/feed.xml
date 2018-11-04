@@ -1,4 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-11-04T19:15:15+00:00</updated><id>http://localhost:4000/</id><title type="html">Lefteris Tatakis</title><subtitle>A Software Engineer based in Oxford. This is a blog about technology (engineering or bike!) and travel.</subtitle><entry><title type="html">Expedition Peru</title><link href="http://localhost:4000/my-trip-to-peru/" rel="alternate" type="text/html" title="Expedition Peru" /><published>2018-11-04T18:48:00+00:00</published><updated>2018-11-04T18:48:00+00:00</updated><id>http://localhost:4000/my-trip-to-peru</id><content type="html" xml:base="http://localhost:4000/my-trip-to-peru/">&lt;p&gt;Some of my favourite pictures from my Peru trip 😊&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-11-04T21:52:19+00:00</updated><id>http://localhost:4000/</id><title type="html">Lefteris Tatakis</title><subtitle>A Software Engineer based in Oxford. This is a blog about technology (engineering or bike!) and travel.</subtitle><entry><title type="html">Event Sourcing</title><link href="http://localhost:4000/event-sourcing/" rel="alternate" type="text/html" title="Event Sourcing" /><published>2018-11-03T00:00:00+00:00</published><updated>2018-11-03T00:00:00+00:00</updated><id>http://localhost:4000/event-sourcing</id><content type="html" xml:base="http://localhost:4000/event-sourcing/">&lt;!-- ---
+title: &quot;Event Sourcing&quot;
+layout: post
+date: 2018-11-03 22:10
+tag: event sourcing, node
+image: # TODO
+headerImage: true
+projects: true
+hidden: true # don't count this post in blog pagination
+description: &quot;Even Sourcing ..&quot;
+category: blog
+author: LefterisTatakis
+externalLink: false
+---
+
+TODO --&gt;</content><author><name></name></author><summary type="html">&amp;lt;!– — title: “Event Sourcing” layout: post date: 2018-11-03 22:10 tag: event sourcing, node image: # TODO headerImage: true projects: true hidden: true # don’t count this post in blog pagination description: “Even Sourcing ..” category: blog author: LefterisTatakis externalLink: false —</summary></entry><entry><title type="html">Expedition Peru</title><link href="http://localhost:4000/my-trip-to-peru/" rel="alternate" type="text/html" title="Expedition Peru" /><published>2018-10-31T23:48:00+00:00</published><updated>2018-10-31T23:48:00+00:00</updated><id>http://localhost:4000/my-trip-to-peru</id><content type="html" xml:base="http://localhost:4000/my-trip-to-peru/">&lt;p&gt;Some of my favourite pictures from my Peru trip 😊&lt;/p&gt;
 
 &lt;figcaption class=&quot;caption&quot;&gt;Machuu Pichuu&lt;/figcaption&gt;
 &lt;p&gt;&lt;img src=&quot;/assets/peru/peru.JPG&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;
@@ -19,22 +34,7 @@
 &lt;p&gt;&lt;img src=&quot;/assets/peru/Ollantaytambo.JPG&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;
 
 &lt;figcaption class=&quot;caption&quot;&gt;A fantastic view of the mountain towards Aqua Calientes &lt;/figcaption&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/peru/trainToCusco.JPG&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;</content><author><name>LefterisTatakis</name></author><category term="blog" /><category term="travel" /><category term="peru" /><category term="photos" /><summary type="html">Some of my favourite pictures from my Peru trip 😊</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Event Sourcing</title><link href="http://localhost:4000/event-sourcing/" rel="alternate" type="text/html" title="Event Sourcing" /><published>2018-11-03T00:00:00+00:00</published><updated>2018-11-03T00:00:00+00:00</updated><id>http://localhost:4000/event-sourcing</id><content type="html" xml:base="http://localhost:4000/event-sourcing/">&lt;!-- ---
-title: &quot;Event Sourcing&quot;
-layout: post
-date: 2018-11-03 22:10
-tag: event sourcing, node
-image: # TODO
-headerImage: true
-projects: true
-hidden: true # don't count this post in blog pagination
-description: &quot;Even Sourcing ..&quot;
-category: blog
-author: LefterisTatakis
-externalLink: false
----
-
-TODO --&gt;</content><author><name></name></author><summary type="html">&amp;lt;!– — title: “Event Sourcing” layout: post date: 2018-11-03 22:10 tag: event sourcing, node image: # TODO headerImage: true projects: true hidden: true # don’t count this post in blog pagination description: “Even Sourcing ..” category: blog author: LefterisTatakis externalLink: false —</summary></entry><entry><title type="html">Chaos Engineering @ Velocity</title><link href="http://localhost:4000/halloween-chaos-engineering/" rel="alternate" type="text/html" title="Chaos Engineering @ Velocity" /><published>2018-10-31T18:48:00+00:00</published><updated>2018-10-31T18:48:00+00:00</updated><id>http://localhost:4000/halloween-chaos-engineering</id><content type="html" xml:base="http://localhost:4000/halloween-chaos-engineering/">&lt;p&gt;Talk given by @Ana_M_Medina from Gremlin.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/peru/trainToCusco.JPG&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;</content><author><name>LefterisTatakis</name></author><category term="blog" /><category term="travel" /><category term="peru" /><category term="photos" /><summary type="html">Some of my favourite pictures from my Peru trip 😊</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Chaos Engineering @ Velocity</title><link href="http://localhost:4000/halloween-chaos-engineering/" rel="alternate" type="text/html" title="Chaos Engineering @ Velocity" /><published>2018-10-31T18:48:00+00:00</published><updated>2018-10-31T18:48:00+00:00</updated><id>http://localhost:4000/halloween-chaos-engineering</id><content type="html" xml:base="http://localhost:4000/halloween-chaos-engineering/">&lt;p&gt;Talk given by @Ana_M_Medina from Gremlin.&lt;/p&gt;
 
 &lt;h1 id=&quot;what-is-chaos-engineering&quot;&gt;What is Chaos Engineering?&lt;/h1&gt;
 
@@ -157,7 +157,7 @@ We are actively investigating other solutions, primarily moving to AWS EKS and u
 
 &lt;h2 id=&quot;kubectl&quot;&gt;Kubectl&lt;/h2&gt;
 &lt;iframe src=&quot;https://giphy.com/embed/tAeB6dptxnoli&quot; width=&quot;480&quot; height=&quot;446&quot; frameborder=&quot;0&quot; class=&quot;giphy-embed&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;p&gt;&lt;a href=&quot;https://giphy.com/gifs/construction-tAeB6dptxnoli&quot;&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>Lefteris Tatakis</name></author><category term="blog" /><category term="kubernetes" /><category term="containers" /><category term="Docker" /><category term="kubectl" /><summary type="html">As most of my “blogs” on this site, this post is a point of reference for me. A quick guide of the things I learned and has most probably forgot over time. I plan on coming back to this and adding (or removing) information I dont agree with or I don’t find useful anymore.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Hello World - the beginning</title><link href="http://localhost:4000/hello-world-blog/" rel="alternate" type="text/html" title="Hello World - the beginning" /><published>2018-10-31T13:48:00+00:00</published><updated>2018-10-31T13:48:00+00:00</updated><id>http://localhost:4000/hello-world-blog</id><content type="html" xml:base="http://localhost:4000/hello-world-blog/">&lt;h2 id=&quot;hello-everyone-outthere---️-️&quot;&gt;Hello everyone outthere! 👋  ✌️ ️&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://giphy.com/gifs/construction-tAeB6dptxnoli&quot;&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>Lefteris Tatakis</name></author><category term="blog" /><category term="kubernetes" /><category term="Docker" /><summary type="html">As most of my “blogs” on this site, this post is a point of reference for me. A quick guide of the things I learned and has most probably forgot over time. I plan on coming back to this and adding (or removing) information I dont agree with or I don’t find useful anymore.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Hello World - the beginning</title><link href="http://localhost:4000/hello-world-blog/" rel="alternate" type="text/html" title="Hello World - the beginning" /><published>2018-10-31T13:48:00+00:00</published><updated>2018-10-31T13:48:00+00:00</updated><id>http://localhost:4000/hello-world-blog</id><content type="html" xml:base="http://localhost:4000/hello-world-blog/">&lt;h2 id=&quot;hello-everyone-outthere---️-️&quot;&gt;Hello everyone outthere! 👋  ✌️ ️&lt;/h2&gt;
 &lt;p&gt;This is something I have been thinking for a while but never got the time to do it.&lt;/p&gt;
 
 &lt;p&gt;While attending &lt;a href=&quot;https://conferences.oreilly.com/velocity&quot;&gt;Velocity&lt;/a&gt;, I was inspired by the cool tech and possiblities out there.
@@ -169,7 +169,7 @@ I therefore decided creating a summary and overview for people to get a brief in
 
 &lt;p&gt;We shall see what the future brings.&lt;/p&gt;
 
-&lt;p&gt;Its an idea, hopefully, it does not die out too soon 🤞🏻&lt;/p&gt;</content><author><name>LefterisTatakis</name></author><category term="blog" /><category term="markdown" /><category term="components" /><category term="extra" /><summary type="html">Hello everyone outthere! 👋 ✌️ ️ This is something I have been thinking for a while but never got the time to do it.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Markdown Extra Components</title><link href="http://localhost:4000/markdown-extra-components/" rel="alternate" type="text/html" title="Markdown Extra Components" /><published>2018-01-24T00:00:00+00:00</published><updated>2018-01-24T00:00:00+00:00</updated><id>http://localhost:4000/markdown-extra-components</id><content type="html" xml:base="http://localhost:4000/markdown-extra-components/">&lt;!-- ---
+&lt;p&gt;Its an idea, hopefully, it does not die out too soon 🤞🏻&lt;/p&gt;</content><author><name>LefterisTatakis</name></author><category term="blog" /><category term="velocity" /><category term="hello" /><summary type="html">Hello everyone outthere! 👋 ✌️ ️ This is something I have been thinking for a while but never got the time to do it.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Markdown Extra Components</title><link href="http://localhost:4000/markdown-extra-components/" rel="alternate" type="text/html" title="Markdown Extra Components" /><published>2018-01-24T00:00:00+00:00</published><updated>2018-01-24T00:00:00+00:00</updated><id>http://localhost:4000/markdown-extra-components</id><content type="html" xml:base="http://localhost:4000/markdown-extra-components/">&lt;!-- ---
 title: &quot;Markdown Extra Components&quot;
 layout: post
 date: 2018-01-24 22:48
@@ -582,15 +582,15 @@ A JS Example:
 &lt;ul&gt;
   &lt;li&gt;Angular 5&lt;/li&gt;
   &lt;li&gt;NodeJs Lambdas&lt;/li&gt;
-  &lt;li&gt;TDD’ed the pricing mechanism&lt;/li&gt;
   &lt;li&gt;Deployment scripts to S3.&lt;/li&gt;
   &lt;li&gt;Google Drive intergration as Databases&lt;/li&gt;
-  &lt;li&gt;Email service for invoicing&lt;/li&gt;
+  &lt;li&gt;AWS SES Email service for invoicing&lt;/li&gt;
+  &lt;li&gt;API’s authed with JSON web tokens&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;This was the 2nd iteration of this project. Initially, it was deployed on AWS Lightsail, however, to drive cost saving as the service does not have a lot of traffic, I decided to change the deployment paridgim to S3, Lambdas, and Google Drive.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://www.libertycars.gr&quot;&gt;Check it out&lt;/a&gt; here.&lt;/p&gt;</content><author><name>LefterisTatakis</name></author><category term="project" /><category term="ecommerce" /><category term="lambdas" /><category term="AWS" /><category term="Angular" /><category term="JavaScript" /><category term="Nodejs" /><summary type="html">What did I build it with</summary></entry><entry><title type="html">Cretecompare</title><link href="http://localhost:4000/cretecompare/" rel="alternate" type="text/html" title="Cretecompare" /><published>2018-01-23T22:10:00+00:00</published><updated>2018-01-23T22:10:00+00:00</updated><id>http://localhost:4000/cretecompare</id><content type="html" xml:base="http://localhost:4000/cretecompare/">&lt;p&gt;Overview of the key outcomes of this project:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.libertycars.gr&quot;&gt;Check it out&lt;/a&gt; here.&lt;/p&gt;</content><author><name>LefterisTatakis</name></author><category term="project" /><category term="ecommerce" /><category term="lambdas" /><category term="AWS" /><category term="Angular" /><category term="JavaScript" /><category term="Nodejs" /><summary type="html">What did I build it with</summary></entry><entry><title type="html">Cretecompare</title><link href="http://localhost:4000/cretecompare/" rel="alternate" type="text/html" title="Cretecompare" /><published>2014-04-23T22:10:00+01:00</published><updated>2014-04-23T22:10:00+01:00</updated><id>http://localhost:4000/cretecompare</id><content type="html" xml:base="http://localhost:4000/cretecompare/">&lt;p&gt;Overview of the key outcomes of this project:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Secured three local stakeholders to be promoted through the website.&lt;/li&gt;
   &lt;li&gt;Designed and implemented secure and persistent interfaces for the clients and the stakeholders, using Spring Security, HTML5, AngularJS, Hibernate and MongoDB.&lt;/li&gt;
@@ -602,4 +602,4 @@ A JS Example:
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/cars.png&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;
-&lt;figcaption class=&quot;caption&quot;&gt;Listing page of CreteCompare&lt;/figcaption&gt;</content><author><name>LefterisTatakis</name></author><category term="project" /><category term="ecommerce" /><category term="Angular" /><category term="Java" /><category term="Tomcat" /><summary type="html">Overview of the key outcomes of this project: Secured three local stakeholders to be promoted through the website. Designed and implemented secure and persistent interfaces for the clients and the stakeholders, using Spring Security, HTML5, AngularJS, Hibernate and MongoDB. Ensured all customer data and administrator login information was encrypted and stored securely using SQL. Developed a wide range of JUnit tests for all the functionality of the website, including the RESTful API services. Established an automated invoice system providing all parties with the information required to confirm a booking. Completed and deployed production version within six weeks. Promoted my work through social media platforms.</summary></entry></feed>
+&lt;figcaption class=&quot;caption&quot;&gt;Listing page of CreteCompare&lt;/figcaption&gt;</content><author><name>LefterisTatakis</name></author><category term="project" /><category term="ecommerce" /><category term="Angular" /><category term="Java" /><category term="JavaScript" /><category term="Nodejs" /><summary type="html">Overview of the key outcomes of this project: Secured three local stakeholders to be promoted through the website. Designed and implemented secure and persistent interfaces for the clients and the stakeholders, using Spring Security, HTML5, AngularJS, Hibernate and MongoDB. Ensured all customer data and administrator login information was encrypted and stored securely using SQL. Developed a wide range of JUnit tests for all the functionality of the website, including the RESTful API services. Established an automated invoice system providing all parties with the information required to confirm a booking. Completed and deployed production version within six weeks. Promoted my work through social media platforms.</summary></entry></feed>

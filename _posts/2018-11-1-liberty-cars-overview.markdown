@@ -24,10 +24,10 @@ What did I build it with
 
 - Angular 5
 - NodeJs Lambdas
-- TDD'ed the pricing mechanism
 - Deployment scripts to S3.
 - Google Drive intergration as Databases
-- Email service for invoicing
+- AWS SES Email service for invoicing
+- API's authed with JSON web tokens
 
 This was the 2nd iteration of this project. Initially, it was deployed on AWS Lightsail, however, to drive cost saving as the service does not have a lot of traffic, I decided to change the deployment paridgim to S3, Lambdas, and Google Drive.
 

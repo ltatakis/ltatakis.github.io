@@ -5,9 +5,8 @@ date: 2018-10-31 13:48
 image: /assets/images/markdown.jpg
 headerImage: false
 tag:
-- markdown
-- components
-- extra
+- velocity
+- hello
 category: blog
 author: LefterisTatakis
 description: The idea of a blog

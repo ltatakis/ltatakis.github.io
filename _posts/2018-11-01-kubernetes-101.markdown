@@ -6,9 +6,7 @@ image: /assets/images/markdown.jpg
 headerImage: false
 tag:
 - kubernetes
-- containers
 - Docker
-- kubectl
 category: blog
 author: Lefteris Tatakis
 description: Kubernetes 101 - how I understand it

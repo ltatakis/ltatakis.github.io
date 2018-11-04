@@ -1,12 +1,13 @@
 ---
 title: "Cretecompare"
 layout: post
-date: 2018-01-23 22:10
+date: 2014-04-23 22:10
 tag: 
 - ecommerce
 - Angular 
 - Java
-- Tomcat
+- JavaScript
+- Nodejs
 image: # TODO
 headerImage: true
 projects: true
