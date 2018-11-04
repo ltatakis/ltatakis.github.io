@@ -13,9 +13,7 @@ description: "Trip overview of Peru"
 # jemoji: '<img class="emoji" title=":ramen:" alt=":ramen:" src="https://assets.github.com/images/icons/emoji/unicode/1f35c.png" height="20" width="20" align="absmiddle">'
 ---
 
-
-
 ![Markdowm Image][1]
 <figcaption class="caption">Photo by me - more to come </figcaption>
 
-[1]: /img/peru.JPG
+[1]: /assets/images/peru.JPG

@@ -1,4 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-11-01T21:28:32+00:00</updated><id>http://localhost:4000/</id><title type="html">Lefteris Tatakis</title><subtitle>A Software Engineer based in Oxford. This is a blog about technology (engineering or bike!) and travel.</subtitle><entry><title type="html">Expedition Peru! Machuu Pichuuu</title><link href="http://localhost:4000/my-trip-to-peru/" rel="alternate" type="text/html" title="Expedition Peru! Machuu Pichuuu" /><published>2018-11-01T18:48:00+00:00</published><updated>2018-11-01T18:48:00+00:00</updated><id>http://localhost:4000/my-trip-to-peru</id><content type="html" xml:base="http://localhost:4000/my-trip-to-peru/">&lt;p&gt;&lt;img src=&quot;/img/peru.JPG&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-11-04T15:51:23+00:00</updated><id>http://localhost:4000/</id><title type="html">Lefteris Tatakis</title><subtitle>A Software Engineer based in Oxford. This is a blog about technology (engineering or bike!) and travel.</subtitle><entry><title type="html">Event Sourcing</title><link href="http://localhost:4000/event-sourcing/" rel="alternate" type="text/html" title="Event Sourcing" /><published>2018-11-03T00:00:00+00:00</published><updated>2018-11-03T00:00:00+00:00</updated><id>http://localhost:4000/event-sourcing</id><content type="html" xml:base="http://localhost:4000/event-sourcing/">&lt;!-- ---
+title: &quot;Event Sourcing&quot;
+layout: post
+date: 2018-11-03 22:10
+tag: event sourcing, node
+image: # TODO
+headerImage: true
+projects: true
+hidden: true # don't count this post in blog pagination
+description: &quot;Even Sourcing ..&quot;
+category: blog
+author: LefterisTatakis
+externalLink: false
+---
+
+TODO --&gt;</content><author><name></name></author><summary type="html">&amp;lt;!– — title: “Event Sourcing” layout: post date: 2018-11-03 22:10 tag: event sourcing, node image: # TODO headerImage: true projects: true hidden: true # don’t count this post in blog pagination description: “Even Sourcing ..” category: blog author: LefterisTatakis externalLink: false —</summary></entry><entry><title type="html">Expedition Peru! Machuu Pichuuu</title><link href="http://localhost:4000/my-trip-to-peru/" rel="alternate" type="text/html" title="Expedition Peru! Machuu Pichuuu" /><published>2018-11-01T18:48:00+00:00</published><updated>2018-11-01T18:48:00+00:00</updated><id>http://localhost:4000/my-trip-to-peru</id><content type="html" xml:base="http://localhost:4000/my-trip-to-peru/">&lt;p&gt;&lt;img src=&quot;/assets/images/peru.JPG&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;
 &lt;figcaption class=&quot;caption&quot;&gt;Photo by me - more to come &lt;/figcaption&gt;</content><author><name>LefterisTatakis</name></author><category term="blog" /><category term="travel" /><category term="peru" /><summary type="html">Photo by me - more to come</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Chaos Engineering @ Velocity</title><link href="http://localhost:4000/halloween-chaos-engineering/" rel="alternate" type="text/html" title="Chaos Engineering @ Velocity" /><published>2018-10-31T18:48:00+00:00</published><updated>2018-10-31T18:48:00+00:00</updated><id>http://localhost:4000/halloween-chaos-engineering</id><content type="html" xml:base="http://localhost:4000/halloween-chaos-engineering/">&lt;p&gt;Talk given by @Ana_M_Medina from Gremlin.&lt;/p&gt;
 
 &lt;h1 id=&quot;what-is-chaos-engineering&quot;&gt;What is Chaos Engineering?&lt;/h1&gt;
@@ -516,9 +531,16 @@ However, to drive cost saving as the service does not have a lot of traffic, I d
 
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://libertycars.gr&quot;&gt;Check it out&lt;/a&gt; here.&lt;/p&gt;</content><author><name>LefterisTatakis</name></author><category term="project" /><category term="ecommerce, lambdas, AWS, Angular, JavaScript, Nodejs" /><summary type="html">What did I build it with</summary></entry><entry><title type="html">Monthly Financial Reporting</title><link href="http://localhost:4000/financial-reporting-tool-commandline/" rel="alternate" type="text/html" title="Monthly Financial Reporting" /><published>2018-01-09T22:10:00+00:00</published><updated>2018-01-09T22:10:00+00:00</updated><id>http://localhost:4000/financial-reporting-tool-commandline</id><content type="html" xml:base="http://localhost:4000/financial-reporting-tool-commandline/">&lt;p&gt;TODO&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://libertycars.gr&quot;&gt;Check it out&lt;/a&gt; here.&lt;/p&gt;</content><author><name>LefterisTatakis</name></author><category term="project" /><category term="ecommerce, lambdas, AWS, Angular, JavaScript, Nodejs" /><summary type="html">What did I build it with</summary></entry><entry><title type="html">Cretecompare</title><link href="http://localhost:4000/cretecompare/" rel="alternate" type="text/html" title="Cretecompare" /><published>2018-01-23T22:10:00+00:00</published><updated>2018-01-23T22:10:00+00:00</updated><id>http://localhost:4000/cretecompare</id><content type="html" xml:base="http://localhost:4000/cretecompare/">&lt;p&gt;Overview of the key outcomes of this project:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Secured three local stakeholders to be promoted through the website.&lt;/li&gt;
+  &lt;li&gt;Designed and implemented secure and persistent interfaces for the clients and the stakeholders, using Spring Security, HTML5, AngularJS, Hibernate and MongoDB.&lt;/li&gt;
+  &lt;li&gt;Ensured all customer data and administrator login information was encrypted and stored securely using SQL.&lt;/li&gt;
+  &lt;li&gt;Developed a wide range of JUnit tests for all the functionality of the website, including the RESTful API services.&lt;/li&gt;
+  &lt;li&gt;Established an automated invoice system providing all parties with the information required to confirm a booking.&lt;/li&gt;
+  &lt;li&gt;Completed and deployed production version within six weeks.&lt;/li&gt;
+  &lt;li&gt;Promoted my work through social media platforms.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;iframe src=&quot;https://giphy.com/embed/tAeB6dptxnoli&quot; width=&quot;480&quot; height=&quot;446&quot; frameborder=&quot;0&quot; class=&quot;giphy-embed&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;p&gt;&lt;a href=&quot;https://giphy.com/gifs/construction-tAeB6dptxnoli&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr /&gt;</content><author><name>LefterisTatakis</name></author><category term="project" /><category term="budgeting, nodejs" /><summary type="html">TODO</summary></entry></feed>
+&lt;p&gt;&lt;img src=&quot;/assets/images/cars.png&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;
+&lt;figcaption class=&quot;caption&quot;&gt;Listing page of CreteCompare&lt;/figcaption&gt;</content><author><name>LefterisTatakis</name></author><category term="project" /><category term="ecommerce, Angular 2, Java, Tomcat" /><summary type="html">Overview of the key outcomes of this project: Secured three local stakeholders to be promoted through the website. Designed and implemented secure and persistent interfaces for the clients and the stakeholders, using Spring Security, HTML5, AngularJS, Hibernate and MongoDB. Ensured all customer data and administrator login information was encrypted and stored securely using SQL. Developed a wide range of JUnit tests for all the functionality of the website, including the RESTful API services. Established an automated invoice system providing all parties with the information required to confirm a booking. Completed and deployed production version within six weeks. Promoted my work through social media platforms.</summary></entry></feed>

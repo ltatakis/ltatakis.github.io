@@ -36,5 +36,5 @@ Currently I am working at Elsevier as a Software Engineer, where you can get a b
 
 <ul>
 	<li><a href="https://libertycars.gr">LibertCars.gr</a></li>
-	<li><a href="../cretecompare.html">Cretecompare</a></li>
+	<li><a href="../cretecompare/">Cretecompare</a></li>
 </ul>
