@@ -2,7 +2,11 @@
 title: "Cretecompare"
 layout: post
 date: 2018-01-23 22:10
-tag: ecommerce, Angular 2, Java, Tomcat
+tag: 
+- ecommerce
+- Angular 
+- Java
+- Tomcat
 image: # TODO
 headerImage: true
 projects: true

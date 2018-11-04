@@ -2,7 +2,13 @@
 title: "Liberty Cars"
 layout: post
 date: 2018-01-23 22:10
-tag: ecommerce, lambdas, AWS, Angular, JavaScript, Nodejs
+tag: 
+- ecommerce
+- lambdas
+- AWS
+- Angular
+- JavaScript
+- Nodejs
 image: # TODO
 headerImage: true
 projects: true
