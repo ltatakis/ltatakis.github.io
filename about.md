@@ -47,6 +47,6 @@ Currently I am working at Elsevier as a
 <h2>Projects</h2>
 
 <ul>
-	<li><a href="https://libertycars.gr">LibertCars.gr</a></li>
+	<li><a href="https://www.libertycars.gr">LibertCars.gr</a></li>
 	<li><a href="../cretecompare/">Cretecompare</a></li>
 </ul>
