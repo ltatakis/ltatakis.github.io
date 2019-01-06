@@ -1,5 +1,5 @@
 ---
-title: "My masters in Advance Computer Science"
+title: "My masters in Advanced Computer Science"
 layout: post
 date: 2016-10-23 22:10
 tag: 
