@@ -1,4 +1,30 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-11-04T22:36:40+00:00</updated><id>http://localhost:4000/</id><title type="html">Lefteris Tatakis</title><subtitle>A Software Engineer based in Oxford. This is a blog about technology (engineering or bike!) and travel.</subtitle><entry><title type="html">Event Sourcing</title><link href="http://localhost:4000/event-sourcing/" rel="alternate" type="text/html" title="Event Sourcing" /><published>2018-11-03T00:00:00+00:00</published><updated>2018-11-03T00:00:00+00:00</updated><id>http://localhost:4000/event-sourcing</id><content type="html" xml:base="http://localhost:4000/event-sourcing/">&lt;!-- ---
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-01-06T21:16:47+00:00</updated><id>http://localhost:4000/</id><title type="html">Lefteris Tatakis</title><subtitle>A Software Engineer based in Oxford. This is a blog about technology (engineering or bike!) and travel.</subtitle><entry><title type="html">Week 1 - Start of 2019 and Ironman training</title><link href="http://localhost:4000/firstweekofIromanTraining/" rel="alternate" type="text/html" title="Week 1 - Start of 2019 and Ironman training" /><published>2019-01-06T21:08:00+00:00</published><updated>2019-01-06T21:08:00+00:00</updated><id>http://localhost:4000/firstweekofIromanTraining</id><content type="html" xml:base="http://localhost:4000/firstweekofIromanTraining/">&lt;p&gt;Well it’s officially 2019! woop woop! 🎉 🥳&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+&lt;iframe src=&quot;https://giphy.com/embed/QMkPpxPDYY0fu&quot; width=&quot;480&quot; height=&quot;204&quot; frameborder=&quot;0&quot; class=&quot;giphy-embed&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;p&gt;&lt;a href=&quot;https://giphy.com/gifs/happy-leonardo-dicaprio-cheers-QMkPpxPDYY0fu&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/p&gt;
+&lt;p&gt;Its going to be a big year for me, its the year I am going to become an Ironman.
+You will notice that I am &lt;em&gt;confident&lt;/em&gt; about it. Well … lets say we shall see what happens, but:&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+Failure is not an option!
+&lt;/p&gt;
+&lt;p&gt;I have focused on starting the new year running, (or more like cycling) by doing all the key sessions I should be doing over the next few months.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Cycling sessions. I started doing my Zwift Grand Fonto training program, which aims to build my fitness to be ready to do 100-200km.&lt;/li&gt;
+  &lt;li&gt;Early morning swims, at 6:30. I am currently, trying to get my body used to that effort. These sessions should be easy (eventually), active recovery for 40-50 minutes. (Going to do one tomorrow 😅)&lt;/li&gt;
+  &lt;li&gt;Brick sessions. I “kinda” did one on Monday but I rested in between the sessions… So… maybe it was just two sessions, which luckily is something I need to do also!&lt;/li&gt;
+  &lt;li&gt;Enjoyed my life a bit! 😇&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The top three items all had there challenges. For example, the Zwift program was quite demanding and I am only on Week 0 ( 😳 ), the swim was at 6:30 am (enough said) and the brick was the first “long” ride I had dont since probably September.&lt;/p&gt;
+
+&lt;p&gt;So far, so good!&lt;/p&gt;
+
+&lt;p&gt;A &lt;em&gt;lot&lt;/em&gt; more hard work to come, but dare I say ( 🤞🏻 ) I am ready for it!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/ironman/week1-training.png&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;
+&lt;figcaption class=&quot;caption&quot;&gt;Training distribution&lt;/figcaption&gt;</content><author><name>Lefteris Tatakis</name></author><category term="blog" /><category term="ironman" /><category term="training" /><summary type="html">Well it’s officially 2019! woop woop! 🎉 🥳</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Event Sourcing</title><link href="http://localhost:4000/event-sourcing/" rel="alternate" type="text/html" title="Event Sourcing" /><published>2018-11-03T00:00:00+00:00</published><updated>2018-11-03T00:00:00+00:00</updated><id>http://localhost:4000/event-sourcing</id><content type="html" xml:base="http://localhost:4000/event-sourcing/">&lt;!-- ---
 title: &quot;Event Sourcing&quot;
 layout: post
 date: 2018-11-03 22:10
@@ -590,7 +616,7 @@ A JS Example:
 
 &lt;p&gt;This was the 2nd iteration of this project. Initially, it was deployed on AWS Lightsail, however, to drive cost saving as the service does not have a lot of traffic, I decided to change the deployment paridgim to S3, Lambdas, and Google Drive.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://www.libertycars.gr&quot;&gt;Check it out&lt;/a&gt; here.&lt;/p&gt;</content><author><name>LefterisTatakis</name></author><category term="project" /><category term="ecommerce" /><category term="lambdas" /><category term="AWS" /><category term="Angular" /><category term="JavaScript" /><category term="Nodejs" /><summary type="html">What did I build it with</summary></entry><entry><title type="html">My masters in Advance Computer Science</title><link href="http://localhost:4000/masters-computer-science/" rel="alternate" type="text/html" title="My masters in Advance Computer Science" /><published>2016-10-23T22:10:00+01:00</published><updated>2016-10-23T22:10:00+01:00</updated><id>http://localhost:4000/masters-computer-science</id><content type="html" xml:base="http://localhost:4000/masters-computer-science/">&lt;p&gt;In my Masters I was passionate in investigating the information loss that occurs in interactive visualisations over time, as the result of user decisions and interactions. Using the MVC design pattern and state-based systems to understand how visualising temporal data results into information loss.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.libertycars.gr&quot;&gt;Check it out&lt;/a&gt; here.&lt;/p&gt;</content><author><name>LefterisTatakis</name></author><category term="project" /><category term="ecommerce" /><category term="lambdas" /><category term="AWS" /><category term="Angular" /><category term="JavaScript" /><category term="Nodejs" /><summary type="html">What did I build it with</summary></entry><entry><title type="html">My masters in Advanced Computer Science</title><link href="http://localhost:4000/masters-computer-science/" rel="alternate" type="text/html" title="My masters in Advanced Computer Science" /><published>2016-10-23T22:10:00+01:00</published><updated>2016-10-23T22:10:00+01:00</updated><id>http://localhost:4000/masters-computer-science</id><content type="html" xml:base="http://localhost:4000/masters-computer-science/">&lt;p&gt;In my Masters I was passionate in investigating the information loss that occurs in interactive visualisations over time, as the result of user decisions and interactions. Using the MVC design pattern and state-based systems to understand how visualising temporal data results into information loss.&lt;/p&gt;
 
 &lt;p&gt;In the process of the Masters I:&lt;/p&gt;
 &lt;ul&gt;
@@ -607,16 +633,4 @@ A JS Example:
   &lt;li&gt;Trained new teaching assistants in the facilitation of student queries and  coursework marking.&lt;/li&gt;
   &lt;li&gt;reinforcted learning concepts, such as Java and SQL, taught by lecturers to undergraduate students.&lt;/li&gt;
   &lt;li&gt;was promoted to Lab Supervisor in the course of Distributed Computing due to my calm composure and effective performance during stressful student workshop situations.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>LefterisTatakis</name></author><category term="project" /><category term="masters" /><category term="Linked Data" /><category term="Visualisation" /><summary type="html">In my Masters I was passionate in investigating the information loss that occurs in interactive visualisations over time, as the result of user decisions and interactions. Using the MVC design pattern and state-based systems to understand how visualising temporal data results into information loss.</summary></entry><entry><title type="html">Cretecompare.co.uk</title><link href="http://localhost:4000/cretecompare/" rel="alternate" type="text/html" title="Cretecompare.co.uk" /><published>2014-04-23T22:10:00+01:00</published><updated>2014-04-23T22:10:00+01:00</updated><id>http://localhost:4000/cretecompare</id><content type="html" xml:base="http://localhost:4000/cretecompare/">&lt;p&gt;Overview of the key outcomes of this project:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Secured three local stakeholders to be promoted through the website.&lt;/li&gt;
-  &lt;li&gt;Designed and implemented secure and persistent interfaces for the clients and the stakeholders, using Spring Security, HTML5, AngularJS, Hibernate and MongoDB.&lt;/li&gt;
-  &lt;li&gt;Ensured all customer data and administrator login information was encrypted and stored securely using SQL.&lt;/li&gt;
-  &lt;li&gt;Developed a wide range of JUnit tests for all the functionality of the website, including the RESTful API services.&lt;/li&gt;
-  &lt;li&gt;Established an automated invoice system providing all parties with the information required to confirm a booking.&lt;/li&gt;
-  &lt;li&gt;Completed and deployed production version within six weeks.&lt;/li&gt;
-  &lt;li&gt;Promoted my work through social media platforms.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/cars.png&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;
-&lt;figcaption class=&quot;caption&quot;&gt;Listing page of CreteCompare&lt;/figcaption&gt;</content><author><name>LefterisTatakis</name></author><category term="project" /><category term="ecommerce" /><category term="Angular" /><category term="Java" /><category term="JavaScript" /><category term="Nodejs" /><summary type="html">Overview of the key outcomes of this project: Secured three local stakeholders to be promoted through the website. Designed and implemented secure and persistent interfaces for the clients and the stakeholders, using Spring Security, HTML5, AngularJS, Hibernate and MongoDB. Ensured all customer data and administrator login information was encrypted and stored securely using SQL. Developed a wide range of JUnit tests for all the functionality of the website, including the RESTful API services. Established an automated invoice system providing all parties with the information required to confirm a booking. Completed and deployed production version within six weeks. Promoted my work through social media platforms.</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>LefterisTatakis</name></author><category term="project" /><category term="masters" /><category term="Linked Data" /><category term="Visualisation" /><summary type="html">In my Masters I was passionate in investigating the information loss that occurs in interactive visualisations over time, as the result of user decisions and interactions. Using the MVC design pattern and state-based systems to understand how visualising temporal data results into information loss.</summary></entry></feed>
