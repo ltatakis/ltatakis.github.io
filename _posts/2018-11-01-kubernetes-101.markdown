@@ -16,17 +16,41 @@ description: Kubernetes 101 - how I understand it
 As most of my "blogs" on this site, this post is a point of reference for me. A quick guide of the things I learned and has most probably forgot over time.
 I plan on coming back to this and adding (or removing) information I dont agree with or I don't find useful anymore.
 
+## Kubernetes
+
+In my mind its just a management system of containers. Deploying them, managing them, failure recovery and scaling.
+Primarily used for micro services.
+The most common use case for kubernetes is with docker containers.
+
+> “Kubernetes is a portable, extensible open-source platform for managing containerized workloads and services” - kubernetes.io
+
+But to be honest, how I visualise Kubernetes, is with the metaphor of Nick the Captain.
+
+![Markdowm Image][1]
+<figcaption class="caption">Nick the Captain of our containers.</figcaption>
+
+Nick is Kubernetes (Kubernetes originates from the Greek word helmsman of ship) of our Nodes e.g. 
+![Markdowm Image][2]
+<figcaption class="caption">Nick managing our Node</figcaption>
+
+The Kubernetes cluster node we are using has a number of containers. One of which, is our app:
+![Markdowm Image][3]
+<figcaption class="caption">Our app is a container on that Node</figcaption>
+
+In reality though Nick manages multiple Nodes, in a true Kubernetes fashion:
+![Markdowm Image][4]
+<figcaption class="caption">Nick managing multiple Nodes</figcaption>
+
+How does this really look like in Kubernetes?
+![Markdowm Image][5]
+<figcaption class="caption">Our Pod in the Cluster</figcaption>
+
+
 ## What is a container
 
 Containers let you isolate an application so that its under the impression its running on its own private machine
 
 The most popular container platform for this is [Docker](https://www.docker.com/).
-
-## Kubernetes
-
-In my mind its just a management system of containers. Deploying them, manageing them, failure recovery and scaling.
-Primarily used for micro services.
-The most common use case for kubernetes is with docker containers.
 
 ## What do I need to get started
 
@@ -56,9 +80,44 @@ However, its not perfect such as as losing the logs, unable to retrieve the even
 Most of the time we feel we don't have control of our own clusters.
 We are actively investigating other solutions, primarily moving to AWS EKS and using the default kubernetes dashboard.
 
-## Namespaces
-
-👷🏻‍ UNDER CONTRUCTION 👷🏻‍
-
 ## Kubectl
-<iframe src="https://giphy.com/embed/tAeB6dptxnoli" width="480" height="446" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/construction-tAeB6dptxnoli"></a></p>
+
+The `kubectl` commands I tend to you on a daily basis are:
+```sh
+kubectl get pods --namespace ltatakis
+```
+
+Checking which env I am currently working on
+```sh
+kubectl config get-contexts
+```
+
+Choosing my namespace to work in
+```sh
+kubectl config use-contexts THE-ENV-I-WANT-2-USE
+```
+
+Deleted a namespace
+```sh
+kubectl delete namespaces
+```
+
+But by *far* the most useful one I use is:
+```sh
+kubectl --namespace ltatakis exec -it my-amazing-app-pod -- /bin/sh
+```
+
+<!-- ## Namespaces
+<iframe src="https://giphy.com/embed/tAeB6dptxnoli" width="480" height="446" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/construction-tAeB6dptxnoli"></a></p> -->
+
+---
+
+Thats all for now folks!
+<p align="centre">
+<iframe src="https://giphy.com/embed/lD76yTC5zxZPG" width="480" height="352" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/the-end-thats-all-folks-lD76yTC5zxZPG"></a></p>
+</p>
+[1]: /assets/kubernetes/nick.png
+[2]: /assets/kubernetes/nickOnship.png
+[3]: /assets/kubernetes/containersonship.png
+[4]: /assets/kubernetes/nickwithmultipleships.png
+[5]: /assets/kubernetes/actualviewofcontainer.png

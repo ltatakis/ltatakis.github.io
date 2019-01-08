@@ -1,4 +1,155 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-01-06T21:43:37+00:00</updated><id>http://localhost:4000/</id><title type="html">Lefteris Tatakis</title><subtitle>A Software Engineer based in Oxford. This is a blog about technology (engineering or bike!) and travel.</subtitle><entry><title type="html">Week 1 - Start of 2019 and Ironman training</title><link href="http://localhost:4000/firstweekofIromanTraining/" rel="alternate" type="text/html" title="Week 1 - Start of 2019 and Ironman training" /><published>2019-01-06T21:08:00+00:00</published><updated>2019-01-06T21:08:00+00:00</updated><id>http://localhost:4000/firstweekofIromanTraining</id><content type="html" xml:base="http://localhost:4000/firstweekofIromanTraining/">&lt;p&gt;Well it’s officially 2019! woop woop! 🎉 🥳&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-01-08T16:46:10+00:00</updated><id>http://localhost:4000/</id><title type="html">Lefteris Tatakis</title><subtitle>A Software Engineer based in Oxford. This is a blog about technology (engineering or bike!) and travel.</subtitle><entry><title type="html">Kubernetes - Blue Green Deployment</title><link href="http://localhost:4000/greenbluedeployment/" rel="alternate" type="text/html" title="Kubernetes - Blue Green Deployment" /><published>2019-01-08T16:41:00+00:00</published><updated>2019-01-08T16:41:00+00:00</updated><id>http://localhost:4000/greenbluedeployment</id><content type="html" xml:base="http://localhost:4000/greenbluedeployment/">&lt;p&gt;Its only been a few weeks since using this strategy our production environment at Elsevier, and its already shown its value multiple times! I think its an awesome strategy!
+So… what it is?!&lt;/p&gt;
+
+&lt;p&gt;Before we start some quick terminology:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Blue deployment is the deployment currently in production&lt;/li&gt;
+  &lt;li&gt;Green deployment is the new release we want to make&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;overview---10000-ft-️&quot;&gt;Overview - 10000 ft ✈️&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Blue-green deployment&lt;/em&gt; is a strategy to allow you to switch deployments of your code with minimal, dare I say 0 down time.
+The way it works is, you version your old &lt;em&gt;(blue)&lt;/em&gt; and new &lt;em&gt;(green)&lt;/em&gt; deployment, ensuring that you route all the traffic to the &lt;em&gt;old&lt;/em&gt; pods initially. Until, you are confident that the new code is ready to be deployed! 
+Once that is done, just switch all the traffic over to the new deployment, and delete the old deployment.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/kubernetes/point2blue.png&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;
+&lt;figcaption class=&quot;caption&quot;&gt;Starting point, traffic going to blue deployment&lt;/figcaption&gt;
+
+&lt;p align=&quot;center&quot;&gt;Voila! &lt;/p&gt;
+
+&lt;h2 id=&quot;the-problem-we-solved&quot;&gt;The problem we solved&lt;/h2&gt;
+&lt;p&gt;In our production environment, we are noticed that for the initial 5-10 minutes of the new deployment there old cold showing between refreshes of the pages.
+This was because, until the new code was up and running we had both deployments of our code serving our customers, obviously causing instability and weird behavior.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Each release deployment is versioned.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Therefore, when we want to make a deployment we keep the &lt;code class=&quot;highlighter-rouge&quot;&gt;Blue deployment&lt;/code&gt; pods in place, until all the pods of the &lt;code class=&quot;highlighter-rouge&quot;&gt;Green deployment&lt;/code&gt; are there.
+While the &lt;code class=&quot;highlighter-rouge&quot;&gt;Green deployment&lt;/code&gt; is reaching required capacity no traffic is sent to it. All traffic is still routed to the &lt;code class=&quot;highlighter-rouge&quot;&gt;Blue&lt;/code&gt; pods.&lt;/p&gt;
+
+&lt;p&gt;Once we are happy that the &lt;code class=&quot;highlighter-rouge&quot;&gt;Green deployment&lt;/code&gt; is up and running, we switch the traffic and we delete the blue deployment.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/kubernetes/point2green.png&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;
+&lt;figcaption class=&quot;caption&quot;&gt;Following successful green deployment traffic&lt;/figcaption&gt;
+
+&lt;h2 id=&quot;the-meat--of-it&quot;&gt;The meat 🥩 of it!&lt;/h2&gt;
+&lt;p&gt;The deployment YML looked like:&lt;/p&gt;
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;apiVersion&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;apps/v1beta1&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;kind&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Deployment&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;metadata&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;the-awesome-page-##VERSION##&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;spec&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;selector&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;matchLabels&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;the-awesome-page&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;##VERSION##&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;replicas&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;3&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;metadata&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;labels&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;the-awesome-page&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;##VERSION##&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;spec&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;containers&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;the-awesome-page&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;##IMAGE##&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;...&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The service of the application&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-YAML&quot;&gt;apiVersion: v1
+kind: Service
+metadata:
+  name: the-awesome-page
+spec:
+  ports:
+  - port: 80
+    name: http
+    targetPort: http
+  selector:
+    app: the-awesome-page
+    version: ##VERSION##
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The strategy implementation in the Jenkins pipeline step that implemented the step was:&lt;/p&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;BLUEDEPLOYMENT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;kubectl &lt;span class=&quot;nt&quot;&gt;--namespace&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;namespace&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; get service &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;project&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; json | jq &lt;span class=&quot;s1&quot;&gt;'.spec.selector.version'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;kubernetes
+&lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;f &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.yml
+&lt;span class=&quot;k&quot;&gt;do
+    if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$f&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;service.yml&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then
+        &lt;/span&gt;kubectl &lt;span class=&quot;nt&quot;&gt;--namespace&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;namespace&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; apply &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$f&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;fi
+done
+&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ..
+
+&lt;span class=&quot;nv&quot;&gt;READY&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;kubectl get deploy &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;project&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;-&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;buildTag&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; json &lt;span class=&quot;nt&quot;&gt;--namespace&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;namespace&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; | jq &lt;span class=&quot;s1&quot;&gt;'.status.conditions[] | select(.reason == &quot;MinimumReplicasAvailable&quot;) | .status'&lt;/span&gt; | tr &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&quot;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;TIMEOUT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0
+&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$READY&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;True&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$TIMEOUT&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-lt&lt;/span&gt; 30 &lt;span class=&quot;o&quot;&gt;]]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do
+    &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;READY&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;kubectl get deploy &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;project&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;-&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;buildTag&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; json &lt;span class=&quot;nt&quot;&gt;--namespace&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;namespace&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; | jq &lt;span class=&quot;s1&quot;&gt;'.status.conditions[] | select(.reason == &quot;MinimumReplicasAvailable&quot;) | .status'&lt;/span&gt; | tr &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&quot;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;The green blue deployment is not ready yet&quot;&lt;/span&gt;
+    sleep 10
+    &lt;span class=&quot;nv&quot;&gt;TIMEOUT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$((&lt;/span&gt;TIMEOUT &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;done
+
+&lt;/span&gt;kubectl &lt;span class=&quot;nt&quot;&gt;--namespace&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;namespace&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; apply &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; ./kubernetes/service.yml
+&lt;span class=&quot;nv&quot;&gt;GREENDEPLOYMENT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;kubectl &lt;span class=&quot;nt&quot;&gt;--namespace&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;namespace&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; get service &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;project&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; json | jq &lt;span class=&quot;s1&quot;&gt;'.spec.selector.version'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-z&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$BLUEDEPLOYMENT&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$BLUEDEPLOYMENT&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$GREENDEPLOYMENT&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# try - we did this in case the old deployment was not there anymore for some reason&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;BLUEDEPLOYMENT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$BLUEDEPLOYMENT&lt;/span&gt; | tr &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&quot;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;
+        kubectl delete deployment &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;project&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;-&lt;span class=&quot;nv&quot;&gt;$BLUEDEPLOYMENT&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--namespace&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;namespace&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# catch&lt;/span&gt;
+        &lt;span class=&quot;c&quot;&gt;# save log for exception&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;retrieving-blue-version&quot;&gt;Retrieving Blue version&lt;/h3&gt;
+&lt;p&gt;First we need to retrieve the version that is currently used in the &lt;code class=&quot;highlighter-rouge&quot;&gt;Blue deployment&lt;/code&gt;.
+The module that controls this routing is the &lt;code class=&quot;highlighter-rouge&quot;&gt;Service&lt;/code&gt; of our deployment in Kubernetes.
+We do this by asking Kubernetes to give us the current version of the deployment its using to route traffic too.&lt;/p&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;BLUEDEPLOYMENT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;kubectl &lt;span class=&quot;nt&quot;&gt;--namespace&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;namespace&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; get service &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;project&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; json | jq &lt;span class=&quot;s1&quot;&gt;'.spec.selector.version'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;yml-deployment-sequence&quot;&gt;YML Deployment Sequence&lt;/h3&gt;
+&lt;p&gt;Previously, our approach was to apply all the YML in one go, for example:&lt;/p&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;kubectl apply &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; ./
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;However, to get the benefit of this strategy we need to apply our &lt;code class=&quot;highlighter-rouge&quot;&gt;service.yml&lt;/code&gt; once the rest of the deployment is up.
+This is because if we apply &lt;em&gt;all&lt;/em&gt; the YML at once the &lt;code class=&quot;highlighter-rouge&quot;&gt;Service&lt;/code&gt; will be overridden straight away, causing bigger problems than we are trying to solve!&lt;/p&gt;
+
+&lt;p&gt;Therefore, we initially  deploy the deployment and the ingresses:&lt;/p&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;kubectl &lt;span class=&quot;nt&quot;&gt;--namespace&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;namespace&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; apply &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; ./kubernetes/deployment.yml
+kubectl &lt;span class=&quot;nt&quot;&gt;--namespace&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;namespace&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; apply &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; ./kubernetes/ingress.yml
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;and only once all the required deployments are in place, we deploy the service new service:&lt;/p&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;kubectl &lt;span class=&quot;nt&quot;&gt;--namespace&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;namespace&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; apply &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; ./kubernetes/service.yml
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;ensuring-the-code-is-successfully--deployed&quot;&gt;Ensuring the code is successfully  deployed&lt;/h3&gt;
+&lt;p&gt;In order to check the code is there and ready to be served to our customers, we loop through the condition.
+The condition that is responsible for us knowing if we are ready is:&lt;/p&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;READY&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;kubectl get deploy &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;project&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;-&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; json &lt;span class=&quot;nt&quot;&gt;--namespace&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;namespace&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; | jq &lt;span class=&quot;s1&quot;&gt;'.status.conditions[] | select(.reason == &quot;MinimumReplicasAvailable&quot;) | .status'&lt;/span&gt; | tr &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&quot;'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;What are retrieving the Kubernetes information for the deployment we just made and make sure we have the &lt;code class=&quot;highlighter-rouge&quot;&gt;MinimumReplicasAvailable&lt;/code&gt; needed for this deployment.
+If this criterion is not met, we are not ready to route traffic through, so we wait and try again later ✌️.&lt;/p&gt;
+
+&lt;h3 id=&quot;deleting-of-the-old-deployment&quot;&gt;Deleting of the old deployment&lt;/h3&gt;
+&lt;p&gt;When implementing this we needed to be aware of two key possible issues:&lt;/p&gt;
+
+&lt;p&gt;1) The blue and green deployments are the same. This would occur if we are rerunning the Jenkins job that deployed the current version.&lt;/p&gt;
+
+&lt;p&gt;2) The old deployment does not exist anymore. This is not a scenario we should see in production, but in &lt;code class=&quot;highlighter-rouge&quot;&gt;dev&lt;/code&gt; where we frequently go and delete a deployment due to &lt;em&gt;X&lt;/em&gt; or &lt;em&gt;Y&lt;/em&gt; reason. We handle this by not failing the Jenkins build because we don’t want the Jenkins build to fail, as the latest deployment has been successful at this point!&lt;/p&gt;
+
+&lt;p&gt;For both of these reasons we had the comparison of the &lt;code class=&quot;highlighter-rouge&quot;&gt;blue&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;green&lt;/code&gt; version to combat point (1), and for point (2) we created a try/catch block to ensure we don’t fail our build due to some behind the scenes manual work.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Blue-green deployment is a strategy that allows minimal down time of your application. Its straightforward to implement and very valuable in my opinion.&lt;/p&gt;
+
+&lt;p&gt;Thank you for reading! 👋&lt;/p&gt;</content><author><name>Lefteris Tatakis</name></author><category term="blog" /><category term="kubernetes" /><category term="jenkins" /><summary type="html">Its only been a few weeks since using this strategy our production environment at Elsevier, and its already shown its value multiple times! I think its an awesome strategy! So… what it is?!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Week 1 - Start of 2019 and Ironman training</title><link href="http://localhost:4000/firstweekofIromanTraining/" rel="alternate" type="text/html" title="Week 1 - Start of 2019 and Ironman training" /><published>2019-01-06T21:08:00+00:00</published><updated>2019-01-06T21:08:00+00:00</updated><id>http://localhost:4000/firstweekofIromanTraining</id><content type="html" xml:base="http://localhost:4000/firstweekofIromanTraining/">&lt;p&gt;Well it’s officially 2019! woop woop! 🎉 🥳&lt;/p&gt;
 
 &lt;p align=&quot;center&quot;&gt;
 &lt;iframe src=&quot;https://giphy.com/embed/QMkPpxPDYY0fu&quot; width=&quot;480&quot; height=&quot;204&quot; frameborder=&quot;0&quot; class=&quot;giphy-embed&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;p&gt;&lt;a href=&quot;https://giphy.com/gifs/happy-leonardo-dicaprio-cheers-QMkPpxPDYY0fu&quot;&gt;&lt;/a&gt;&lt;/p&gt;
@@ -136,17 +287,42 @@ TODO --&gt;</content><author><name></name></author><summary type="html">&amp;lt;
 &lt;p&gt;An interesting link that was shared during the talk was &lt;a href=&quot;http://github.com/danluu/post-mortems&quot;&gt;github.com/danluu/post-mortems&lt;/a&gt;. A repo of a number of post mortem of large company outages.&lt;/p&gt;</content><author><name>LefterisTatakis</name></author><category term="blog" /><category term="chaos engineering" /><category term="velocity" /><category term="tech" /><summary type="html">Talk given by @Ana_M_Medina from Gremlin.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Kubernetes a childs guide</title><link href="http://localhost:4000/kubernetes-101/" rel="alternate" type="text/html" title="Kubernetes a childs guide" /><published>2018-10-31T13:48:00+00:00</published><updated>2018-10-31T13:48:00+00:00</updated><id>http://localhost:4000/kubernetes-101</id><content type="html" xml:base="http://localhost:4000/kubernetes-101/">&lt;p&gt;As most of my “blogs” on this site, this post is a point of reference for me. A quick guide of the things I learned and has most probably forgot over time.
 I plan on coming back to this and adding (or removing) information I dont agree with or I don’t find useful anymore.&lt;/p&gt;
 
+&lt;h2 id=&quot;kubernetes&quot;&gt;Kubernetes&lt;/h2&gt;
+
+&lt;p&gt;In my mind its just a management system of containers. Deploying them, managing them, failure recovery and scaling.
+Primarily used for micro services.
+The most common use case for kubernetes is with docker containers.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Kubernetes is a portable, extensible open-source platform for managing containerized workloads and services” - kubernetes.io&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;But to be honest, how I visualise Kubernetes, is with the metaphor of Nick the Captain.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/kubernetes/nick.png&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;
+&lt;figcaption class=&quot;caption&quot;&gt;Nick the Captain of our containers.&lt;/figcaption&gt;
+
+&lt;p&gt;Nick is Kubernetes (Kubernetes originates from the Greek word helmsman of ship) of our Nodes e.g. 
+&lt;img src=&quot;/assets/kubernetes/nickOnship.png&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;
+&lt;figcaption class=&quot;caption&quot;&gt;Nick managing our Node&lt;/figcaption&gt;
+
+&lt;p&gt;The Kubernetes cluster node we are using has a number of containers. One of which, is our app:
+&lt;img src=&quot;/assets/kubernetes/containersonship.png&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;
+&lt;figcaption class=&quot;caption&quot;&gt;Our app is a container on that Node&lt;/figcaption&gt;
+
+&lt;p&gt;In reality though Nick manages multiple Nodes, in a true Kubernetes fashion:
+&lt;img src=&quot;/assets/kubernetes/nickwithmultipleships.png&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;
+&lt;figcaption class=&quot;caption&quot;&gt;Nick managing multiple Nodes&lt;/figcaption&gt;
+
+&lt;p&gt;How does this really look like in Kubernetes?
+&lt;img src=&quot;/assets/kubernetes/actualviewofcontainer.png&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;
+&lt;figcaption class=&quot;caption&quot;&gt;Our Pod in the Cluster&lt;/figcaption&gt;
+
 &lt;h2 id=&quot;what-is-a-container&quot;&gt;What is a container&lt;/h2&gt;
 
 &lt;p&gt;Containers let you isolate an application so that its under the impression its running on its own private machine&lt;/p&gt;
 
 &lt;p&gt;The most popular container platform for this is &lt;a href=&quot;https://www.docker.com/&quot;&gt;Docker&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;kubernetes&quot;&gt;Kubernetes&lt;/h2&gt;
-
-&lt;p&gt;In my mind its just a management system of containers. Deploying them, manageing them, failure recovery and scaling.
-Primarily used for micro services.
-The most common use case for kubernetes is with docker containers.&lt;/p&gt;
 
 &lt;h2 id=&quot;what-do-i-need-to-get-started&quot;&gt;What do I need to get started&lt;/h2&gt;
 
@@ -177,13 +353,37 @@ However, its not perfect such as as losing the logs, unable to retrieve the even
 &lt;p&gt;Most of the time we feel we don’t have control of our own clusters.
 We are actively investigating other solutions, primarily moving to AWS EKS and using the default kubernetes dashboard.&lt;/p&gt;
 
-&lt;h2 id=&quot;namespaces&quot;&gt;Namespaces&lt;/h2&gt;
-
-&lt;p&gt;👷🏻‍ UNDER CONTRUCTION 👷🏻‍&lt;/p&gt;
-
 &lt;h2 id=&quot;kubectl&quot;&gt;Kubectl&lt;/h2&gt;
-&lt;iframe src=&quot;https://giphy.com/embed/tAeB6dptxnoli&quot; width=&quot;480&quot; height=&quot;446&quot; frameborder=&quot;0&quot; class=&quot;giphy-embed&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-&lt;p&gt;&lt;a href=&quot;https://giphy.com/gifs/construction-tAeB6dptxnoli&quot;&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>Lefteris Tatakis</name></author><category term="blog" /><category term="kubernetes" /><category term="Docker" /><summary type="html">As most of my “blogs” on this site, this post is a point of reference for me. A quick guide of the things I learned and has most probably forgot over time. I plan on coming back to this and adding (or removing) information I dont agree with or I don’t find useful anymore.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Hello World - the beginning</title><link href="http://localhost:4000/hello-world-blog/" rel="alternate" type="text/html" title="Hello World - the beginning" /><published>2018-10-31T13:48:00+00:00</published><updated>2018-10-31T13:48:00+00:00</updated><id>http://localhost:4000/hello-world-blog</id><content type="html" xml:base="http://localhost:4000/hello-world-blog/">&lt;h2 id=&quot;hello-everyone-outthere---️-️&quot;&gt;Hello everyone outthere! 👋  ✌️ ️&lt;/h2&gt;
+
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;kubectl&lt;/code&gt; commands I tend to you on a daily basis are:&lt;/p&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;kubectl get pods &lt;span class=&quot;nt&quot;&gt;--namespace&lt;/span&gt; ltatakis
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Checking which env I am currently working on&lt;/p&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;kubectl config get-contexts
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Choosing my namespace to work in&lt;/p&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;kubectl config use-contexts THE-ENV-I-WANT-2-USE
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Deleted a namespace&lt;/p&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;kubectl delete namespaces
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;But by &lt;em&gt;far&lt;/em&gt; the most useful one I use is:&lt;/p&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;kubectl &lt;span class=&quot;nt&quot;&gt;--namespace&lt;/span&gt; ltatakis &lt;span class=&quot;nb&quot;&gt;exec&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-it&lt;/span&gt; my-amazing-app-pod &lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt; /bin/sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;!-- ## Namespaces
+&lt;iframe src=&quot;https://giphy.com/embed/tAeB6dptxnoli&quot; width=&quot;480&quot; height=&quot;446&quot; frameBorder=&quot;0&quot; class=&quot;giphy-embed&quot; allowFullScreen&gt;&lt;/iframe&gt;&lt;p&gt;&lt;a href=&quot;https://giphy.com/gifs/construction-tAeB6dptxnoli&quot;&gt;&lt;/a&gt;&lt;/p&gt; --&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Thats all for now folks!&lt;/p&gt;
+&lt;p align=&quot;centre&quot;&gt;
+&lt;iframe src=&quot;https://giphy.com/embed/lD76yTC5zxZPG&quot; width=&quot;480&quot; height=&quot;352&quot; frameborder=&quot;0&quot; class=&quot;giphy-embed&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;p&gt;&lt;a href=&quot;https://giphy.com/gifs/the-end-thats-all-folks-lD76yTC5zxZPG&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/p&gt;</content><author><name>Lefteris Tatakis</name></author><category term="blog" /><category term="kubernetes" /><category term="Docker" /><summary type="html">As most of my “blogs” on this site, this post is a point of reference for me. A quick guide of the things I learned and has most probably forgot over time. I plan on coming back to this and adding (or removing) information I dont agree with or I don’t find useful anymore.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Hello World - the beginning</title><link href="http://localhost:4000/hello-world-blog/" rel="alternate" type="text/html" title="Hello World - the beginning" /><published>2018-10-31T13:48:00+00:00</published><updated>2018-10-31T13:48:00+00:00</updated><id>http://localhost:4000/hello-world-blog</id><content type="html" xml:base="http://localhost:4000/hello-world-blog/">&lt;h2 id=&quot;hello-everyone-out-there---️-️&quot;&gt;Hello everyone out there! 👋  ✌️ ️&lt;/h2&gt;
 &lt;p&gt;This is something I have been thinking for a while but never got the time to do it.&lt;/p&gt;
 
 &lt;p&gt;While attending &lt;a href=&quot;https://conferences.oreilly.com/velocity&quot;&gt;Velocity&lt;/a&gt;, I was inspired by the cool tech and possiblities out there.
@@ -195,7 +395,7 @@ I therefore decided creating a summary and overview for people to get a brief in
 
 &lt;p&gt;We shall see what the future brings.&lt;/p&gt;
 
-&lt;p&gt;Its an idea, hopefully, it does not die out too soon 🤞🏻&lt;/p&gt;</content><author><name>LefterisTatakis</name></author><category term="blog" /><category term="velocity" /><category term="hello" /><summary type="html">Hello everyone outthere! 👋 ✌️ ️ This is something I have been thinking for a while but never got the time to do it.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Markdown Extra Components</title><link href="http://localhost:4000/markdown-extra-components/" rel="alternate" type="text/html" title="Markdown Extra Components" /><published>2018-01-24T00:00:00+00:00</published><updated>2018-01-24T00:00:00+00:00</updated><id>http://localhost:4000/markdown-extra-components</id><content type="html" xml:base="http://localhost:4000/markdown-extra-components/">&lt;!-- ---
+&lt;p&gt;Its an idea, hopefully, it does not die out too soon 🤞🏻&lt;/p&gt;</content><author><name>LefterisTatakis</name></author><category term="blog" /><category term="velocity" /><category term="hello" /><summary type="html">Hello everyone out there! 👋 ✌️ ️ This is something I have been thinking for a while but never got the time to do it.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Markdown Extra Components</title><link href="http://localhost:4000/markdown-extra-components/" rel="alternate" type="text/html" title="Markdown Extra Components" /><published>2018-01-24T00:00:00+00:00</published><updated>2018-01-24T00:00:00+00:00</updated><id>http://localhost:4000/markdown-extra-components</id><content type="html" xml:base="http://localhost:4000/markdown-extra-components/">&lt;!-- ---
 title: &quot;Markdown Extra Components&quot;
 layout: post
 date: 2018-01-24 22:48
@@ -616,21 +816,4 @@ A JS Example:
 
 &lt;p&gt;This was the 2nd iteration of this project. Initially, it was deployed on AWS Lightsail, however, to drive cost saving as the service does not have a lot of traffic, I decided to change the deployment paridgim to S3, Lambdas, and Google Drive.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://www.libertycars.gr&quot;&gt;Check it out&lt;/a&gt; here.&lt;/p&gt;</content><author><name>LefterisTatakis</name></author><category term="project" /><category term="ecommerce" /><category term="lambdas" /><category term="AWS" /><category term="Angular" /><category term="JavaScript" /><category term="Nodejs" /><summary type="html">What did I build it with</summary></entry><entry><title type="html">My masters in Advanced Computer Science</title><link href="http://localhost:4000/masters-computer-science/" rel="alternate" type="text/html" title="My masters in Advanced Computer Science" /><published>2016-10-23T22:10:00+01:00</published><updated>2016-10-23T22:10:00+01:00</updated><id>http://localhost:4000/masters-computer-science</id><content type="html" xml:base="http://localhost:4000/masters-computer-science/">&lt;p&gt;In my Masters I was passionate in investigating the information loss that occurs in interactive visualisations over time, as the result of user decisions and interactions. Using the MVC design pattern and state-based systems to understand how visualising temporal data results into information loss.&lt;/p&gt;
-
-&lt;p&gt;In the process of the Masters I:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Used iPython Notebooks for cleaning and manipulating the data using Pandas library.&lt;/li&gt;
-  &lt;li&gt;Visualised data with R and D3 to understand where the user interactions lead to information loss.&lt;/li&gt;
-  &lt;li&gt;Investigated the use of user clustering and data masking as information loss issues.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;During that time period I was also Teaching Assistant for the Undergraduate courses of: Java, Distributed Systems, Software Engineering and Agile Development.&lt;/p&gt;
-
-&lt;p&gt;As a Teaching Assistant I:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Managed and resolved student complaints and objections relating to the marking they received by my fellow teaching assistants, always ensuring to be helpful and calm.&lt;/li&gt;
-  &lt;li&gt;Trained new teaching assistants in the facilitation of student queries and  coursework marking.&lt;/li&gt;
-  &lt;li&gt;reinforcted learning concepts, such as Java and SQL, taught by lecturers to undergraduate students.&lt;/li&gt;
-  &lt;li&gt;was promoted to Lab Supervisor in the course of Distributed Computing due to my calm composure and effective performance during stressful student workshop situations.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>LefterisTatakis</name></author><category term="project" /><category term="masters" /><category term="Linked Data" /><category term="Visualisation" /><summary type="html">In my Masters I was passionate in investigating the information loss that occurs in interactive visualisations over time, as the result of user decisions and interactions. Using the MVC design pattern and state-based systems to understand how visualising temporal data results into information loss.</summary></entry></feed>
+&lt;p&gt;&lt;a href=&quot;https://www.libertycars.gr&quot;&gt;Check it out&lt;/a&gt; here.&lt;/p&gt;</content><author><name>LefterisTatakis</name></author><category term="project" /><category term="ecommerce" /><category term="lambdas" /><category term="AWS" /><category term="Angular" /><category term="JavaScript" /><category term="Nodejs" /><summary type="html">What did I build it with</summary></entry></feed>

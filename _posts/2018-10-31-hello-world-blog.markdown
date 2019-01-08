@@ -13,8 +13,7 @@ description: The idea of a blog
 # jemoji: '<img class="emoji" title=":ramen:" alt=":ramen:" src="https://assets.github.com/images/icons/emoji/unicode/1f35c.png" height="20" width="20" align="absmiddle">'
 ---
 
-
-## Hello everyone outthere! 👋  ✌️ ️
+## Hello everyone out there! 👋  ✌️ ️
 This is something I have been thinking for a while but never got the time to do it.
 
 While attending [Velocity](https://conferences.oreilly.com/velocity), I was inspired by the cool tech and possiblities out there.
