@@ -26,7 +26,7 @@ Failure is not an option!
 </p>
 I have focused on starting the new year running, (or more like cycling) by doing all the key sessions I should be doing over the next few months.
 1. Cycling sessions. I started doing my Zwift Grand Fonto training program, which aims to build my fitness to be ready to do 100-200km.
-2. Early morning swims, at 6:30. I am currently, trying to get my body used to that effort. These sessions should be easy (eventually), active recovery for 40-50 minutes. (Going to do one tomorrow 😅)
+2. Early morning swims, at 6:30. I am currently trying to get my body used to that effort. These sessions should be easy (eventually), active recovery for 40-50 minutes. (Going to do one tomorrow 😅)
 3. Brick sessions. I "kinda" did one on Monday but I rested in between the sessions... So... maybe it was just two sessions, which luckily is something I need to do also! 
 4. Enjoyed my life a bit! 😇
 
