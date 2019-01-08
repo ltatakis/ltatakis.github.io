@@ -21,9 +21,9 @@ Before we start some quick terminology:
 
 
 ## Overview - 10000 ft ✈️
-*Blue-green deployment* is a strategy to allow you to switch deployments of your code with minimal, dare I say 0 down time.
-The way it works is, you version your old _(blue)_ and new _(green)_ deployment, ensuring that you route all the traffic to the *old* pods initially. Until, you are confident that the new code is ready to be deployed! 
-Once that is done, just switch all the traffic over to the new deployment, and delete the old deployment.
+*Blue-green deployment* is a strategy that allows you to switch deployments of your code with minimal, dare I say 0 down time.
+The code is versioned, we call the old code the blue deployment while the new one green. The versioning of the code ensures that the traffic is routed to the *old* pods initially, until, we are confident that the new code is ready to be deployed! 
+Once we are happy that the `Green deployment` is up and running, we switch the traffic and we delete the blue deployment.
 
 ![Markdowm Image][1]
 <figcaption class="caption">Starting point, traffic going to blue deployment</figcaption>
@@ -31,15 +31,10 @@ Once that is done, just switch all the traffic over to the new deployment, and d
 <p align="center">Voila! </p>
 
 ## The problem we solved
-In our production environment, we are noticed that for the initial 5-10 minutes of the new deployment there old cold showing between refreshes of the pages.
+We noticed that in our Production system the initial 5-10 minutes of the new deployment was unstable, eg we saw old code showing between refreshes of the pages.
 This was because, until the new code was up and running we had both deployments of our code serving our customers, obviously causing instability and weird behavior.
 
 > Each release deployment is versioned.
-
-Therefore, when we want to make a deployment we keep the `Blue deployment` pods in place, until all the pods of the `Green deployment` are there.
-While the `Green deployment` is reaching required capacity no traffic is sent to it. All traffic is still routed to the `Blue` pods.
-
-Once we are happy that the `Green deployment` is up and running, we switch the traffic and we delete the blue deployment.
 
 
 ![Markdowm Image][2]
@@ -87,8 +82,7 @@ spec:
     version: ##VERSION##
 ```
 
-
-The strategy implementation in the Jenkins pipeline step that implemented the step was:
+and the implementation strategy was done in the Jenkins pipeline step:
 ```sh
 BLUEDEPLOYMENT=$(kubectl --namespace ${namespace} get service ${project} -o json | jq '.spec.selector.version')
 
@@ -123,11 +117,11 @@ if [ ! -z "$BLUEDEPLOYMENT" ] && [ "$BLUEDEPLOYMENT" != "$GREENDEPLOYMENT" ] ; t
     }
 fi
 ```
-
+## Details of the implementation 
 ### Retrieving Blue version
-First we need to retrieve the version that is currently used in the `Blue deployment`.
+First, we need to retrieve the version that is currently used in the `Blue deployment`.
 The module that controls this routing is the `Service` of our deployment in Kubernetes.
-We do this by asking Kubernetes to give us the current version of the deployment its using to route traffic too.
+We do this by asking Kubernetes to give us the current version of the deployment its using.
 ```sh
 BLUEDEPLOYMENT=$(kubectl --namespace ${namespace} get service ${project} -o json | jq '.spec.selector.version')
 ```
@@ -137,7 +131,7 @@ Previously, our approach was to apply all the YML in one go, for example:
 ```sh
 kubectl apply -f ./
 ```
-However, to get the benefit of this strategy we need to apply our `service.yml` once the rest of the deployment is up.
+However, to get the benefit of this strategy we apply our `service.yml` only once the rest of the deployment is up.
 This is because if we apply _all_ the YML at once the `Service` will be overridden straight away, causing bigger problems than we are trying to solve!
 
 Therefore, we initially  deploy the deployment and the ingresses:
@@ -168,12 +162,14 @@ When implementing this we needed to be aware of two key possible issues:
 
 2) The old deployment does not exist anymore. This is not a scenario we should see in production, but in `dev` where we frequently go and delete a deployment due to _X_ or _Y_ reason. We handle this by not failing the Jenkins build because we don't want the Jenkins build to fail, as the latest deployment has been successful at this point!
 
-For both of these reasons we had the comparison of the `blue` and `green` version to combat point (1), and for point (2) we created a try/catch block to ensure we don't fail our build due to some behind the scenes manual work.
+Therefore, we added the comparison of the `blue` and `green` version to combat point (1), and we created a try/catch block to ensure we don't fail our build due to some behind the scenes manual work, for (2).
 
 ## Conclusion
 Blue-green deployment is a strategy that allows minimal down time of your application. Its straightforward to implement and very valuable in my opinion.
 
 Thank you for reading! 👋
+
+If you notice any mistakes or spelling mistakes please contact me on <a href="https://twitter.com/LTatakis"> Twitter</a>.
 
 [1]: /assets/kubernetes/point2blue.png
 [2]: /assets/kubernetes/point2green.png

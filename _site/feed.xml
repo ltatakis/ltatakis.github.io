@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-01-08T16:46:10+00:00</updated><id>http://localhost:4000/</id><title type="html">Lefteris Tatakis</title><subtitle>A Software Engineer based in Oxford. This is a blog about technology (engineering or bike!) and travel.</subtitle><entry><title type="html">Kubernetes - Blue Green Deployment</title><link href="http://localhost:4000/greenbluedeployment/" rel="alternate" type="text/html" title="Kubernetes - Blue Green Deployment" /><published>2019-01-08T16:41:00+00:00</published><updated>2019-01-08T16:41:00+00:00</updated><id>http://localhost:4000/greenbluedeployment</id><content type="html" xml:base="http://localhost:4000/greenbluedeployment/">&lt;p&gt;Its only been a few weeks since using this strategy our production environment at Elsevier, and its already shown its value multiple times! I think its an awesome strategy!
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-01-08T19:24:26+00:00</updated><id>http://localhost:4000/</id><title type="html">Lefteris Tatakis</title><subtitle>A Software Engineer based in Oxford. This is a blog about technology (engineering or bike!) and travel.</subtitle><entry><title type="html">Kubernetes - Blue Green Deployment</title><link href="http://localhost:4000/greenbluedeployment/" rel="alternate" type="text/html" title="Kubernetes - Blue Green Deployment" /><published>2019-01-08T16:41:00+00:00</published><updated>2019-01-08T16:41:00+00:00</updated><id>http://localhost:4000/greenbluedeployment</id><content type="html" xml:base="http://localhost:4000/greenbluedeployment/">&lt;p&gt;Its only been a few weeks since using this strategy our production environment at Elsevier, and its already shown its value multiple times! I think its an awesome strategy!
 So… what it is?!&lt;/p&gt;
 
 &lt;p&gt;Before we start some quick terminology:&lt;/p&gt;
@@ -8,9 +8,9 @@ So… what it is?!&lt;/p&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;overview---10000-ft-️&quot;&gt;Overview - 10000 ft ✈️&lt;/h2&gt;
-&lt;p&gt;&lt;em&gt;Blue-green deployment&lt;/em&gt; is a strategy to allow you to switch deployments of your code with minimal, dare I say 0 down time.
-The way it works is, you version your old &lt;em&gt;(blue)&lt;/em&gt; and new &lt;em&gt;(green)&lt;/em&gt; deployment, ensuring that you route all the traffic to the &lt;em&gt;old&lt;/em&gt; pods initially. Until, you are confident that the new code is ready to be deployed! 
-Once that is done, just switch all the traffic over to the new deployment, and delete the old deployment.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Blue-green deployment&lt;/em&gt; is a strategy that allows you to switch deployments of your code with minimal, dare I say 0 down time.
+The code is versioned, we call the old code the blue deployment while the new one green. The versioning of the code ensures that the traffic is routed to the &lt;em&gt;old&lt;/em&gt; pods initially, until, we are confident that the new code is ready to be deployed! 
+Once we are happy that the &lt;code class=&quot;highlighter-rouge&quot;&gt;Green deployment&lt;/code&gt; is up and running, we switch the traffic and we delete the blue deployment.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/kubernetes/point2blue.png&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;
 &lt;figcaption class=&quot;caption&quot;&gt;Starting point, traffic going to blue deployment&lt;/figcaption&gt;
@@ -18,17 +18,12 @@ Once that is done, just switch all the traffic over to the new deployment, and d
 &lt;p align=&quot;center&quot;&gt;Voila! &lt;/p&gt;
 
 &lt;h2 id=&quot;the-problem-we-solved&quot;&gt;The problem we solved&lt;/h2&gt;
-&lt;p&gt;In our production environment, we are noticed that for the initial 5-10 minutes of the new deployment there old cold showing between refreshes of the pages.
+&lt;p&gt;We noticed that in our Production system the initial 5-10 minutes of the new deployment was unstable, eg we saw old code showing between refreshes of the pages.
 This was because, until the new code was up and running we had both deployments of our code serving our customers, obviously causing instability and weird behavior.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Each release deployment is versioned.&lt;/p&gt;
 &lt;/blockquote&gt;
-
-&lt;p&gt;Therefore, when we want to make a deployment we keep the &lt;code class=&quot;highlighter-rouge&quot;&gt;Blue deployment&lt;/code&gt; pods in place, until all the pods of the &lt;code class=&quot;highlighter-rouge&quot;&gt;Green deployment&lt;/code&gt; are there.
-While the &lt;code class=&quot;highlighter-rouge&quot;&gt;Green deployment&lt;/code&gt; is reaching required capacity no traffic is sent to it. All traffic is still routed to the &lt;code class=&quot;highlighter-rouge&quot;&gt;Blue&lt;/code&gt; pods.&lt;/p&gt;
-
-&lt;p&gt;Once we are happy that the &lt;code class=&quot;highlighter-rouge&quot;&gt;Green deployment&lt;/code&gt; is up and running, we switch the traffic and we delete the blue deployment.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/kubernetes/point2green.png&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;
 &lt;figcaption class=&quot;caption&quot;&gt;Following successful green deployment traffic&lt;/figcaption&gt;
@@ -72,7 +67,7 @@ spec:
     version: ##VERSION##
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;The strategy implementation in the Jenkins pipeline step that implemented the step was:&lt;/p&gt;
+&lt;p&gt;and the implementation strategy was done in the Jenkins pipeline step:&lt;/p&gt;
 &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;BLUEDEPLOYMENT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;kubectl &lt;span class=&quot;nt&quot;&gt;--namespace&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;namespace&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; get service &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;project&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; json | jq &lt;span class=&quot;s1&quot;&gt;'.spec.selector.version'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;
 
 &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;kubernetes
@@ -106,11 +101,11 @@ done
     &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
+&lt;h2 id=&quot;details-of-the-implementation&quot;&gt;Details of the implementation&lt;/h2&gt;
 &lt;h3 id=&quot;retrieving-blue-version&quot;&gt;Retrieving Blue version&lt;/h3&gt;
-&lt;p&gt;First we need to retrieve the version that is currently used in the &lt;code class=&quot;highlighter-rouge&quot;&gt;Blue deployment&lt;/code&gt;.
+&lt;p&gt;First, we need to retrieve the version that is currently used in the &lt;code class=&quot;highlighter-rouge&quot;&gt;Blue deployment&lt;/code&gt;.
 The module that controls this routing is the &lt;code class=&quot;highlighter-rouge&quot;&gt;Service&lt;/code&gt; of our deployment in Kubernetes.
-We do this by asking Kubernetes to give us the current version of the deployment its using to route traffic too.&lt;/p&gt;
+We do this by asking Kubernetes to give us the current version of the deployment its using.&lt;/p&gt;
 &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;BLUEDEPLOYMENT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;kubectl &lt;span class=&quot;nt&quot;&gt;--namespace&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;namespace&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; get service &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;project&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; json | jq &lt;span class=&quot;s1&quot;&gt;'.spec.selector.version'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -118,7 +113,7 @@ We do this by asking Kubernetes to give us the current version of the deployment
 &lt;p&gt;Previously, our approach was to apply all the YML in one go, for example:&lt;/p&gt;
 &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;kubectl apply &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; ./
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;However, to get the benefit of this strategy we need to apply our &lt;code class=&quot;highlighter-rouge&quot;&gt;service.yml&lt;/code&gt; once the rest of the deployment is up.
+&lt;p&gt;However, to get the benefit of this strategy we apply our &lt;code class=&quot;highlighter-rouge&quot;&gt;service.yml&lt;/code&gt; only once the rest of the deployment is up.
 This is because if we apply &lt;em&gt;all&lt;/em&gt; the YML at once the &lt;code class=&quot;highlighter-rouge&quot;&gt;Service&lt;/code&gt; will be overridden straight away, causing bigger problems than we are trying to solve!&lt;/p&gt;
 
 &lt;p&gt;Therefore, we initially  deploy the deployment and the ingresses:&lt;/p&gt;
@@ -144,12 +139,14 @@ If this criterion is not met, we are not ready to route traffic through, so we w
 
 &lt;p&gt;2) The old deployment does not exist anymore. This is not a scenario we should see in production, but in &lt;code class=&quot;highlighter-rouge&quot;&gt;dev&lt;/code&gt; where we frequently go and delete a deployment due to &lt;em&gt;X&lt;/em&gt; or &lt;em&gt;Y&lt;/em&gt; reason. We handle this by not failing the Jenkins build because we don’t want the Jenkins build to fail, as the latest deployment has been successful at this point!&lt;/p&gt;
 
-&lt;p&gt;For both of these reasons we had the comparison of the &lt;code class=&quot;highlighter-rouge&quot;&gt;blue&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;green&lt;/code&gt; version to combat point (1), and for point (2) we created a try/catch block to ensure we don’t fail our build due to some behind the scenes manual work.&lt;/p&gt;
+&lt;p&gt;Therefore, we added the comparison of the &lt;code class=&quot;highlighter-rouge&quot;&gt;blue&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;green&lt;/code&gt; version to combat point (1), and we created a try/catch block to ensure we don’t fail our build due to some behind the scenes manual work, for (2).&lt;/p&gt;
 
 &lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;Blue-green deployment is a strategy that allows minimal down time of your application. Its straightforward to implement and very valuable in my opinion.&lt;/p&gt;
 
-&lt;p&gt;Thank you for reading! 👋&lt;/p&gt;</content><author><name>Lefteris Tatakis</name></author><category term="blog" /><category term="kubernetes" /><category term="jenkins" /><summary type="html">Its only been a few weeks since using this strategy our production environment at Elsevier, and its already shown its value multiple times! I think its an awesome strategy! So… what it is?!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Week 1 - Start of 2019 and Ironman training</title><link href="http://localhost:4000/firstweekofIromanTraining/" rel="alternate" type="text/html" title="Week 1 - Start of 2019 and Ironman training" /><published>2019-01-06T21:08:00+00:00</published><updated>2019-01-06T21:08:00+00:00</updated><id>http://localhost:4000/firstweekofIromanTraining</id><content type="html" xml:base="http://localhost:4000/firstweekofIromanTraining/">&lt;p&gt;Well it’s officially 2019! woop woop! 🎉 🥳&lt;/p&gt;
+&lt;p&gt;Thank you for reading! 👋&lt;/p&gt;
+
+&lt;p&gt;If you notice any mistakes or spelling mistakes please contact me on &lt;a href=&quot;https://twitter.com/LTatakis&quot;&gt; Twitter&lt;/a&gt;.&lt;/p&gt;</content><author><name>Lefteris Tatakis</name></author><category term="blog" /><category term="kubernetes" /><category term="jenkins" /><summary type="html">Its only been a few weeks since using this strategy our production environment at Elsevier, and its already shown its value multiple times! I think its an awesome strategy! So… what it is?!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Week 1 - Start of 2019 and Ironman training</title><link href="http://localhost:4000/firstweekofIromanTraining/" rel="alternate" type="text/html" title="Week 1 - Start of 2019 and Ironman training" /><published>2019-01-06T21:08:00+00:00</published><updated>2019-01-06T21:08:00+00:00</updated><id>http://localhost:4000/firstweekofIromanTraining</id><content type="html" xml:base="http://localhost:4000/firstweekofIromanTraining/">&lt;p&gt;Well it’s officially 2019! woop woop! 🎉 🥳&lt;/p&gt;
 
 &lt;p align=&quot;center&quot;&gt;
 &lt;iframe src=&quot;https://giphy.com/embed/QMkPpxPDYY0fu&quot; width=&quot;480&quot; height=&quot;204&quot; frameborder=&quot;0&quot; class=&quot;giphy-embed&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;p&gt;&lt;a href=&quot;https://giphy.com/gifs/happy-leonardo-dicaprio-cheers-QMkPpxPDYY0fu&quot;&gt;&lt;/a&gt;&lt;/p&gt;
