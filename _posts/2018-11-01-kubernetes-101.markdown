@@ -116,6 +116,10 @@ Thats all for now folks!
 <p align="centre">
 <iframe src="https://giphy.com/embed/lD76yTC5zxZPG" width="480" height="352" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/the-end-thats-all-folks-lD76yTC5zxZPG"></a></p>
 </p>
+
+If you notice any mistakes please contact me on <a href="https://twitter.com/LTatakis"> Twitter</a>.
+
+
 [1]: /assets/kubernetes/nick.png
 [2]: /assets/kubernetes/nickOnship.png
 [3]: /assets/kubernetes/containersonship.png

@@ -169,7 +169,7 @@ Blue-green deployment is a strategy that allows minimal down time of your applic
 
 Thank you for reading! 👋
 
-If you notice any mistakes or spelling mistakes please contact me on <a href="https://twitter.com/LTatakis"> Twitter</a>.
+If you notice any mistakes please contact me on <a href="https://twitter.com/LTatakis"> Twitter</a>.
 
 [1]: /assets/kubernetes/point2blue.png
 [2]: /assets/kubernetes/point2green.png
