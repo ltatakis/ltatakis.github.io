@@ -1,4 +1,24 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-01-08T19:26:43+00:00</updated><id>http://localhost:4000/</id><title type="html">Lefteris Tatakis</title><subtitle>A Software Engineer based in Oxford. This is a blog about technology (engineering or bike!) and travel.</subtitle><entry><title type="html">Kubernetes - Blue Green Deployment</title><link href="http://localhost:4000/greenbluedeployment/" rel="alternate" type="text/html" title="Kubernetes - Blue Green Deployment" /><published>2019-01-08T16:41:00+00:00</published><updated>2019-01-08T16:41:00+00:00</updated><id>http://localhost:4000/greenbluedeployment</id><content type="html" xml:base="http://localhost:4000/greenbluedeployment/">&lt;p&gt;Its only been a few weeks since using this strategy our production environment at Elsevier, and its already shown its value multiple times! I think its an awesome strategy!
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-01-13T19:50:29+00:00</updated><id>http://localhost:4000/</id><title type="html">Lefteris Tatakis</title><subtitle>A Software Engineer based in Oxford. This is a blog about technology (engineering or bike!) and travel.</subtitle><entry><title type="html">Week 2 - Ironman training</title><link href="http://localhost:4000/week2iromantraining/" rel="alternate" type="text/html" title="Week 2 - Ironman training" /><published>2019-01-13T19:32:00+00:00</published><updated>2019-01-13T19:32:00+00:00</updated><id>http://localhost:4000/week2iromantraining</id><content type="html" xml:base="http://localhost:4000/week2iromantraining/">&lt;p&gt;My main focus for these early months is the cycling, my key weakness. I would like to try and start enjoying the session as much as this:&lt;/p&gt;
+&lt;iframe src=&quot;https://giphy.com/embed/C429iD9jGChRm&quot; width=&quot;480&quot; height=&quot;269&quot; frameborder=&quot;0&quot; class=&quot;giphy-embed&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;a href=&quot;https://giphy.com/gifs/funny-pictures-peter-sagan-C429iD9jGChRm&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;It &lt;em&gt;might&lt;/em&gt; happen 😂 but we shall see… 😅&lt;/p&gt;
+
+&lt;p&gt;The highlight of this week was my first “long” session on the turbo, 
+1hour 35 min 😳 I am not sure how people do it… its not confortable!&lt;/p&gt;
+
+&lt;p&gt;In order to finish the session, I had to distract myself with Youtube videos to get past the pain of the last 10 min!
+Looking at the Zwift Grand Fondo program I am doing its only going up! With sessions over 3 hours on a turbo! 😱&lt;/p&gt;
+
+&lt;p&gt;The sessions this week were:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Monday morning swim&lt;/li&gt;
+  &lt;li&gt;Wednesday double cycling session. Was not planned, but as I was prepping for the Oxford Tri swim I found out the boiler was broken down at the pool! The Lead Coach joked about using wetsuits in the pool, as it was 25C. Personally did not fancy a cold pool on a January evening 😅 And did a bike session instead!&lt;/li&gt;
+  &lt;li&gt;Sunday 1:35 on Zwift and 5km run.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/ironman/week2-training.png&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;
+&lt;figcaption class=&quot;caption&quot;&gt;Training distribution&lt;/figcaption&gt;</content><author><name>Lefteris Tatakis</name></author><category term="blog" /><category term="ironman" /><category term="training" /><summary type="html">My main focus for these early months is the cycling, my key weakness. I would like to try and start enjoying the session as much as this:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Kubernetes - Blue Green Deployment</title><link href="http://localhost:4000/greenbluedeployment/" rel="alternate" type="text/html" title="Kubernetes - Blue Green Deployment" /><published>2019-01-08T16:41:00+00:00</published><updated>2019-01-08T16:41:00+00:00</updated><id>http://localhost:4000/greenbluedeployment</id><content type="html" xml:base="http://localhost:4000/greenbluedeployment/">&lt;p&gt;Its only been a few weeks since using this strategy our production environment at Elsevier, and its already shown its value multiple times! I think its an awesome strategy!
 So… what it is?!&lt;/p&gt;
 
 &lt;p&gt;Before we start some quick terminology:&lt;/p&gt;
@@ -802,17 +822,4 @@ A JS Example:
 [3]: http://www.markitdown.net/
 [4]: http://daringfireball.net/projects/markdown/basics
 [5]: http://daringfireball.net/projects/markdown/syntax
-[6]: http://kune.fr/wp-content/uploads/2013/10/ghost-blog.jpg --&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Liberty Cars</title><link href="http://localhost:4000/liberty-cars-overview/" rel="alternate" type="text/html" title="Liberty Cars" /><published>2018-01-23T22:10:00+00:00</published><updated>2018-01-23T22:10:00+00:00</updated><id>http://localhost:4000/liberty-cars-overview</id><content type="html" xml:base="http://localhost:4000/liberty-cars-overview/">&lt;p&gt;What did I build it with&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Angular 5&lt;/li&gt;
-  &lt;li&gt;NodeJs Lambdas&lt;/li&gt;
-  &lt;li&gt;Deployment scripts to S3.&lt;/li&gt;
-  &lt;li&gt;Google Drive intergration as Databases&lt;/li&gt;
-  &lt;li&gt;AWS SES Email service for invoicing&lt;/li&gt;
-  &lt;li&gt;API’s authed with JSON web tokens&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This was the 2nd iteration of this project. Initially, it was deployed on AWS Lightsail, however, to drive cost saving as the service does not have a lot of traffic, I decided to change the deployment paridgim to S3, Lambdas, and Google Drive.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.libertycars.gr&quot;&gt;Check it out&lt;/a&gt; here.&lt;/p&gt;</content><author><name>LefterisTatakis</name></author><category term="project" /><category term="ecommerce" /><category term="lambdas" /><category term="AWS" /><category term="Angular" /><category term="JavaScript" /><category term="Nodejs" /><summary type="html">What did I build it with</summary></entry></feed>
+[6]: http://kune.fr/wp-content/uploads/2013/10/ghost-blog.jpg --&gt;</content><author><name></name></author><summary type="html"></summary></entry></feed>
