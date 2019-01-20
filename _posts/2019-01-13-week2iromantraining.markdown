@@ -2,7 +2,7 @@
 title: "Week 2 - Ironman training"
 layout: post
 date: 2019-01-13 19:32
-image: /assets/images/markdown.jpg
+image: /assets/images/ironman/week2-training.png
 headerImage: false
 tag:
 - ironman

@@ -2,7 +2,7 @@
 title: "Kubernetes - Blue Green Deployment"
 layout: post
 date: 2019-01-8 16:41
-image: /assets/images/markdown.jpg
+image: /assets/kubernetes/point2blue.png
 headerImage: false
 tag:
 - kubernetes

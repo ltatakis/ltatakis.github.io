@@ -2,7 +2,7 @@
 title: "Kubernetes a childs guide"
 layout: post
 date: 2018-10-31 13:48
-image: /assets/images/markdown.jpg
+image: /assets/kubernetes/nick.png
 headerImage: false
 tag:
 - kubernetes

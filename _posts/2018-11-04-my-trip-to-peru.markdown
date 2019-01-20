@@ -2,7 +2,7 @@
 title: "Expedition Peru"
 layout: post
 date: 2018-10-31 23:48
-image: /assets/images/markdown.jpg
+image: /assets/peru/peru.JPG
 headerImage: false
 tag:
 - travel
