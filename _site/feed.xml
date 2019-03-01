@@ -1,4 +1,100 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-02-05T18:21:16+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Lefteris Tatakis</title><subtitle>A Software Engineer based in Oxford. This is a blog about technology (engineering or bike!) and travel.</subtitle><entry><title type="html">Indident Reports - a template</title><link href="http://localhost:4000/incidentreports/" rel="alternate" type="text/html" title="Indident Reports - a template" /><published>2019-02-05T17:30:00+00:00</published><updated>2019-02-05T17:30:00+00:00</updated><id>http://localhost:4000/incidentreports</id><content type="html" xml:base="http://localhost:4000/incidentreports/">&lt;p&gt;Bad things happen, the important thing is how do we deal with them when they do, and the actions we take so they don’t happen again.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-03-01T18:03:15+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Lefteris Tatakis</title><subtitle>A Software Engineer based in Oxford. This is a blog about technology (engineering or bike!) and travel.</subtitle><entry><title type="html">10000ft of Machine Learning</title><link href="http://localhost:4000/machinelearningatgoogle/" rel="alternate" type="text/html" title="10000ft of Machine Learning" /><published>2019-03-01T17:30:00+00:00</published><updated>2019-03-01T17:30:00+00:00</updated><id>http://localhost:4000/machinelearningatgoogle</id><content type="html" xml:base="http://localhost:4000/machinelearningatgoogle/">&lt;p&gt;Today I went to a Machine learning training course at Google which was done by Datatonic. For me as a complete noobie in Machine Learning it was an opportunity to learn and freshen up my extremely limited and superficial knowledge gained by University Courses or hearing about pet projects of colleagues.&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+&lt;iframe src=&quot;https://giphy.com/embed/WoWm8YzFQJg5i&quot; width=&quot;480&quot; height=&quot;351&quot; frameborder=&quot;0&quot; class=&quot;giphy-embed&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;p&gt;&lt;a href=&quot;https://giphy.com/gifs/cartoons-comics-sea-reading-WoWm8YzFQJg5i&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/p&gt;
+
+&lt;p&gt;We started with a brief and interesting talk on the basic principles and history of ML, but then all of the sudden it just jumped in the complete deep end telling us to run complicated code in Google Collab. I tried to get my head around one of the exercises with the help of the instructor.&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+&lt;iframe src=&quot;https://giphy.com/embed/l0NwvLFprv6DrUXx6&quot; width=&quot;480&quot; height=&quot;480&quot; frameborder=&quot;0&quot; class=&quot;giphy-embed&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;p&gt;&lt;a href=&quot;https://giphy.com/gifs/afv-funny-fail-lol-l0NwvLFprv6DrUXx6&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/p&gt;
+
+&lt;p&gt;For me, the initial overview information and learning was the most valuable, and I would like to share some of it, for future me and anyone else interested.&lt;/p&gt;
+
+&lt;p&gt;Hopefully, I will have a crack at trying a project myself and get my head around the more complicated concepts. 🤔&lt;/p&gt;
+
+&lt;p&gt;(All the images used below are taken from the Datatonic slides)&lt;/p&gt;
+
+&lt;h2 id=&quot;a-1000ft-view-of-machine-learning&quot;&gt;A 1000ft view of Machine Learning&lt;/h2&gt;
+
+&lt;p&gt;Where I am at the moment and how I see machine learning is as:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/ml/MLinAnImage.png&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;
+&lt;figcaption class=&quot;caption&quot;&gt;Machine learning in an image&lt;/figcaption&gt;
+
+&lt;p&gt;You give it some data and it gives you a result. For now I am satisfied with that view on ML, however, I will have to a few books to get a bit more into the ML concepts.&lt;/p&gt;
+
+&lt;p&gt;My brother (and ML enthusiast) is currently planning to read “Deep Learning” by Ian Goodfellow, which has now been added to my reading list!&lt;/p&gt;
+
+&lt;h2 id=&quot;the-three-ml-categories&quot;&gt;The three ML categories&lt;/h2&gt;
+
+&lt;p&gt;What was discussed today in the workshop that Machine learning mainly falls in three big categorisations:&lt;/p&gt;
+
+&lt;p&gt;(1) Supervised learning&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Classification&lt;/li&gt;
+  &lt;li&gt;Regression (eg linear regression is also ML 🤓)&lt;/li&gt;
+  &lt;li&gt;Forcasting&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/ml/petclassification.png&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;
+&lt;figcaption class=&quot;caption&quot;&gt;We have different levels of classification&lt;/figcaption&gt;
+
+&lt;p&gt;(2) Unsupervised Learning&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Clustering&lt;/li&gt;
+  &lt;li&gt;Embedding&lt;/li&gt;
+  &lt;li&gt;Forcasting&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;(3) Optimasition - learn how to act by exploring the environment and receiving reward punishment.&lt;/p&gt;
+
+&lt;p&gt;An interesting point I found for the classifications, if you train them in absolute terms and tell them for example the world is only dog and cats, if you give it a fish it will say dog or cat. It good to add some uncertainty and concept of “I don’t know” in the model, a Bayesian approach (probabilistic).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/ml/overviewOfMLProcess.png&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;
+&lt;figcaption class=&quot;caption&quot;&gt;How a neural network arrives to a result&lt;/figcaption&gt;
+
+&lt;h2 id=&quot;overview-of-process-to-create-a-ml-project&quot;&gt;Overview of process to create a ML project&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/ml/neural.png&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;
+&lt;figcaption class=&quot;caption&quot;&gt;Overview of the Machine learning project&lt;/figcaption&gt;
+
+&lt;h2 id=&quot;future-work-tools-to-have-a-play-with&quot;&gt;Future work: Tools to have a play with!&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Tensarflow&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Apache Spark (throwback to uni and maybe try and figure out what we did in that Data Science course! 😬)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;spaCy&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- ## Adding ML in Media Companies
+
+You ML to identify
+
+- Pricing strategies - optimal prices, personal prices, dynamic prices
+- Churn prevention - identify subscribers likely to churn
+- Piracy Detection --&gt;
+&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;There is a lot to learn and its not an easy topic! 😂&lt;/p&gt;
+
+&lt;p align=&quot;center&quot;&gt;
+&lt;iframe src=&quot;https://giphy.com/embed/1X61eW9DotM7TgBnOc&quot; width=&quot;480&quot; height=&quot;270&quot; frameborder=&quot;0&quot; class=&quot;giphy-embed&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;p&gt;&lt;a href=&quot;https://giphy.com/gifs/hyperrpg-game-reaction-1X61eW9DotM7TgBnOc&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Hopefully, I will be doing a project in ML soon to get my round it! 🤓 🤔&lt;/p&gt;
+
+&lt;p&gt;Thank you for reading! 👋&lt;/p&gt;
+
+&lt;p&gt;If you notice any mistakes please contact me on &lt;a href=&quot;https://twitter.com/LTatakis&quot;&gt; Twitter&lt;/a&gt;.&lt;/p&gt;</content><author><name>LefterisTatakis</name></author><category term="blog" /><category term="machine learning" /><category term="training" /><category term="overview" /><summary type="html">Today I went to a Machine learning training course at Google which was done by Datatonic. For me as a complete noobie in Machine Learning it was an opportunity to learn and freshen up my extremely limited and superficial knowledge gained by University Courses or hearing about pet projects of colleagues.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/eventsourcing.png" /></entry><entry><title type="html">Indident Reports - a template</title><link href="http://localhost:4000/incidentreports/" rel="alternate" type="text/html" title="Indident Reports - a template" /><published>2019-02-05T17:30:00+00:00</published><updated>2019-02-05T17:30:00+00:00</updated><id>http://localhost:4000/incidentreports</id><content type="html" xml:base="http://localhost:4000/incidentreports/">&lt;p&gt;Bad things happen, the important thing is how do we deal with them when they do, and the actions we take so they don’t happen again.&lt;/p&gt;
 
 &lt;p&gt;Today I would like to talk about Incident reports. A way for the technical / engineering staff to show the business we care about our platform, understand the problems caused and are willing to move ahead and be better next time. Showing the lessons learned from this mistake, in order to avoid getting bitten by it again.&lt;/p&gt;
 
@@ -626,105 +722,4 @@ I therefore decided creating a summary and overview for people to get a brief in
 
 &lt;p&gt;We shall see what the future brings.&lt;/p&gt;
 
-&lt;p&gt;Its an idea, hopefully, it does not die out too soon 🤞🏻&lt;/p&gt;</content><author><name>LefterisTatakis</name></author><category term="blog" /><category term="velocity" /><category term="hello" /><summary type="html">Hello everyone out there! 👋 ✌️ ️ This is something I have been thinking for a while but never got the time to do it.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">Kubernetes a childs guide</title><link href="http://localhost:4000/kubernetes-101/" rel="alternate" type="text/html" title="Kubernetes a childs guide" /><published>2018-10-31T13:48:00+00:00</published><updated>2018-10-31T13:48:00+00:00</updated><id>http://localhost:4000/kubernetes-101</id><content type="html" xml:base="http://localhost:4000/kubernetes-101/">&lt;p&gt;As most of my “blogs” on this site, this post is a point of reference for me. A quick guide of the things I learned and has most probably forgot over time.
-I plan on coming back to this and adding (or removing) information I dont agree with or I don’t find useful anymore.&lt;/p&gt;
-
-&lt;h2 id=&quot;kubernetes&quot;&gt;Kubernetes&lt;/h2&gt;
-
-&lt;p&gt;In my mind its just a management system of containers. Deploying them, managing them, failure recovery and scaling.
-Primarily used for micro services.
-The most common use case for kubernetes is with docker containers.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“Kubernetes is a portable, extensible open-source platform for managing containerized workloads and services” - kubernetes.io&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;But to be honest, how I visualise Kubernetes, is with the metaphor of Nick the Captain.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/kubernetes/nick.png&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;
-&lt;figcaption class=&quot;caption&quot;&gt;Nick the Captain of our containers.&lt;/figcaption&gt;
-
-&lt;p&gt;Nick is Kubernetes (Kubernetes originates from the Greek word helmsman of ship) of our Nodes e.g. 
-&lt;img src=&quot;/assets/kubernetes/nickOnship.png&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;
-&lt;figcaption class=&quot;caption&quot;&gt;Nick managing our Node&lt;/figcaption&gt;
-
-&lt;p&gt;The Kubernetes cluster node we are using has a number of containers. One of which, is our app:
-&lt;img src=&quot;/assets/kubernetes/containersonship.png&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;
-&lt;figcaption class=&quot;caption&quot;&gt;Our app is a container on that Node&lt;/figcaption&gt;
-
-&lt;p&gt;In reality though Nick manages multiple Nodes, in a true Kubernetes fashion:
-&lt;img src=&quot;/assets/kubernetes/nickwithmultipleships.png&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;
-&lt;figcaption class=&quot;caption&quot;&gt;Nick managing multiple Nodes&lt;/figcaption&gt;
-
-&lt;p&gt;How does this really look like in Kubernetes?
-&lt;img src=&quot;/assets/kubernetes/actualviewofcontainer.png&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;
-&lt;figcaption class=&quot;caption&quot;&gt;Our Pod in the Cluster&lt;/figcaption&gt;
-
-&lt;h2 id=&quot;what-is-a-container&quot;&gt;What is a container&lt;/h2&gt;
-
-&lt;p&gt;Containers let you isolate an application so that its under the impression its running on its own private machine&lt;/p&gt;
-
-&lt;p&gt;The most popular container platform for this is &lt;a href=&quot;https://www.docker.com/&quot;&gt;Docker&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;what-do-i-need-to-get-started&quot;&gt;What do I need to get started&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;A dockerised application.&lt;/li&gt;
-  &lt;li&gt;A yml file so k8s knows what it needs for your app.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Eg like:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;na&quot;&gt;apiVersion&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;v1&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;kind&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Pod&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;metadata&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;nginx&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;spec&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;containers&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;nginx&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;nginx:1.7.9&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;ports&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;containerPort&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;80&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h2 id=&quot;how-can-you-manage-the-cluster&quot;&gt;How can you manage the cluster&lt;/h2&gt;
-
-&lt;p&gt;At the moment, my team and I use Tectonic. 
-Tectonic helps us check deployments and manage the cluster to some basic extent.
-However, its not perfect such as as losing the logs, unable to retrieve the event history for pods, not being very descriptive and a lot of black magic related to it.&lt;/p&gt;
-
-&lt;p&gt;Most of the time we feel we don’t have control of our own clusters.
-We are actively investigating other solutions, primarily moving to AWS EKS and using the default kubernetes dashboard.&lt;/p&gt;
-
-&lt;h2 id=&quot;kubectl&quot;&gt;Kubectl&lt;/h2&gt;
-
-&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;kubectl&lt;/code&gt; commands I tend to you on a daily basis are:&lt;/p&gt;
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;kubectl get pods &lt;span class=&quot;nt&quot;&gt;--namespace&lt;/span&gt; ltatakis
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Checking which env I am currently working on&lt;/p&gt;
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;kubectl config get-contexts
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Choosing my namespace to work in&lt;/p&gt;
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;kubectl config use-contexts THE-ENV-I-WANT-2-USE
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Deleted a namespace&lt;/p&gt;
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;kubectl delete namespaces
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;But by &lt;em&gt;far&lt;/em&gt; the most useful one I use is:&lt;/p&gt;
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;kubectl &lt;span class=&quot;nt&quot;&gt;--namespace&lt;/span&gt; ltatakis &lt;span class=&quot;nb&quot;&gt;exec&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-it&lt;/span&gt; my-amazing-app-pod &lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt; /bin/sh
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;!-- ## Namespaces
-&lt;iframe src=&quot;https://giphy.com/embed/tAeB6dptxnoli&quot; width=&quot;480&quot; height=&quot;446&quot; frameBorder=&quot;0&quot; class=&quot;giphy-embed&quot; allowFullScreen&gt;&lt;/iframe&gt;&lt;p&gt;&lt;a href=&quot;https://giphy.com/gifs/construction-tAeB6dptxnoli&quot;&gt;&lt;/a&gt;&lt;/p&gt; --&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Thats all for now folks!&lt;/p&gt;
-&lt;p align=&quot;centre&quot;&gt;
-&lt;iframe src=&quot;https://giphy.com/embed/lD76yTC5zxZPG&quot; width=&quot;480&quot; height=&quot;352&quot; frameborder=&quot;0&quot; class=&quot;giphy-embed&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;p&gt;&lt;a href=&quot;https://giphy.com/gifs/the-end-thats-all-folks-lD76yTC5zxZPG&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/p&gt;
-
-&lt;p&gt;If you notice any mistakes please contact me on &lt;a href=&quot;https://twitter.com/LTatakis&quot;&gt; Twitter&lt;/a&gt;.&lt;/p&gt;</content><author><name>Lefteris Tatakis</name></author><category term="blog" /><category term="kubernetes" /><category term="Docker" /><summary type="html">As most of my “blogs” on this site, this post is a point of reference for me. A quick guide of the things I learned and has most probably forgot over time. I plan on coming back to this and adding (or removing) information I dont agree with or I don’t find useful anymore.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/kubernetes/nick.png" /></entry></feed>
+&lt;p&gt;Its an idea, hopefully, it does not die out too soon 🤞🏻&lt;/p&gt;</content><author><name>LefterisTatakis</name></author><category term="blog" /><category term="velocity" /><category term="hello" /><summary type="html">Hello everyone out there! 👋 ✌️ ️ This is something I have been thinking for a while but never got the time to do it.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry></feed>
