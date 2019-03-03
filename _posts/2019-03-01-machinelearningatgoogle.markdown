@@ -75,7 +75,7 @@ An interesting point I found for the classifications, if you train them in absol
 
 ## Future work: Tools to have a play with!
 
-- Tensarflow
+- Tensorflow
 
 - Apache Spark (throwback to uni and maybe try and figure out what we did in that Data Science course! 😬)
 
