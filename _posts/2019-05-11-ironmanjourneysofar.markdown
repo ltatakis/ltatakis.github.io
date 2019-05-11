@@ -132,7 +132,7 @@ If time allows - a brick bike
 - External shoulder rotation - with band
 - Internal shoulder rotation - with band
 - Reverse lunges x3 10-12 reps
-- Theraband - the walking sideways and the forwards as per video https://www.youtube.com/watch?v=Em2U9mY60Oc
+- Theraband - the walking sideways and the forwards as per [video](https://www.youtube.com/watch?v=Em2U9mY60Oc)
 - On leg box sitting - single leg squat on box
 - Yoga ball - bridge (hip bridge leg curl)
 - Stepping on the box with one leg - with good posture
@@ -145,9 +145,23 @@ If time allows - a brick bike
 
 Let this journey continue! Keep pushing and keep doing the best I can! Thats what is the most important thing! (and don't get injured!!)
 
-#### Post notes from Bike fit today for future reference
+Thank you for reading! 👋
+
+If you notice any mistakes please contact me on <a href="https://twitter.com/LTatakis"> Twitter</a>.
+
+
+#### Foot notes: from Bike fit today for future reference
 
 Bike saddle height position: the tape that Bryan added is the min heigh I can have before my Knees starting hurting.
 
+![Markdown Image][1]
+<figcaption class="caption">Saddle height boundaries discussed with Bryan</figcaption>
+
 Seat position: if I go to that lowest saddle height position I will need to move the seat to the position the tape has been placed. (the closest metal)
 
+![Markdown Image][2]
+<figcaption class="caption">Saddle position boundaries discussed with Bryan</figcaption>
+
+
+[1]: /assets/images/ironman/IMG_4784.JPG
+[2]: /assets/images/ironman/IMG_4787.JPG

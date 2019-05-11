@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-05-11T13:02:16+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Lefteris Tatakis</title><subtitle>A Software Engineer based in Oxford. This is a blog about technology (engineering or bike!) and travel.</subtitle><entry><title type="html">Ironman Training - the journey so far</title><link href="http://localhost:4000/ironmanjourneysofar/" rel="alternate" type="text/html" title="Ironman Training - the journey so far" /><published>2019-05-11T12:30:00+01:00</published><updated>2019-05-11T12:30:00+01:00</updated><id>http://localhost:4000/ironmanjourneysofar</id><content type="html" xml:base="http://localhost:4000/ironmanjourneysofar/">&lt;p&gt;Ironman Frankfurt is no more on the plan for me.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-05-11T13:46:48+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Lefteris Tatakis</title><subtitle>A Software Engineer based in Oxford. This is a blog about technology (engineering or bike!) and travel.</subtitle><entry><title type="html">Ironman Training - the journey so far</title><link href="http://localhost:4000/ironmanjourneysofar/" rel="alternate" type="text/html" title="Ironman Training - the journey so far" /><published>2019-05-11T12:30:00+01:00</published><updated>2019-05-11T12:30:00+01:00</updated><id>http://localhost:4000/ironmanjourneysofar</id><content type="html" xml:base="http://localhost:4000/ironmanjourneysofar/">&lt;p&gt;Ironman Frankfurt is no more on the plan for me.&lt;/p&gt;
 
 &lt;p&gt;Ironman Italy is where its at!&lt;/p&gt;
 
@@ -137,7 +137,7 @@ could use pull boys&lt;/li&gt;
   &lt;li&gt;External shoulder rotation - with band&lt;/li&gt;
   &lt;li&gt;Internal shoulder rotation - with band&lt;/li&gt;
   &lt;li&gt;Reverse lunges x3 10-12 reps&lt;/li&gt;
-  &lt;li&gt;Theraband - the walking sideways and the forwards as per video https://www.youtube.com/watch?v=Em2U9mY60Oc&lt;/li&gt;
+  &lt;li&gt;Theraband - the walking sideways and the forwards as per &lt;a href=&quot;https://www.youtube.com/watch?v=Em2U9mY60Oc&quot;&gt;video&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;On leg box sitting - single leg squat on box&lt;/li&gt;
   &lt;li&gt;Yoga ball - bridge (hip bridge leg curl)&lt;/li&gt;
   &lt;li&gt;Stepping on the box with one leg - with good posture&lt;/li&gt;
@@ -150,11 +150,21 @@ could use pull boys&lt;/li&gt;
 
 &lt;p&gt;Let this journey continue! Keep pushing and keep doing the best I can! Thats what is the most important thing! (and don’t get injured!!)&lt;/p&gt;
 
-&lt;h4 id=&quot;post-notes-from-bike-fit-today-for-future-reference&quot;&gt;Post notes from Bike fit today for future reference&lt;/h4&gt;
+&lt;p&gt;Thank you for reading! 👋&lt;/p&gt;
+
+&lt;p&gt;If you notice any mistakes please contact me on &lt;a href=&quot;https://twitter.com/LTatakis&quot;&gt; Twitter&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;foot-notes-from-bike-fit-today-for-future-reference&quot;&gt;Foot notes: from Bike fit today for future reference&lt;/h4&gt;
 
 &lt;p&gt;Bike saddle height position: the tape that Bryan added is the min heigh I can have before my Knees starting hurting.&lt;/p&gt;
 
-&lt;p&gt;Seat position: if I go to that lowest saddle height position I will need to move the seat to the position the tape has been placed. (the closest metal)&lt;/p&gt;</content><author><name>LefterisTatakis</name></author><category term="blog" /><category term="ironman" /><category term="training" /><category term="update" /><category term="bike" /><category term="race" /><category term="tools" /><summary type="html">Ironman Frankfurt is no more on the plan for me.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/ironman/ironmanLogoItaly.png" /></entry><entry><title type="html">Kubernetes Node Recycle</title><link href="http://localhost:4000/kubernetesNodeRecycle/" rel="alternate" type="text/html" title="Kubernetes Node Recycle" /><published>2019-03-12T13:40:00+00:00</published><updated>2019-03-12T13:40:00+00:00</updated><id>http://localhost:4000/kubernetesNodeRecycle</id><content type="html" xml:base="http://localhost:4000/kubernetesNodeRecycle/">&lt;p&gt;Recycling nodes in Kubernetes is quite easy (given there is enough capacity to deal with the Pods of the old Node) 🤓&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/ironman/IMG_4784.JPG&quot; alt=&quot;Markdown Image&quot; /&gt;&lt;/p&gt;
+&lt;figcaption class=&quot;caption&quot;&gt;Saddle height boundaries discussed with Bryan&lt;/figcaption&gt;
+
+&lt;p&gt;Seat position: if I go to that lowest saddle height position I will need to move the seat to the position the tape has been placed. (the closest metal)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/ironman/IMG_4787.JPG&quot; alt=&quot;Markdown Image&quot; /&gt;&lt;/p&gt;
+&lt;figcaption class=&quot;caption&quot;&gt;Saddle position boundaries discussed with Bryan&lt;/figcaption&gt;</content><author><name>LefterisTatakis</name></author><category term="blog" /><category term="ironman" /><category term="training" /><category term="update" /><category term="bike" /><category term="race" /><category term="tools" /><summary type="html">Ironman Frankfurt is no more on the plan for me.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/ironman/ironmanLogoItaly.png" /></entry><entry><title type="html">Kubernetes Node Recycle</title><link href="http://localhost:4000/kubernetesNodeRecycle/" rel="alternate" type="text/html" title="Kubernetes Node Recycle" /><published>2019-03-12T13:40:00+00:00</published><updated>2019-03-12T13:40:00+00:00</updated><id>http://localhost:4000/kubernetesNodeRecycle</id><content type="html" xml:base="http://localhost:4000/kubernetesNodeRecycle/">&lt;p&gt;Recycling nodes in Kubernetes is quite easy (given there is enough capacity to deal with the Pods of the old Node) 🤓&lt;/p&gt;
 
 &lt;p&gt;Commands the need to do:&lt;/p&gt;
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    kubectl cordon &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;NODE_NAME&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
