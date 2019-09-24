@@ -25,11 +25,11 @@ What did I build it with
 - Angular 5
 - NodeJs Lambdas
 - Deployment scripts to S3.
-- Google Drive intergration as Databases
+- Google Drive integration as Databases
 - AWS SES Email service for invoicing
-- API's authed with JSON web tokens
+- API's auth'ed with JSON web tokens
 
-This was the 2nd iteration of this project. Initially, it was deployed on AWS Lightsail, however, to drive cost saving as the service does not have a lot of traffic, I decided to change the deployment paridgim to S3, Lambdas, and Google Drive.
+This was the 2nd iteration of this project. Initially, it was deployed on AWS Lightsail, however, to drive cost saving as the service does not have a lot of traffic, I decided to change the deployment paradigm to S3, Lambdas, and Google Drive.
 
 [Check it out](https://www.libertycars.gr) here.
 
