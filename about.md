@@ -17,8 +17,9 @@ Whilst this project was short-lived, it provided me with a strong foundation in 
 </p>
 
 <p>
-Currently I am working at Elsevier as a 
-<a href="https://www.elsevier.com/about/careers/technology-careers/lefteris-tatakis/">Software Engineer</a> and training for my first Ironman 😅✌️.
+For three years, I worked in in the e-commerce team of Elsevier as a 
+<a href="https://www.elsevier.com/about/careers/technology-careers/lefteris-tatakis/">Software Engineer</a>.
+In September 2019, I made the move to <a href="https://www.vocovo.com/">VoCoVo</a>, as a Senior Software Engineer.
 </p>
 
 <h2>Skills</h2>
