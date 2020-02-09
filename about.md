@@ -6,13 +6,13 @@ layout: page
 <figcaption class="caption">The glory of Greek Summer! </figcaption>
 
 <p>Hello!👋
-I am Lefteris! A software engineer commited to solving problems and always up for a challenge.
+I am Lefteris! A software engineer committed to solving problems and always up for a challenge.
 </p>
 <p>
 I am a highly motivated and entrepreneurial individual, who is eager to learn and interested in problem-solving, ready to take on any challenge.
 </p>
 <p>
-As an undergraduate, I launched my own e-commerce company - Cretecompare - a car rental comparison website for the island of Crete, in which I collaborated with a number of local companies.
+As an undergraduate, I launched my own e-commerce company - CreteCompare - a car rental comparison website for the island of Crete, in which I collaborated with a number of local companies.
 Whilst this project was short-lived, it provided me with a strong foundation in designing and implementing business applications, and it has been an invaluable lesson for acquiring technical and business acumen. 
 </p>
 
