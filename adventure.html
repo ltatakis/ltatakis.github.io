@@ -1,0 +1,76 @@
+
+<html>
+    <head>
+      <title>Teris's Map of Adventures!</title>
+      <link rel="stylesheet" href="assets/leaflet/leaflet.css"/>
+      <script src="assets/leaflet/leaflet.js"></script>
+      <style>
+        #map{ height: 100% }
+      </style>
+    </head>
+    <body>
+<div id="map"></div>
+    
+      <script>
+    
+        var mymap = L.map('map', {
+            center: [53.474977, -1.805159],
+            zoom: 6 
+        });
+
+        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+            attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+            maxZoom: 18,
+            id: 'mapbox.streets',
+            accessToken: 'pk.eyJ1IjoibHRhdGFraXMiLCJhIjoiY2s3bnV5a3h5MDJ0czNncDlqbTFsaDJoOSJ9.jEUS7PHiihqDh0-75gIP-w'
+        }).addTo(mymap);
+
+        // Stonehenge
+        const stone = L.marker([51.1739726374, -1.82237671048 ]).addTo(mymap);
+        stone.bindPopup("Stonehenge")
+      
+        // oxford
+        const oxford = L.marker([51.75222, -1.25596 ], { title: "Home" }).addTo(mymap);
+        oxford.bindPopup("Oxford")
+
+        // snowdon
+        const snowdown = L.marker([53.0685, -4.0763 ], { title: "snowdown" }).addTo(mymap);
+        snowdown.bindPopup("Snowdon")
+
+        // gospel pass
+        const gospelPass = L.marker([52.010036, -3.115638]).addTo(mymap);
+        gospelPass.bindPopup("Gospel Pass")
+
+        // somewhere in the yorkshare dales
+        const yorkhire = L.marker([54.195081, -2.094376]).addTo(mymap);
+        yorkhire.bindPopup("Yorkshire Dales")
+
+        // scotland where finn recommended
+        const scotland = L.marker([56.871453, -5.674568]).addTo(mymap);
+        scotland.bindPopup("Scotland")
+
+        // island of mull
+        const mull = L.marker([56.484262, -5.989230]).addTo(mymap);
+        mull.bindPopup("Island of Mull") 
+
+        // ben nevis
+        const benNevis = L.marker([56.803789, -5.028140]).addTo(mymap);
+        benNevis.bindPopup("Ben Nevis") 
+        
+        // cotworld
+        L.marker([51.888966, -1.809867]).addTo(mymap);
+
+        // island of wight
+        const wight = L.marker([50.761441, -1.296214]).addTo(mymap);
+        wight.bindPopup("Island of Wight") 
+
+        //Cardinham Woods
+        const woods = L.marker([50.470100, -4.676070]).addTo(mymap);
+        woods.bindPopup("Cardinham Woods");
+
+        // coast to coast starting point 
+        L.marker([54.548558, -3.591116]).addTo(mymap);
+
+      </script>
+    </body>
+    </html>
