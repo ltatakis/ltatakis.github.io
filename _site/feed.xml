@@ -1,4 +1,24 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-03-12T22:05:04+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Lefteris Tatakis</title><subtitle>A Software Engineer based in Oxford. This is a blog about technology (engineering or bike!) and travel.</subtitle><entry><title type="html">Ironman Italy</title><link href="http://localhost:4000/ironman-italy/" rel="alternate" type="text/html" title="Ironman Italy" /><published>2019-09-24T14:30:00+01:00</published><updated>2019-09-24T14:30:00+01:00</updated><id>http://localhost:4000/ironman-italy</id><content type="html" xml:base="http://localhost:4000/ironman-italy/">&lt;p&gt;&lt;img style=&quot;float: right;&quot; src=&quot;/assets/images/ironman/ironmanLogoItaly.png&quot; /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-10-28T21:31:38+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Lefteris Tatakis</title><subtitle>A Software Engineer based in Oxford. This is a blog about technology (engineering or bike!) and travel.</subtitle><entry><title type="html">Liberty Cars - Iteration 2</title><link href="http://localhost:4000/liberty-cars-v2-overview/" rel="alternate" type="text/html" title="Liberty Cars - Iteration 2" /><published>2020-10-01T22:10:00+01:00</published><updated>2020-10-01T22:10:00+01:00</updated><id>http://localhost:4000/liberty-cars-v2-overview</id><content type="html" xml:base="http://localhost:4000/liberty-cars-v2-overview/">&lt;p&gt;As of early 2020, the AWS lambdas I was using for version one where being decommissioned due to Node 8 EOL.  Plus several other technologies I was used were way out of date. So in April 2020 I decided to simplify the website.&lt;/p&gt;
+
+&lt;p&gt;The site does not actually do any business, its primarily my testing ground website / domain. 
+For this reason I decided to a make it a static website and deploy it with &lt;a href=&quot;https://netlify.com&quot;&gt;Netlify&lt;/a&gt;.
+I loved it, super simple and the generation of the website with Jekyll was a few hours work. The website lost a lot of its functionality that had all the advanced technical features and the technical debt, but I decided it was not needed. It only added complexity at this point and stress. 
+Instead I experimented with static website form submission systems that send emails if actually used. Just in case some person is actually interested. In the months is been live only a few bots have actually got through the form. ✌️&lt;/p&gt;
+
+&lt;p&gt;For example some of the functionality it lost:&lt;/p&gt;
+
+&lt;p&gt;The old homepage:
+&lt;img src=&quot;/assets/images/libertycars/home.png&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The old date range selection:
+&lt;img src=&quot;/assets/images/libertycars/select.png&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The old booking page:
+&lt;img src=&quot;/assets/images/libertycars/book.png&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As always I will admit my frontend skills are not the best. I am a Full Stack Engineer that focuses on DevOps and Backend work, that can change a CSS colour if needed 🤓&lt;/p&gt;
+
+&lt;p&gt;Check out the new &lt;a href=&quot;https://www.libertycars.gr&quot;&gt;liberty cars here&lt;/a&gt;.&lt;/p&gt;</content><author><name>LefterisTatakis</name></author><category term="project" /><category term="Jekyll" /><category term="netlify" /><summary type="html">As of early 2020, the AWS lambdas I was using for version one where being decommissioned due to Node 8 EOL. Plus several other technologies I was used were way out of date. So in April 2020 I decided to simplify the website.</summary></entry><entry><title type="html">Ironman Italy</title><link href="http://localhost:4000/ironman-italy/" rel="alternate" type="text/html" title="Ironman Italy" /><published>2019-09-24T14:30:00+01:00</published><updated>2019-09-24T14:30:00+01:00</updated><id>http://localhost:4000/ironman-italy</id><content type="html" xml:base="http://localhost:4000/ironman-italy/">&lt;p&gt;&lt;img style=&quot;float: right;&quot; src=&quot;/assets/images/ironman/ironmanLogoItaly.png&quot; /&gt;
 The race I had trained for a year, but was dreaming of getting there for 5.
 It was finally here. I was going to do an ironman race, and try and get the title of Ironman.
 I was as ready as I could have been for this round.&lt;/p&gt;
@@ -894,30 +914,4 @@ If this criterion is not met, we are not ready to route traffic through, so we w
 
 &lt;p&gt;Thank you for reading! 👋&lt;/p&gt;
 
-&lt;p&gt;If you notice any mistakes please contact me on &lt;a href=&quot;https://twitter.com/LTatakis&quot;&gt; Twitter&lt;/a&gt;.&lt;/p&gt;</content><author><name>Lefteris Tatakis</name></author><category term="blog" /><category term="kubernetes" /><category term="jenkins" /><summary type="html">Its only been a few weeks since using this strategy our production environment at Elsevier, and its already shown its value multiple times! I think its an awesome strategy! So… what it is?!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/kubernetes/point2blue.png" /></entry><entry><title type="html">Week 1 - Start of 2019 and Ironman training</title><link href="http://localhost:4000/firstweekofIromanTraining/" rel="alternate" type="text/html" title="Week 1 - Start of 2019 and Ironman training" /><published>2019-01-06T21:08:00+00:00</published><updated>2019-01-06T21:08:00+00:00</updated><id>http://localhost:4000/firstweekofIromanTraining</id><content type="html" xml:base="http://localhost:4000/firstweekofIromanTraining/">&lt;p&gt;Well it’s officially 2019! woop woop! 🎉 🥳&lt;/p&gt;
-
-&lt;p align=&quot;center&quot;&gt;
-&lt;iframe src=&quot;https://giphy.com/embed/QMkPpxPDYY0fu&quot; width=&quot;480&quot; height=&quot;204&quot; frameborder=&quot;0&quot; class=&quot;giphy-embed&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;p&gt;&lt;a href=&quot;https://giphy.com/gifs/happy-leonardo-dicaprio-cheers-QMkPpxPDYY0fu&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/p&gt;
-&lt;p&gt;Its going to be a big year for me, its the year I am going to become an Ironman.
-You will notice that I am &lt;em&gt;confident&lt;/em&gt; about it. Well … lets say we shall see what happens, but:&lt;/p&gt;
-
-&lt;p align=&quot;center&quot;&gt;
-Failure is not an option!
-&lt;/p&gt;
-&lt;p&gt;I have focused on starting the new year running, (or more like cycling) by doing all the key sessions I should be doing over the next few months.&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Cycling sessions. I started doing my Zwift Grand Fonto training program, which aims to build my fitness to be ready to do 100-200km.&lt;/li&gt;
-  &lt;li&gt;Early morning swims, at 6:30. I am currently trying to get my body used to that effort. These sessions should be easy (eventually), active recovery for 40-50 minutes. (Going to do one tomorrow 😅)&lt;/li&gt;
-  &lt;li&gt;Brick sessions. I “kinda” did one on Monday but I rested in between the sessions… So… maybe it was just two sessions, which luckily is something I need to do also!&lt;/li&gt;
-  &lt;li&gt;Enjoyed my life a bit! 😇&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;The top three items all had there challenges. For example, the Zwift program was quite demanding and I am only on Week 0 ( 😳 ), the swim was at 6:30 am (enough said) and the brick was the first “long” ride I had dont since probably September.&lt;/p&gt;
-
-&lt;p&gt;So far, so good!&lt;/p&gt;
-
-&lt;p&gt;A &lt;em&gt;lot&lt;/em&gt; more hard work to come, but dare I say ( 🤞🏻 ) I am ready for it!&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/ironman/week1-training.png&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;
-&lt;figcaption class=&quot;caption&quot;&gt;Training distribution&lt;/figcaption&gt;</content><author><name>Lefteris Tatakis</name></author><category term="blog" /><category term="ironman" /><category term="training" /><summary type="html">Well it’s officially 2019! woop woop! 🎉 🥳</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry></feed>
+&lt;p&gt;If you notice any mistakes please contact me on &lt;a href=&quot;https://twitter.com/LTatakis&quot;&gt; Twitter&lt;/a&gt;.&lt;/p&gt;</content><author><name>Lefteris Tatakis</name></author><category term="blog" /><category term="kubernetes" /><category term="jenkins" /><summary type="html">Its only been a few weeks since using this strategy our production environment at Elsevier, and its already shown its value multiple times! I think its an awesome strategy! So… what it is?!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/kubernetes/point2blue.png" /></entry></feed>

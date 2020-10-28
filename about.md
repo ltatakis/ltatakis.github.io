@@ -19,7 +19,7 @@ Whilst this project was short-lived, it provided me with a strong foundation in 
 <p>
 For three years, I worked in in the e-commerce team of Elsevier as a 
 <a href="https://www.elsevier.com/about/careers/technology-careers/lefteris-tatakis/">Software Engineer</a>.
-In September 2019, I made the move to <a href="https://www.vocovo.com/">VoCoVo</a>, as a Senior Software Engineer.
+In September 2019, I made the move to <a href="https://www.vocovo.com/">VoCoVo</a>, as a Senior Software Engineer. As of August 2020 I have become the DevOps Tech Lead, were my first project was moving all the infrastructure from Digital Ocean to Azure with a team of two other developers.
 </p>
 
 <h2>Skills</h2>
@@ -28,6 +28,7 @@ In September 2019, I made the move to <a href="https://www.vocovo.com/">VoCoVo</
 	<li>NodeJS</li>
 	<li>TypeScript</li>
 	<li>AWS - EC2, Lambdas, RDS, SecretManager and more</li>
+	<li>Azure</li>
 	<li>Kubernetes</li>
 	<li>Vue.js</li>
 	<li>Infrastructure as Code: Terraform, Ansible, Puppet</li>
@@ -36,7 +37,7 @@ In September 2019, I made the move to <a href="https://www.vocovo.com/">VoCoVo</
 	<li>Responsive (Mobile First)</li>
 	<li>Git</li>
 	<li>REST API's</li>
-	<li>MySQL</li>
+	<li>MySQL / Postgres</li>
 	<li>Cypress</li>
 	<li>Scrum and Kanban</li>
 	<li>TDD </li>
