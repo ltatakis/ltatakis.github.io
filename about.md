@@ -2,7 +2,7 @@
 title: About
 layout: page
 ---
-![Profile Image]({{ site.url }}/{{ site.picture }})
+![Profile Image](/{{ site.picture }})
 <figcaption class="caption">The glory of Greek Summer! </figcaption>
 
 <p>Hello!👋
@@ -17,9 +17,8 @@ Whilst this project was short-lived, it provided me with a strong foundation in 
 </p>
 
 <p>
-For three years, I worked in in the e-commerce team of Elsevier as a 
-<a href="https://www.elsevier.com/about/careers/technology-careers/lefteris-tatakis/">Software Engineer</a>.
-In September 2019, I made the move to <a href="https://www.vocovo.com/">VoCoVo</a>, as a Senior Software Engineer. As of August 2020 I have become the DevOps Tech Lead, were my first project was moving all the infrastructure from Digital Ocean to Azure with a team of two other developers.
+For three years, I worked in in the e-commerce team of Elsevier as a Software Engineer.
+In September 2019, I made the move to <a href="https://www.vocovo.com/">VoCoVo</a>, as a Senior Software Engineer. As of August 2020 I have become the DevOps Tech Lead, were my first project was moving all the infrastructure from Digital Ocean to Azure with a team of two other engineers.
 </p>
 
 <h2>Skills</h2>
