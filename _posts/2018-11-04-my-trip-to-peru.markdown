@@ -17,25 +17,25 @@ description: "Photos from my trip to Peru: Lima, Cusco, Ollantaytambo, Machu Pic
 Some of my favourite pictures from my Peru trip 😊
 
 <figcaption class="caption">Machuu Pichuu</figcaption>
-![Markdowm Image][1]
+![Markdown Image][1]
 
 <figcaption class="caption">The Amazon - it was amazing!</figcaption>
-![Markdowm Image][2]
+![Markdown Image][2]
 
 <figcaption class="caption">The Incan king in Cusco</figcaption>
-![Markdowm Image][3]
+![Markdown Image][3]
 
 <figcaption class="caption">A traditional Incan dog - used to be considered as bad luck. Now are a point of pride for the locals</figcaption>
-![Markdowm Image][4]
+![Markdown Image][4]
 
 <figcaption class="caption">Driving towards Ollantaytambo </figcaption>
-![Markdowm Image][5]
+![Markdown Image][5]
 
 <figcaption class="caption">Ollantaytambo store warehouses</figcaption>
-![Markdowm Image][6]
+![Markdown Image][6]
 
 <figcaption class="caption">A fantastic view of the mountain towards Aqua Calientes </figcaption>
-![Markdowm Image][7]
+![Markdown Image][7]
 
 [1]: /assets/peru/peru.JPG
 [2]: /assets/peru/amazon.jpg

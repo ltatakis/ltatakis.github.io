@@ -29,7 +29,7 @@ The sessions this week were:
  - Wednesday double cycling session. Was not planned, but as I was prepping for the Oxford Tri swim I found out the boiler was broken down at the pool! The Lead Coach joked about using wetsuits in the pool, as it was 25C. Personally did not fancy a cold pool on a January evening 😅 And did a bike session instead!
  - Sunday 1:35 on Zwift and 5km run.
 
-![Markdowm Image][1]
+![Markdown Image][1]
 <figcaption class="caption">Training distribution</figcaption>
 
 [1]: /assets/images/ironman/week2-training.png

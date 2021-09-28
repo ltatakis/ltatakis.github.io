@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-09T14:14:34+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Lefteris Tatakis</title><subtitle>A Software Engineer based in Oxford. This is a blog about technology (engineering or bike!) and travel.</subtitle><entry><title type="html">Liberty Cars - Iteration 2</title><link href="http://localhost:4000/liberty-cars-v2-overview/" rel="alternate" type="text/html" title="Liberty Cars - Iteration 2" /><published>2020-10-01T22:10:00+01:00</published><updated>2020-10-01T22:10:00+01:00</updated><id>http://localhost:4000/liberty-cars-v2-overview</id><content type="html" xml:base="http://localhost:4000/liberty-cars-v2-overview/">&lt;p&gt;As of early 2020, the AWS lambdas I was using for version one where being decommissioned due to Node 8 EOL.  Plus several other technologies I was used were way out of date. So in April 2020 I decided to simplify the website.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-09-28T17:52:06+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Lefteris Tatakis</title><subtitle>A Software Engineer based in Oxford. This is a blog about technology (engineering or bike!) and travel.</subtitle><entry><title type="html">Liberty Cars - Iteration 2</title><link href="http://localhost:4000/liberty-cars-v2-overview/" rel="alternate" type="text/html" title="Liberty Cars - Iteration 2" /><published>2020-10-01T22:10:00+01:00</published><updated>2020-10-01T22:10:00+01:00</updated><id>http://localhost:4000/liberty-cars-v2-overview</id><content type="html" xml:base="http://localhost:4000/liberty-cars-v2-overview/">&lt;p&gt;As of early 2020, the AWS lambdas I was using for version one where being decommissioned due to Node 8 EOL.  Plus several other technologies I was used were way out of date. So in April 2020 I decided to simplify the website.&lt;/p&gt;
 
 &lt;p&gt;The site does not actually do any business, its primarily my testing ground website / domain. 
 For this reason I decided to a make it a static website and deploy it with &lt;a href=&quot;https://netlify.com&quot;&gt;Netlify&lt;/a&gt;.
@@ -8,13 +8,13 @@ Instead I experimented with static website form submission systems that send ema
 &lt;p&gt;For example some of the functionality it lost:&lt;/p&gt;
 
 &lt;p&gt;The old homepage:
-&lt;img src=&quot;/assets/images/libertycars/home.png&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;/assets/images/libertycars/home.png&quot; alt=&quot;Markdown Image&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The old date range selection:
-&lt;img src=&quot;/assets/images/libertycars/select.png&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;/assets/images/libertycars/select.png&quot; alt=&quot;Markdown Image&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The old booking page:
-&lt;img src=&quot;/assets/images/libertycars/book.png&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;/assets/images/libertycars/book.png&quot; alt=&quot;Markdown Image&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;As always I will admit my frontend skills are not the best. I am a Full Stack Engineer that focuses on DevOps and Backend work, that can change a CSS colour if needed 🤓&lt;/p&gt;
 
@@ -344,7 +344,7 @@ could use pull boys&lt;/li&gt;
 
 &lt;p&gt;Where I am at the moment and how I see machine learning is as:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/ml/MLinAnImage.png&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/ml/MLinAnImage.png&quot; alt=&quot;Markdown Image&quot; /&gt;&lt;/p&gt;
 &lt;figcaption class=&quot;caption&quot;&gt;Machine learning in an image&lt;/figcaption&gt;
 
 &lt;p&gt;You give it some data and it gives you a result. For now I am satisfied with that view on ML, however, I will have to a few books to get a bit more into the ML concepts.&lt;/p&gt;
@@ -362,7 +362,7 @@ could use pull boys&lt;/li&gt;
   &lt;li&gt;Forcasting&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/ml/petclassification.png&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/ml/petclassification.png&quot; alt=&quot;Markdown Image&quot; /&gt;&lt;/p&gt;
 &lt;figcaption class=&quot;caption&quot;&gt;We have different levels of classification&lt;/figcaption&gt;
 
 &lt;p&gt;(2) Unsupervised Learning&lt;/p&gt;
@@ -377,12 +377,12 @@ could use pull boys&lt;/li&gt;
 
 &lt;p&gt;An interesting point I found for the classifications, if you train them in absolute terms and tell them for example the world is only dog and cats, if you give it a fish it will say dog or cat. It good to add some uncertainty and concept of “I don’t know” in the model, a Bayesian approach (probabilistic).&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/ml/overviewOfMLProcess.png&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/ml/overviewOfMLProcess.png&quot; alt=&quot;Markdown Image&quot; /&gt;&lt;/p&gt;
 &lt;figcaption class=&quot;caption&quot;&gt;How a neural network arrives to a result&lt;/figcaption&gt;
 
 &lt;h2 id=&quot;overview-of-process-to-create-a-ml-project&quot;&gt;Overview of process to create a ML project&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/ml/neural.png&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/ml/neural.png&quot; alt=&quot;Markdown Image&quot; /&gt;&lt;/p&gt;
 &lt;figcaption class=&quot;caption&quot;&gt;Overview of the Machine learning project&lt;/figcaption&gt;
 
 &lt;h2 id=&quot;future-work-tools-to-have-a-play-with&quot;&gt;Future work: Tools to have a play with!&lt;/h2&gt;
@@ -605,7 +605,7 @@ You ML to identify
 &lt;h1 id=&quot;our-implementation-of-event-sourcing&quot;&gt;Our implementation of Event sourcing&lt;/h1&gt;
 
 &lt;figcaption class=&quot;caption&quot;&gt;An overview of our system&lt;/figcaption&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/images/eventsourcing.png&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/eventsourcing.png&quot; alt=&quot;Markdown Image&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The key component of the application that puts this pattern together is here:&lt;/p&gt;
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;c1&quot;&gt;// Going to start add prices process &lt;/span&gt;
@@ -734,11 +734,11 @@ If I can just stay on the aerobars for 20% of the race that would be a huge bene
 &lt;p&gt;My flexibility and comfort over the next 2-3 months needs to significantly improve if I am to consider this bike position for race day. And I can assure you that needs a lot of work … 😳&lt;/p&gt;
 
 &lt;p&gt;For example, currently my nature body position on the aerobars is:
-&lt;img src=&quot;/assets/images/ironman/currentbikeposition.jpg&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;/assets/images/ironman/currentbikeposition.jpg&quot; alt=&quot;Markdown Image&quot; /&gt;&lt;/p&gt;
 &lt;figcaption class=&quot;caption&quot;&gt;How I currently rest on the bike&lt;/figcaption&gt;
 
 &lt;p&gt;However, it has to become like this: 
-&lt;img src=&quot;/assets/images/ironman/desiredbikepos.jpg&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;/assets/images/ironman/desiredbikepos.jpg&quot; alt=&quot;Markdown Image&quot; /&gt;&lt;/p&gt;
 &lt;figcaption class=&quot;caption&quot;&gt;What I need to be for race day&lt;/figcaption&gt;
 
 &lt;p&gt;That means my low back and hip muscles needs to strengthen and not be a tight!
@@ -765,7 +765,7 @@ Looking at the Zwift Grand Fondo program I am doing its only going up! With sess
   &lt;li&gt;Sunday 1:35 on Zwift and 5km run.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/ironman/week2-training.png&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/ironman/week2-training.png&quot; alt=&quot;Markdown Image&quot; /&gt;&lt;/p&gt;
 &lt;figcaption class=&quot;caption&quot;&gt;Training distribution&lt;/figcaption&gt;</content><author><name>Lefteris Tatakis</name></author><category term="blog" /><category term="ironman" /><category term="training" /><summary type="html">My main focus for these early months is the cycling, my key weakness. I would like to try and start enjoying the session as much as this:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/ironman/week2-training.png" /></entry><entry><title type="html">Kubernetes - Blue Green Deployment</title><link href="http://localhost:4000/greenbluedeployment/" rel="alternate" type="text/html" title="Kubernetes - Blue Green Deployment" /><published>2019-01-08T16:41:00+00:00</published><updated>2019-01-08T16:41:00+00:00</updated><id>http://localhost:4000/greenbluedeployment</id><content type="html" xml:base="http://localhost:4000/greenbluedeployment/">&lt;p&gt;Its only been a few weeks since using this strategy our production environment at Elsevier, and its already shown its value multiple times! I think its an awesome strategy!
 So… what it is?!&lt;/p&gt;
 
@@ -780,7 +780,7 @@ So… what it is?!&lt;/p&gt;
 The code is versioned, we call the old code the blue deployment while the new one green. The versioning of the code ensures that the traffic is routed to the &lt;em&gt;old&lt;/em&gt; pods initially, until, we are confident that the new code is ready to be deployed! 
 Once we are happy that the &lt;code class=&quot;highlighter-rouge&quot;&gt;Green deployment&lt;/code&gt; is up and running, we switch the traffic and we delete the blue deployment.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/kubernetes/point2blue.png&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/kubernetes/point2blue.png&quot; alt=&quot;Markdown Image&quot; /&gt;&lt;/p&gt;
 &lt;figcaption class=&quot;caption&quot;&gt;Starting point, traffic going to blue deployment&lt;/figcaption&gt;
 
 &lt;p align=&quot;center&quot;&gt;Voila! &lt;/p&gt;
@@ -793,7 +793,7 @@ This was because, until the new code was up and running we had both deployments 
   &lt;p&gt;Each release deployment is versioned.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/kubernetes/point2green.png&quot; alt=&quot;Markdowm Image&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/kubernetes/point2green.png&quot; alt=&quot;Markdown Image&quot; /&gt;&lt;/p&gt;
 &lt;figcaption class=&quot;caption&quot;&gt;Following successful green deployment traffic&lt;/figcaption&gt;
 
 &lt;h2 id=&quot;the-meat--of-it&quot;&gt;The meat 🥩 of it!&lt;/h2&gt;

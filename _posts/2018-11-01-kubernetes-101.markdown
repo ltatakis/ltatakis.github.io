@@ -26,23 +26,23 @@ The most common use case for kubernetes is with docker containers.
 
 But to be honest, how I visualise Kubernetes, is with the metaphor of Nick the Captain.
 
-![Markdowm Image][1]
+![Markdown Image][1]
 <figcaption class="caption">Nick the Captain of our containers.</figcaption>
 
 Nick is Kubernetes (Kubernetes originates from the Greek word helmsman of ship) of our Nodes e.g. 
-![Markdowm Image][2]
+![Markdown Image][2]
 <figcaption class="caption">Nick managing our Node</figcaption>
 
 The Kubernetes cluster node we are using has a number of containers. One of which, is our app:
-![Markdowm Image][3]
+![Markdown Image][3]
 <figcaption class="caption">Our app is a container on that Node</figcaption>
 
 In reality though Nick manages multiple Nodes, in a true Kubernetes fashion:
-![Markdowm Image][4]
+![Markdown Image][4]
 <figcaption class="caption">Nick managing multiple Nodes</figcaption>
 
 How does this really look like in Kubernetes?
-![Markdowm Image][5]
+![Markdown Image][5]
 <figcaption class="caption">Our Pod in the Cluster</figcaption>
 
 

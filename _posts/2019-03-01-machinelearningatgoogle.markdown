@@ -34,7 +34,7 @@ Hopefully, I will have a crack at trying a project myself and get my head around
 
 Where I am at the moment and how I see machine learning is as:
 
-![Markdowm Image][1]
+![Markdown Image][1]
 <figcaption class="caption">Machine learning in an image</figcaption>
 
 You give it some data and it gives you a result. For now I am satisfied with that view on ML, however, I will have to a few books to get a bit more into the ML concepts.
@@ -50,7 +50,7 @@ What was discussed today in the workshop that Machine learning mainly falls in t
 - Regression (eg linear regression is also ML 🤓)
 - Forcasting
 
-![Markdowm Image][2]
+![Markdown Image][2]
 <figcaption class="caption">We have different levels of classification</figcaption>
 
 
@@ -64,13 +64,13 @@ What was discussed today in the workshop that Machine learning mainly falls in t
 
 An interesting point I found for the classifications, if you train them in absolute terms and tell them for example the world is only dog and cats, if you give it a fish it will say dog or cat. It good to add some uncertainty and concept of "I don't know" in the model, a Bayesian approach (probabilistic).
 
-![Markdowm Image][3]
+![Markdown Image][3]
 <figcaption class="caption">How a neural network arrives to a result</figcaption>
 
 
 ## Overview of process to create a ML project
 
-![Markdowm Image][4]
+![Markdown Image][4]
 <figcaption class="caption">Overview of the Machine learning project</figcaption>
 
 ## Future work: Tools to have a play with!

@@ -36,7 +36,7 @@ So far, so good!
 
 A *lot* more hard work to come, but dare I say ( 🤞🏻 ) I am ready for it! 
 
-![Markdowm Image][1]
+![Markdown Image][1]
 <figcaption class="caption">Training distribution</figcaption>
 
 [1]: /assets/images/ironman/week1-training.png

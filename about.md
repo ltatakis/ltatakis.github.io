@@ -17,18 +17,26 @@ Whilst this project was short-lived, it provided me with a strong foundation in 
 </p>
 
 <p>
-For three years, I worked in in the e-commerce team of Elsevier as a Software Engineer.
-In September 2019, I made the move to <a href="https://www.vocovo.com/">VoCoVo</a>, as a Senior Software Engineer. As of August 2020 I have become the DevOps Tech Lead, were my first project was moving all the infrastructure from Digital Ocean to Azure with a team of two other engineers.
+For three years, I worked in the e-commerce team of Elsevier as a Software Engineer.
+In September 2019, I made the move to <a href="https://www.vocovo.com/">VoCoVo</a>, as a Senior Software Engineer. As of August 2020 I have become the DevOps Tech Lead, where I managed the workload of two engineers. I am passionate about improving the development experience, reducing barriers of releasing and solving bottlenecks within systems. 
+Some notable achievements of the last year are:  
 </p>
+<ul class="skill-list">
+<li> the migration from Digital Ocean to Azure.</li>
+<li> the introduction of DataDog for monitoring.</li>
+<li> automation of tests in Jenkins.</li>
+<li> change of the release process from biweekly to continuous. </li>
+<li> improvement of build times by 150%.</li>
+</ul>
 
 <h2>Skills</h2>
 
 <ul class="skill-list">
+	<li>Kubernetes</li>
+	<li>Azure</li>
 	<li>NodeJS</li>
 	<li>TypeScript</li>
 	<li>AWS - EC2, Lambdas, RDS, SecretManager and more</li>
-	<li>Azure</li>
-	<li>Kubernetes</li>
 	<li>Vue.js</li>
 	<li>Infrastructure as Code: Terraform, Ansible, Puppet</li>
 	<li>Jenkins</li>

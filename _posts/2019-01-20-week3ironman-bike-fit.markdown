@@ -24,11 +24,11 @@ However, to achieve this __its going to be a journey__. With multiple visits to 
 My flexibility and comfort over the next 2-3 months needs to significantly improve if I am to consider this bike position for race day. And I can assure you that needs a lot of work ... 😳
 
 For example, currently my nature body position on the aerobars is:
-![Markdowm Image][1]
+![Markdown Image][1]
 <figcaption class="caption">How I currently rest on the bike</figcaption>
 
 However, it has to become like this: 
-![Markdowm Image][2]
+![Markdown Image][2]
 <figcaption class="caption">What I need to be for race day</figcaption>
 
 That means my low back and hip muscles needs to strengthen and not be a tight!

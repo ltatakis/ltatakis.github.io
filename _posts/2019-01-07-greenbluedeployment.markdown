@@ -25,7 +25,7 @@ Before we start some quick terminology:
 The code is versioned, we call the old code the blue deployment while the new one green. The versioning of the code ensures that the traffic is routed to the *old* pods initially, until, we are confident that the new code is ready to be deployed! 
 Once we are happy that the `Green deployment` is up and running, we switch the traffic and we delete the blue deployment.
 
-![Markdowm Image][1]
+![Markdown Image][1]
 <figcaption class="caption">Starting point, traffic going to blue deployment</figcaption>
 
 <p align="center">Voila! </p>
@@ -37,7 +37,7 @@ This was because, until the new code was up and running we had both deployments 
 > Each release deployment is versioned.
 
 
-![Markdowm Image][2]
+![Markdown Image][2]
 <figcaption class="caption">Following successful green deployment traffic</figcaption>
 
 

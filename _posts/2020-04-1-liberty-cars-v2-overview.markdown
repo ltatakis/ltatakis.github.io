@@ -27,13 +27,13 @@ Instead I experimented with static website form submission systems that send ema
 For example some of the functionality it lost:
 
 The old homepage:
-![Markdowm Image][1]
+![Markdown Image][1]
 
 The old date range selection:
-![Markdowm Image][2]
+![Markdown Image][2]
 
 The old booking page:
-![Markdowm Image][3]
+![Markdown Image][3]
 
 As always I will admit my frontend skills are not the best. I am a Full Stack Engineer that focuses on DevOps and Backend work, that can change a CSS colour if needed 🤓
 

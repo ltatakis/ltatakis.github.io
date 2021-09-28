@@ -86,7 +86,7 @@ Given these key entities we describe above, we have the following key components
 # Our implementation of Event sourcing
 
 <figcaption class="caption">An overview of our system</figcaption>
-![Markdowm Image][1]
+![Markdown Image][1]
 
 The key component of the application that puts this pattern together is here:
 ```javascript

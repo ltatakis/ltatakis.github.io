@@ -120,28 +120,28 @@ It's sometimes handy for breaking things up.
 Markdown can also contain images. I'll need to add something here sometime.
 
 {% highlight raw %}
-![Markdowm Image][/image/url]
+![Markdown Image][/image/url]
 {% endhighlight %}
 
-![Markdowm Image][6]
+![Markdown Image][6]
 
 *Figure Caption*?
 
 {% highlight raw %}
-![Markdowm Image][/image/url]
+![Markdown Image][/image/url]
 <figcaption class="caption">Photo by John Doe</figcaption>
 {% endhighlight %}
 
-![Markdowm Image][6]
+![Markdown Image][6]
 <figcaption class="caption">Photo by John Doe</figcaption>
 
 *Bigger Images*?
 
 {% highlight raw %}
-![Markdowm Image][/image/url]{: class="bigger-image" }
+![Markdown Image][/image/url]{: class="bigger-image" }
 {% endhighlight %}
 
-![Markdowm Image][6]{: class="bigger-image" }
+![Markdown Image][6]{: class="bigger-image" }
 
 ---
 
