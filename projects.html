@@ -1,13 +1,19 @@
 ---
-layout: page
 title: Projects
+layout: page
 ---
+<header class="header-home {% if site.animation %}animated{% endif %}">
+<a class="link" href="/about">
+    <img class="selfie" alt="{{ site.name }}" src="{% if site.external-image %}{{ site.picture }}{% else %}/{{ site.picture }}{% endif %}" />
+</a>
+</header
+
 <section class="list">
     {% for post in site.posts %}
         {% if post.projects %}
             <div class="item {% if post.star %}star{% endif %}">
                 <a class="url" href="{% if post.externalLink %}{{ post.externalLink }}{% else %}{{ post.url }}{% endif %}">
-                    <aside><time datetime="{{ post.date | date:"%d-%m-%Y" }}">{{ post.date | date: "%b %d %Y" }}</time></aside>
+                    <!-- <aside><time datetime="{{ post.date | date:"%d-%m-%Y" }}">{{ post.date | date: "%b %d %Y" }}</time></aside> -->
                     <h3 class="title">{{ post.title }}</h3>
                 </a>
             </div>
