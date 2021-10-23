@@ -1,6 +1,6 @@
 # main text of home
 name: Lefteris Tatakis
-bio: Software Engineer & DevOps Team Lead
+bio: Software Engineer & DevOps Team Lead, Triathlete 
 
 # twitter summary info
 description: A Fullstack Software Engineer based in Oxford.
@@ -37,14 +37,14 @@ disqus:
 twitter: ltatakis
 linkedin: tatakis
 
-# github: ltatakis
+github: ltatakis
 
 # email: 
 
 authors:
     LefterisTatakis:
         name: Lefteris Tatakis
-        bio: Passionate about improving the development experience, innovating and removing bottlenecks within systems.
+        bio: Passionate about improving the development experience, innovating and removing bottlenecks within systems. Outside work I am currently training for an Ironman.
         external-image: false
         picture: assets/images/me.jpg
         twitter: ltatakis
